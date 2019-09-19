@@ -1,0 +1,9 @@
+git add web/hello.html
+
+git push heroku master
+
+git push github master
+
+https://content.byui.edu/file/14882098-ce1f-44ba-a196-a7aebcb3d5ce/1/week01/commands.pdf
+
+htm is the prefered extension over html
