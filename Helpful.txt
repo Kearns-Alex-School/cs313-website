@@ -1,9 +1,30 @@
-git add web/hello.html
+1.) create the repository in GitHub
+2.) download the repository your hard drive through github
+3.) add the app.json, composer.json, composer.lock, and Procfile to the repository
+4.) create a 'web' directory folder
+5.) create the heroku app
+	heroku create
+6.) deploy the app
+	git push heroku master
+	'heroku' is the name of the git repository
+7.) rename to a better domain
+	heroku apps:rename *newname
+8.) create you index.html page under the 'web' folder
+9.) add all of the new files that you want
+	git add web/index.html
+	git add web/*
+10.) commit any changes
+	git commit -m "I made changes"
 
-git push heroku master
-
-git push github master
-
+References
+https://content.byui.edu/file/14882098-ce1f-44ba-a196-a7aebcb3d5ce/1/week01/prove.html
 https://content.byui.edu/file/14882098-ce1f-44ba-a196-a7aebcb3d5ce/1/week01/commands.pdf
 
-htm is the prefered extension over html
+git remote -v
+heroku login
+heroku create
+git push heroku master
+heroku apps:rename kearns-cs313
+git status
+git add web\*
+git commit -m "comment for the commit"
