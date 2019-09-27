@@ -14,10 +14,10 @@
 
     <body class="bg-primary container-fluid">
         <!-- Header -->
-        <?php include '../php/header.php'?>
+        <?php include '../php/header.php';?>
 
         <!-- Navigation bar -->
-        <?php include '../php/nav.php'?>
+        <?php include '../php/nav.php';?>
         
         <!-- Content -->
         <br>
@@ -26,7 +26,7 @@
         </div>
 
         <!-- Footer bar -->
-        <?php include '../php/footer.php'?>
+        <?php include '../php/footer.php';?>
         
 	</body>
 
