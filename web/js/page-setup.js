@@ -1,2 +1,4 @@
-//Navigation bar
-$("#nav").load("../php/nav.php");
+$( document ).ready(function() {
+    //Navigation bar
+    $("#nav").load("../php/nav.php");
+});
