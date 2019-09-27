@@ -1,9 +1,9 @@
 <!-- Header -->
 
-<div class="row">
+<div class="row text-center">
 
     <div class="col-sm">
-        <img src="../content/images/profile.jpg" class="rounded" height="200">
+        <img src="../content/images/profile.jpg" class="rounded float-left" height="200">
     </div>
 
     <div class="col-sm">
@@ -11,7 +11,7 @@
     </div>
 
     <!--div class="col-sm">
-        <img src="../content/images/" class="rounded" height="200">
+        <img src="../content/images/" class="rounded float-right" height="200">
     </div-->
 
 </div>
