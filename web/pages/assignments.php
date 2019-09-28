@@ -23,12 +23,17 @@
         <div id="content" class="container">
             <h1>CS 313 Assignments</h1>
             <p>
-                This is the main page of where you can find all of the assignments that I have worked on for this class. You can click on an assignemnt title to go to its page. Check back often to see if there have been any new additions to the site!!
+                This is the main page of where you can find all of the assignments that I have worked on for this class. You can click on an assignment title to go to its page. Check back often to see if there have been any new additions to the site!!
             </p>
             
             <h2>Coming Soon!</h2>
+            <p>
+                You may have noticed some "broken" links on this site. Do not be afraid!! These are just temporary placeholders for things to come! Each week something new will be added and maybe more of these placeholders will be populated with actual names. This is to get you excited to come back and see each of these assignments completed and fully functioning!
+            </p>
 
-            
+            <!-- Assignment List -->
+            <?php include ('../php/assignment-list.php');?>
+
         </div>
 
         <!-- Footer bar -->
