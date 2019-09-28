@@ -13,7 +13,7 @@
         </div>
 
         <div class="col-sm">
-            <img src="../content/images/slct.jpg" class="rounded" height="200">
+            <img src="../content/images/slct.jpg" class="rounded r90" height="200">
         </div>
 
     </div>
