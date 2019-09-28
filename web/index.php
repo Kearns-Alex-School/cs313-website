@@ -22,6 +22,18 @@
         <br>
         <div id="content" class="container">
             <h1>CS 313 Home Page</h1>
+
+            <p>Welcome to my homepage for CS 313 - Web Engineering II! Thank you so much for visiting. It really means a lot to me.</p>
+
+            <h2>A Little About Myself</h2>
+
+            <p>
+            My name is Alex Kearns and I am pursuing a bachelor’s degree in Software Engineering. I will be graduating in April of 2020. My current residence is in the snowy state of Michigan. I have been programming since my freshman year of high school and love/hate it. Even though I have this relationship, I would not imagine myself doing anything other than this. It presents to me a challenge or puzzle for me to complete. 
+                <br>
+            I was married to my wonderful wife in July of 2017 and sealed in the Salt Lake Temple a year later. We have no kids at the moment and are not planning on any for a few more years. But whatever comes will come. Some things that we both like to do in our free time include watching anime, playing video games, and cuddle while thinking of what our lives have in store for us.
+                <br>
+            I hope you enjoyed learning a little about myself! Please come back often to check out the many assignments that will be added to this site. I cannot wait for us to see how much I have grown since day one of this semester. 
+            </p>
         </div>
 
         <!-- Footer bar -->

@@ -1,7 +1,7 @@
 <!-- Header -->
 
 <br>
-<div id="header" class="container-fluid">
+<div id="header" class="container">
     <div class="row text-center">
 
         <div class="col-sm">
