@@ -1,3 +1,7 @@
 .r90 {
-    transform:rotate(-90deg);
+    /*transform:rotate(-90deg);*/
+}
+
+.link {
+    color:rgb(0, 247, 255);
 }
