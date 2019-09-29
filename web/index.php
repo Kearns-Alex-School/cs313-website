@@ -39,7 +39,7 @@
             <br>
 
             <div class="media">
-                <img src="content/images/slct.jpg" width="200" class="mr-3 r-90" alt="...">
+                <img src="content/images/slct.jpg" width="200" class="mr-3" alt="...">
                 <div class="media-body">
                     <h5 class="mt-0">Married Life</h5>
                     I was married to my wonderful wife in July of 2017 and sealed in the Salt Lake Temple a year later. We have no kids at the moment and are not planning on any for a few more years. But whatever comes will come. Some things that we both like to do in our free time include watching anime, playing video games, and cuddle while thinking of what our lives have in store for us.
