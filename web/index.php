@@ -49,7 +49,7 @@
             <br>
 
             <div class="media">
-                <img src="content/images/alttp-banner.jpg" height="200" class="mr-3 r-90" alt="...">
+                <img src="content/images/alttp-banner.jpg" height="200" class="mr-3" alt="...">
                 <div class="media-body">
                     <h5 class="mt-0">Conclusion</h5>
                     I hope you enjoyed learning a little about myself! Please come back often to check out the many assignments that will be added to this site. I cannot wait for us to see how much I have grown since day one of this semester. 
