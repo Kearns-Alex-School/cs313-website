@@ -1,5 +1,6 @@
-.r90 {
-    /*transform:rotate(-90deg);*/
+.r-90 {
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: top right;
 }
 
 .link {

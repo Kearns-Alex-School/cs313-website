@@ -1,5 +1,3 @@
-<!-- Header -->
-
 <br>
 <div id="header" class="container">
     <div class="row text-center">
@@ -13,7 +11,7 @@
         </div>
 
         <div class="col-sm">
-            <img src="../content/images/slct.jpg" class="rounded r90" width="200">
+            <img src="../content/images/slct.jpg" class="rounded r-90" width="200">
         </div>
 
     </div>

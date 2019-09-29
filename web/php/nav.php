@@ -1,5 +1,3 @@
-<!-- Navigation Bar -->
-
 <br>
 <div id="nav" class="container">
     <div class="btn-group">

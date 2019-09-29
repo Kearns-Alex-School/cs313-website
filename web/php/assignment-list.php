@@ -1,5 +1,3 @@
-<!-- Assignment List -->
-
 <div id="assignment-list" class="container">
     <h2>
         <nav class="nav flex-column">
