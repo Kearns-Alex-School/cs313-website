@@ -1,6 +1,6 @@
 <br>
 <div id="header" class="container">
-    <div class="row text-center">
+    <div class="row">
 
         <div class="col-sm-4">
             <img src="../content/images/profile.jpg" class="rounded" height="200">
