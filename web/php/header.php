@@ -1,6 +1,9 @@
 <br>
 <div id="header" class="container">
-    <div class="row">
+    <h1 class="display-1 text-center">
+        Alex Kearns - CS 313
+    </h1>
+    <!--div class="row">
 
         <div class="col-sm-4 bg-success">
             <img src="../content/images/profile.jpg" class="rounded" height="200">
@@ -14,5 +17,5 @@
             <img src="../content/images/slct.jpg" class="rounded r-90" width="200">
         </div>
 
-    </div>
+    </div-->
 </div>

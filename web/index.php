@@ -16,7 +16,7 @@
         <!-- Header -->
         <?php include ('php/header.php');?>
 
-        <!-- Navigation bar -->
+        <!-- Navigation Bar -->
         <?php include ('php/nav.php');?>
         
         <!-- Content -->
@@ -28,16 +28,37 @@
 
             <h2>A Little About Myself</h2>
 
-            <p>
-            My name is Alex Kearns and I am pursuing a bachelor’s degree in Software Engineering. I will be graduating in April of 2020. My current residence is in the snowy state of Michigan. I have been programming since my freshman year of high school and love/hate it. Even though I have this relationship, I would not imagine myself doing anything other than this. It presents to me a challenge or puzzle for me to complete. 
-                <br>
-            I was married to my wonderful wife in July of 2017 and sealed in the Salt Lake Temple a year later. We have no kids at the moment and are not planning on any for a few more years. But whatever comes will come. Some things that we both like to do in our free time include watching anime, playing video games, and cuddle while thinking of what our lives have in store for us.
-                <br>
-            I hope you enjoyed learning a little about myself! Please come back often to check out the many assignments that will be added to this site. I cannot wait for us to see how much I have grown since day one of this semester. 
-            </p>
+            <div class="media">
+                <img src="content/images/profile.jpg" class="mr-3" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0">Basic Information</h5>
+                    My name is Alex Kearns and I am pursuing a bachelor’s degree in Software Engineering. I will be graduating in April of 2020. My current residence is in the snowy state of Michigan. I have been programming since my freshman year of high school and love/hate it. Even though I have this relationship, I would not imagine myself doing anything other than this. It presents to me a challenge or puzzle for me to complete.
+                </div>
+            </div>
+
+            <br>
+
+            <div class="media">
+                <img src="content/images/slct.jpg" class="mr-3 r-90" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0">Married Life</h5>
+                    I was married to my wonderful wife in July of 2017 and sealed in the Salt Lake Temple a year later. We have no kids at the moment and are not planning on any for a few more years. But whatever comes will come. Some things that we both like to do in our free time include watching anime, playing video games, and cuddle while thinking of what our lives have in store for us.
+                </div>
+            </div>
+
+            <br>
+
+            <div class="media">
+                <img src="content/images/alttp-banner.jpg" class="mr-3 r-90" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0">Conclusion</h5>
+                    I hope you enjoyed learning a little about myself! Please come back often to check out the many assignments that will be added to this site. I cannot wait for us to see how much I have grown since day one of this semester. 
+                </div>
+            </div>
+
         </div>
 
-        <!-- Footer bar -->
+        <!-- Footer -->
         <?php include ('php/footer.php');?>
 
 	</body>
