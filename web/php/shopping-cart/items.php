@@ -74,6 +74,14 @@ $Price_Index = 2;
 
         foreach ($items as $item)
         {
+            echo "
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input> </input></td>
+                <td><button onclick=""> </button></td>
+            </tr>";
             /*echo "<tr>
                 <td>
                     <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
@@ -82,8 +90,8 @@ $Price_Index = 2;
                 <td>$item[$Price_Index]</td>
                 <td><input> </input></td>
                 <td><button onclick=""> </button></td>
-            </tr>";
-            $temp_index++;*/
+            </tr>";*/
+            $temp_index++;
         }
         ?>
 
