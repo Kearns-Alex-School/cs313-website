@@ -54,8 +54,8 @@ $items = array(
 $Name_Index = 0;
 $Picture_Index = 1;
 $Price_Index = 2;
-$root = $_SERVER['DOCUMENT_ROOT'];
-$root2 = "../..";
+//$root = $_SERVER['DOCUMENT_ROOT'];
+$root = "../../../content/images/";
 ?>
 
 <div class="table-responsive">
@@ -79,7 +79,7 @@ $root2 = "../..";
             echo '
             <tr>
                 <td>
-                    <img class="product" src="'.$root.'/content/images/alttp-banner.jpg" alt="'.$item[$Name_Index].'">
+                    <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
                 </td>
                 <td>'.$item[$Name_Index].'</td>
                 <td>'.$item[$Price_Index].'</td>
