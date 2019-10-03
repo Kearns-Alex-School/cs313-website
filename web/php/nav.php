@@ -2,7 +2,7 @@
 <div id="nav" class="container">
     <div class="btn-group">
 
-        <a type="button" class="btn btn-secondary" href="../index.php">Home</a>
+        <a type="button" class="btn btn-secondary" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/index.php">Home</a>
 
         <a type="button" class="btn btn-secondary" href="../pages/assignments.php">Assignments</a>
 
