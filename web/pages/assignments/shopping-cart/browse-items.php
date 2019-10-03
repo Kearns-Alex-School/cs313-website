@@ -17,7 +17,7 @@
         <?php include ('../../../php/header.php');?>
 
         <!-- Navigation Bar -->
-        <?php include ('../../../php/nav.php');?>
+        <?php include ("$_SERVER['DOCUMENT_ROOT']/php/nav.php");?>
         
         <!-- Content -->
         <br>
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Footer -->
-        <?php include ('../../../php/footer.php');?>
+        <?php include ("/php/footer.php");?>
 
 	</body>
 
