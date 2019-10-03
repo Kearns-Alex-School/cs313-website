@@ -76,7 +76,9 @@ $Price_Index = 2;
         {
             echo "
             <tr>
-                <td></td>
+                <td>
+                    <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
+                </td>
                 <td></td>
                 <td></td>
                 <td></td>
