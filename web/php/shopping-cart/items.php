@@ -56,7 +56,7 @@ $Picture_Index = 1;
 $Price_Index = 2;
 //$root = $_SERVER['DOCUMENT_ROOT'];
 $root = "../../../content/images/";
-$width = 200;
+$width = 100;
 ?>
 
 <div class="table-responsive">
