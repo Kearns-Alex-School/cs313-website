@@ -27,17 +27,13 @@
             
             <br>
 
-            <h2>Candy Shop</h2>
-
-            <br>
-
             <div class="row">
-                <div class="col-sm-9">
+                <div class="col-sm-8">
 
                     <!-- Product Table -->
                     <?php include ($_SERVER['DOCUMENT_ROOT']."/php/shopping-cart/items.php");?>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                 
                 </div>
             </div>

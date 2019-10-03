@@ -8,10 +8,6 @@ tr:after {
     visibility: hidden;
     clear: both;
 }
-/*
-thead th {
-    height: 30px;
-}*/
 
 tbody {
     height: 350px;
