@@ -10,7 +10,7 @@
             <span class="caret"></span>
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item disabled" href="#">Assignment</a>
+            <a class="dropdown-item disabled" href="../pages/assignments/shopping-cart/browse-items.php">PHP Shopping Cart</a>
             <a class="dropdown-item disabled" href="#">Assignment</a>
             <a class="dropdown-item disabled" href="#">Assignment</a>
             <a class="dropdown-item disabled" href="#">Assignment</a>
