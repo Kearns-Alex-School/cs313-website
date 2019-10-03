@@ -14,22 +14,22 @@
 
     <body class="bg-primary container-fluid">
         <!-- Header -->
-        <?php include ('../php/header.php');?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");?>
 
         <!-- Navigation bar -->
-        <?php include ('../php/nav.php');?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/nav.php");?>
         
         <!-- Content -->
         <br>
         <div id="content" class="container">
 
             <!-- Assignment List -->
-            <?php include ('../php/assignment-list.php');?>
+            <?php include ($_SERVER['DOCUMENT_ROOT']."/php/assignment-list.php");?>
 
         </div>
 
         <!-- Footer bar -->
-        <?php include ('../php/footer.php');?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."php/footer.php");?>
         
 	</body>
 
