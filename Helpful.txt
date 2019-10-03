@@ -15,6 +15,9 @@
 	git add web/*
 10.) commit any changes
 	git commit -m "I made changes"
+11.) push to the master
+	git push heroku master
+	'heroku' is the name of the git repository
 
 References
 https://content.byui.edu/file/14882098-ce1f-44ba-a196-a7aebcb3d5ce/1/week01/prove.html
