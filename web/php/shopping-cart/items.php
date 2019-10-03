@@ -72,16 +72,22 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 
         <?php
         $temp_index = 0;
+        $root2 = $_SERVER['DOCUMENT_ROOT'];
 
         foreach ($items as $item)
         {
             echo '
+            <script>
+                console.log('.$_SERVER['DOCUMENT_ROOT'].');
+            </script>';
+
+            echo '
             <tr>
                 <td>
-                    <img class="product" src="'.$root.'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
+                    <img class="product" src="'.$root2.'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
                 </td>
-                <td></td>
-                <td></td>
+                <td>'.$item[$Name_Index].'</td>
+                <td>'.$item[$Price_Index].'</td>
                 <td></td>
                 <td></td>
             </tr>';
