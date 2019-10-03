@@ -79,7 +79,7 @@ $root2 = "../..";
             echo '
             <tr>
                 <td>
-                    <img class="product" src="'.$root.'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
+                    <img class="product" src="'.$root.'/content/images/alttp-banner.jpg" alt="'.$item[$Name_Index].'">
                 </td>
                 <td>'.$item[$Name_Index].'</td>
                 <td>'.$item[$Price_Index].'</td>
