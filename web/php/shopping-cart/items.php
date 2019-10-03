@@ -69,12 +69,12 @@ $Price_Index = 2;
         </thead>
         <tbody>
 
-        <!--?php
+        <?php
         $temp_index = 0;
 
         foreach ($items as $item)
         {
-            echo "<tr>
+            /*echo "<tr>
                 <td>
                     <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
                 </td>
@@ -83,9 +83,9 @@ $Price_Index = 2;
                 <td><input> </input></td>
                 <td><button onclick=""> </button></td>
             </tr>";
-            $temp_index++;
+            $temp_index++;*/
         }
-        ?-->
+        ?>
 
         </tbody>
     </table>
