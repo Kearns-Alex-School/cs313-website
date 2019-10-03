@@ -17,7 +17,7 @@
         <?php include ('../../../php/header.php');?>
 
         <!-- Navigation Bar -->
-        <?php include ("$_SERVER['DOCUMENT_ROOT']/php/nav.php");?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/nav.php");?>
         
         <!-- Content -->
         <br>
