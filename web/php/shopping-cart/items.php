@@ -79,8 +79,8 @@ $Price_Index = 2;
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><input> </input></td>
-                <td><button onclick=""> </button></td>
+                <td></td>
+                <td></td>
             </tr>";
             /*echo "<tr>
                 <td>
