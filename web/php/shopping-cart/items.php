@@ -74,23 +74,16 @@ $Price_Index = 2;
 
         foreach ($items as $item)
         {
-
-            echo "
-            <script>
-                console.log(<?= json_encode($temp_index); ?>);
-            </script>
-            ";
-
-            /*echo "
+            echo '
             <tr>
                 <td>
-                    <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
+                    <img class="product" src="'.$_SERVER['DOCUMENT_ROOT'].'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
                 </td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-            </tr>";*/
+            </tr>';
             /*echo "<tr>
                 <td>
                     <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
