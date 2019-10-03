@@ -17,8 +17,8 @@ tbody {
     height: 350px;
     overflow-y: auto;
 }
-/*
+
 tbody td, thead th {
     width: 19.2%;
     float: left;
-}*/
+}
