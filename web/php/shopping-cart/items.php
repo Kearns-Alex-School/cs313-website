@@ -54,6 +54,7 @@ $items = array(
 $Name_Index = 0;
 $Picture_Index = 1;
 $Price_Index = 2;
+$root = $_SERVER['DOCUMENT_ROOT'];
 ?>
 
 <div class="table-responsive">
@@ -77,7 +78,7 @@ $Price_Index = 2;
             echo '
             <tr>
                 <td>
-                    <img class="product" src="'.$_SERVER['DOCUMENT_ROOT'].'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
+                    <img class="product" src="'.$root.'/content/images/'.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
                 </td>
                 <td></td>
                 <td></td>
