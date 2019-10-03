@@ -72,15 +72,12 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 
         <?php
         $temp_index = 0;
-        $root2 = $_SERVER['DOCUMENT_ROOT'];
+        $root2 = $_SERVER["DOCUMENT_ROOT"];
+
+        echo "<script>console.log('$root2')</script>";
 
         foreach ($items as $item)
         {
-            echo '
-            <script>
-                console.log('.$_SERVER['DOCUMENT_ROOT'].');
-            </script>';
-
             echo '
             <tr>
                 <td>
