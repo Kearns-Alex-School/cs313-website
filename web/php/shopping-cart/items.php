@@ -74,6 +74,13 @@ $Price_Index = 2;
 
         foreach ($items as $item)
         {
+
+            echo "
+            <script>
+                console.log(<?= json_encode($temp_index); ?>);
+            </script>
+            ";
+
             echo "
             <tr>
                 <td>
