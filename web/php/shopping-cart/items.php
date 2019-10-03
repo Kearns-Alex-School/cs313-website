@@ -2,37 +2,37 @@
 $items = array(
      array(
         "Snickers"
-       ,"snickers.jpg"
+       ,"snickers.png"
        ,0.98
     )
     ,array(
         "Milkyway"
-       ,"milkyway.jpg"
+       ,"milkyway.png"
        ,0.98
     )
     ,array(
         "3Musketeers"
-       ,"3musketeers.jpg"
+       ,"3musketeers.png"
        ,0.98
     )
     ,array(
         "Skittles"
-       ,"skittles.jpg"
+       ,"skittles.png"
        ,0.98
     )
     ,array(
         "M&M"
-       ,"mm.jpg"
+       ,"mm.png"
        ,0.98
     )
     ,array(
         "Reeses Pieces"
-       ,"reesespieces.jpg"
+       ,"reesespieces.png"
        ,0.98
     )
     ,array(
         "100 Grand"
-       ,"100grand.jpg"
+       ,"100grand.png"
        ,0.98
     )
     ,array(
@@ -42,12 +42,12 @@ $items = array(
     )
     ,array(
         "Jolly Ranchers"
-       ,"jollyrancher.jpg"
+       ,"jollyrancher.png"
        ,0.98
     )
     ,array(
         "Mike N Ike"
-       ,"mikeandike.jpg"
+       ,"mikeandike.png"
        ,0.98
     )
 );
@@ -56,6 +56,7 @@ $Picture_Index = 1;
 $Price_Index = 2;
 //$root = $_SERVER['DOCUMENT_ROOT'];
 $root = "../../../content/images/";
+$width = 200;
 ?>
 
 <div class="table-responsive">
@@ -79,22 +80,14 @@ $root = "../../../content/images/";
             echo '
             <tr>
                 <td>
-                    <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'">
+                    <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'" width="'.$width.'">
                 </td>
                 <td>'.$item[$Name_Index].'</td>
                 <td>'.$item[$Price_Index].'</td>
                 <td></td>
                 <td></td>
             </tr>';
-            /*echo "<tr>
-                <td>
-                    <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
-                </td>
-                <td>$item[$Name_Index]</td>
-                <td>$item[$Price_Index]</td>
-                <td><input> </input></td>
-                <td><button onclick=""> </button></td>
-            </tr>";*/
+
             $temp_index++;
         }
         ?>
