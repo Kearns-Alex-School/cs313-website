@@ -29,7 +29,7 @@
         </div>
 
         <!-- Footer bar -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."php/footer.php");?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
         
 	</body>
 
