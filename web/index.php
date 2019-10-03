@@ -14,10 +14,10 @@
 
     <body class="bg-primary container-fluid">
         <!-- Header -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");?>
+        <?php include ('php/header.php');?>
 
         <!-- Navigation Bar -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/nav.php");?>
+        <?php include ('php/nav.php');?>
         
         <!-- Content -->
         <br>
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Footer -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
+        <?php include ('php/footer.php');?>
 
 	</body>
 
