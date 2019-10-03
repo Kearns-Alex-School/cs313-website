@@ -81,7 +81,7 @@ $Price_Index = 2;
             </script>
             ";
 
-            echo "
+            /*echo "
             <tr>
                 <td>
                     <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
@@ -90,7 +90,7 @@ $Price_Index = 2;
                 <td></td>
                 <td></td>
                 <td></td>
-            </tr>";
+            </tr>";*/
             /*echo "<tr>
                 <td>
                     <img class="product" src="$_SERVER['DOCUMENT_ROOT']/content/images/$item[$Picture_Index]" alt="$item[$Name_Index]">
