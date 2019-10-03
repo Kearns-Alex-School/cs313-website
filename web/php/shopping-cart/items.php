@@ -69,9 +69,9 @@ $Price_Index = 2;
         </thead>
         <tbody>
 
-        <?php
+        <!--?php
         $temp_index = 0;
-        
+
         foreach ($items as $item)
         {
             echo "<tr>
@@ -85,7 +85,7 @@ $Price_Index = 2;
             </tr>";
             $temp_index++;
         }
-        ?>
+        ?-->
 
         </tbody>
     </table>
