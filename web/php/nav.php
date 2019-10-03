@@ -1,9 +1,3 @@
-<?php
-$root2 = $_SERVER["DOCUMENT_ROOT"];
-
-echo "<script>console.log('$root2')</script>";
-?>
-
 <br>
 <div id="nav" class="container">
     <div class="btn-group">

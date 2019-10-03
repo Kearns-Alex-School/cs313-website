@@ -55,6 +55,7 @@ $Name_Index = 0;
 $Picture_Index = 1;
 $Price_Index = 2;
 $root = $_SERVER['DOCUMENT_ROOT'];
+$root2 = "../..";
 ?>
 
 <div class="table-responsive">
@@ -72,9 +73,6 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 
         <?php
         $temp_index = 0;
-        $root2 = $_SERVER["DOCUMENT_ROOT"];
-
-        echo "<script>console.log('$root2')</script>";
 
         foreach ($items as $item)
         {
