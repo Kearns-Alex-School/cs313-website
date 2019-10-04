@@ -3,7 +3,7 @@ body {
 }
 
 .table {
-    background-color: #003aa5;
+    /*background-color: #003aa5;*/
 }
 
 .row-striped:nth-of-type(odd){
