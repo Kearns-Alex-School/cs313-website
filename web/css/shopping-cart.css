@@ -1,3 +1,19 @@
+body {
+    background-color: #87cefa;
+}
+
+.table {
+    background-color: #003aa5;
+}
+
+.row-striped:nth-of-type(odd){
+    background-color: #55d386;
+  }
+  
+.row-striped:nth-of-type(even){
+    background-color: #33d8af;
+}
+
 thead, tbody, tr, td, th { 
     display: block; 
 }

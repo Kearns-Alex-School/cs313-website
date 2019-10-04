@@ -60,7 +60,7 @@ $width = 100;
 ?>
 
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped table-hover table-items">
         <thead>
         <tr>
             <th>Picture</th>
@@ -83,9 +83,9 @@ $width = 100;
                     <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'" width="'.$width.'">
                 </td>
                 <td>'.$item[$Name_Index].'</td>
-                <td>'.$item[$Price_Index].'</td>
-                <td></td>
-                <td></td>
+                <td id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
+                <td id="item-'.$temp_index.'-qty"></td>
+                <td id="item'.$temp_index.'-add"></td>
             </tr>';
 
             $temp_index++;

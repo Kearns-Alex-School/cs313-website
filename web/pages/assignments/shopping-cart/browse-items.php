@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
 	</head>
 
-    <body class="bg-primary container-fluid">
+    <body class="container-fluid">
         <!-- Header -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");?>
 
