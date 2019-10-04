@@ -2,16 +2,12 @@ body {
     background-color: #87cefa;
 }
 
-.table {
-    /*background-color: #003aa5;*/
-}
-
 .row-striped:nth-of-type(odd){
-    background-color: #55d386;
+    background-color: #ffffff;
   }
   
 .row-striped:nth-of-type(even){
-    background-color: #33d8af;
+    background-color: #b9b9b9;
 }
 
 thead, tbody, tr, td, th { 
@@ -31,6 +27,6 @@ tbody {
 }
 
 tbody td, thead th {
-    width: 19.2%;
+    width: 1%;
     float: left;
 }
