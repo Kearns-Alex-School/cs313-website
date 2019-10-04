@@ -27,6 +27,6 @@ tbody {
 }
 
 tbody td, thead th {
-    width: 1%;
+    /*width: 1%;*/
     float: left;
 }
