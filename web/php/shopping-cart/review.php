@@ -44,6 +44,8 @@
             </table>
         </div>
 
+        
+
         <!-- Footer -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
 
