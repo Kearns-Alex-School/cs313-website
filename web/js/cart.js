@@ -87,6 +87,7 @@ function clearCart() {
 function updateTable(products) {
     var text = 
     '<div class="table-responsive">' +
+        '<br>' +
         '<table class="table table-striped table-hover table-items">' +
             '<thead>' +
                 '<tr>' +
