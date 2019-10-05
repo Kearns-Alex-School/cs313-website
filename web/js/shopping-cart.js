@@ -39,7 +39,7 @@ function updateTotal(products) {
     document.getElementById('total-price').innerHTML = '$' + sum;
 }
 
-function resetForm() {
+function clearCart() {
     localStorage.removeItem("products");
     document.getElementById('total-price').innerHTML = '$0.00';
 
