@@ -84,8 +84,13 @@ $width = 100;
                 </td>
                 <td>'.$item[$Name_Index].'</td>
                 <td id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
-                <td id="item-'.$temp_index.'-qty"></td>
-                <td id="item'.$temp_index.'-add"></td>
+                <td>
+                    <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
+                </td>
+                <td>
+                    <button id="item'.$temp_index.'-add">Add</button>
+                    <button id="item'.$temp_index.'-remove">Remove</button>
+                </td>
             </tr>';
 
             $temp_index++;
