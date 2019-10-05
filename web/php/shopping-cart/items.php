@@ -66,8 +66,8 @@ $width = 100;
             <th width="20%">Picture</th>
             <th width="20%">Name</th>
             <th width="10%">Price</th>
-            <th width="15%">Qty</th>
-            <th width="35%">Action</th>
+            <th width="20%">Qty</th>
+            <th width="30%">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -84,10 +84,10 @@ $width = 100;
                 </td>
                 <td width="20%">'.$item[$Name_Index].'</td>
                 <td width="10%" id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
-                <td width="15%">
+                <td width="20%">
                     <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
                 </td>
-                <td width="35%">
+                <td width="30%">
                     <div class="btn-group">
                         <button type="button" class="btn btn-success" id="item'.$temp_index.'-add" onclick="">Add</button>
                         

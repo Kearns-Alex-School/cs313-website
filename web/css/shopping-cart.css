@@ -27,5 +27,6 @@ tbody {
 }
 
 tbody td, thead th {
+    vertical-align: middle;
     float: left;
 }
