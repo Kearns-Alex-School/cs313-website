@@ -30,11 +30,11 @@ function init() {
 
 function addToCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
-    var qty   = document.getElementById('item-' + index + '-qty').value;
+    var qty   = document.getElementById('item-' + index + '-qty');
     var name  = document.getElementById('item-' + index + '-name').innerHTML;
     
-    if (qty < 1) {
-        alert("Please enter a positive number to add to your cart").classList.add("alert-warning");
+    if (qty.value < 1) {
+        alert("Please enter a positive number to add to your cart");
         qty.value = 0;
         return;
     }
@@ -50,7 +50,7 @@ function addToCart(index) {
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
     }
-    products.push({'id':index, name:name, qty:qty, price:price});
+    products.push({'id':index, name:name, qty:qty.value, price:price});
     localStorage.setItem('products', JSON.stringify(products));
 
     updateTotal(products);

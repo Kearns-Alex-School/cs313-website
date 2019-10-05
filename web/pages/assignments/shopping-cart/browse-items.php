@@ -41,7 +41,7 @@
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
                     <?php echo '<form action="'.$_SERVER["DOCUMENT_ROOT"].'/php/shopping-cart/review.php" method="post"></form>' ?>
-                        <button type="submit" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" onclick="checkout.php" >Checkout</button>
+                        <button type="submit" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</button>
                         <button type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Reset</button>
                     </form>
                 </div>
