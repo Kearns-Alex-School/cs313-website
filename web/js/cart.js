@@ -8,13 +8,14 @@ document.addEventListener('readystatechange', event => {
 
 function init() {
     checkout_btn = document.getElementById('checkout-btn');
+    let products = [];
 
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
-
-        updateTotal(products);
-        updateTable(products);
     }
+
+    updateTotal(products);
+    updateTable(products);
 }
 
 function updateCart(index) {
