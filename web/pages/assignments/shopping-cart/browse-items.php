@@ -38,6 +38,12 @@ session_start();
                     <?php include ($_SERVER['DOCUMENT_ROOT']."/php/shopping-cart/items.php");?>
                 </div>
                 <div class="col-sm-4">
+                    <h1 class="display-4 text-center">Total</h1>
+
+                    <br>
+
+                    <h2 class="display-4 text-center" id="total-price">$0.00</h2>
+
                     <button type="button" class="btn btn-success">Checkout</button>
                     <button type="button" class="btn btn-danger">Reset</button>
                 </div>
