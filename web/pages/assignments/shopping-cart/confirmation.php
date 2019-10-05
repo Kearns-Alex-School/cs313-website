@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
-        <script src="../../../js/shopping-cart.js"></script>
+        <script src="../../../js/confirmation.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-sm-4">
                     
-                    <a href="../../../pages/assignments/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse</a>
+                    <a href="../../../pages/assignments/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse Products</a>
 
                 </div>
             </div>

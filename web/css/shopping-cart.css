@@ -28,7 +28,7 @@ td {
 }
 
 #fname, #lname {
-    width: 300px;
+    width: 200px;
 }
 
 #fnamevalid, #lnamevalid, #addressvalid {
