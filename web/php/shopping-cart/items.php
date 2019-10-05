@@ -67,7 +67,7 @@ $width = 100;
             <th>Name</th>
             <th>Price</th>
             <th>Qty</th>
-            <th> </th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
