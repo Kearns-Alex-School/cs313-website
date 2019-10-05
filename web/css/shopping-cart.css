@@ -31,3 +31,7 @@ td, th {
     align-items: center;
     float: left;
 }
+
+p {
+    margin-bottom: 0;
+}
