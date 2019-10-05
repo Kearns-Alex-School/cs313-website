@@ -52,20 +52,23 @@
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
-                    <label for="fname">First Name</label>
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
                         <span id="fnamevalid"> *</span>
-                        <br />
-                        <input name="fname" type="text" id="fname" size="3" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
+                        <input type="text" id="fname" class="form-control" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
+                    </div>
 
-                    <label for="lname">Last Name</label>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
                         <span id="lnamevalid"> *</span>
-                        <br />
-                        <input name="lname" type="text" id="lname" size="3" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
+                        <input type="text" id="lname" class="form-control" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
+                    </div>
 
-                    <label for="address">Address</label>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
                         <span id="addressvalid"> *</span>
-                        <br />
-                        <input name="address" style="width:300px" type="text" id="address" size="3" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
+                        <input type="text" id="address" class="form-control" onInput="checkName('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
+                    </div>
                     
                     <a href="../../../pages/assignments/shopping-cart/confirmation.php" type="button" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>
 
