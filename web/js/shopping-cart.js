@@ -1,7 +1,7 @@
 function addToCart(index) {
-    var price = document.getElementById('item-' + index + '-price').value;
+    var price = document.getElementById('item-' + index + '-price').innerHTML;
     var qty   = document.getElementById('item-' + index + '-qty').value;
-    var name  = document.getElementById('item-' + index + '-name').value;
+    var name  = document.getElementById('item-' + index + '-name').innerHTML;
     var removebutton = document.getElementById('item-' + index + '-remove');
     removebutton.classList.remove("disabled")
 
