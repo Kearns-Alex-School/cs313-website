@@ -51,26 +51,26 @@
                     <h1 class="display-4 text-center">Total</h1>
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
-
+                    <form action="../../../pages/assignments/shopping-cart/confirmation.php" method="post">
                     <div class="form-group">
                         <label for="fname">First Name:</label>
                         <span id="fnamevalid"> *</span>
-                        <input type="text" id="fname" class="form-control" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
+                        <input type="text" name="fname" id="fname" class="form-control" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
                     </div>
 
                     <div class="form-group">
                         <label for="lname">Last Name:</label>
                         <span id="lnamevalid"> *</span>
-                        <input type="text" id="lname" class="form-control" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
+                        <input type="text" name="lname" id="lname" class="form-control" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
                     </div>
 
                     <div class="form-group">
                         <label for="address">Address:</label>
                         <span id="addressvalid"> *</span>
-                        <input type="text" id="address" class="form-control" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
+                        <input type="text" name="address" id="address" class="form-control" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
                     </div>
                     
-                    <a href="../../../pages/assignments/shopping-cart/confirmation.php" type="button" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>
+                    <input type="submit" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</input>
 
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</a>
                 </div>

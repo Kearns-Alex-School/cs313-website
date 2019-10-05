@@ -30,7 +30,6 @@
 
             <div class="row">
                 <div class="col-sm-8" id="item-contents">
-                    <br>
 
                     <!-- Product Table -->
 
