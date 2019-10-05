@@ -11,7 +11,7 @@ body {
 }
 
 thead, tbody, tr, td, th { 
-    display: block;
+    display: block; 
 }
 
 tr:after {
@@ -26,10 +26,6 @@ tbody {
     overflow-y: auto;
 }
 
-.table td, .table  th {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    vertical-align: middle;
+tbody td, thead th {
     float: left;
 }
