@@ -18,10 +18,10 @@ function init() {
         var subtotal = price * qty;
         text += 
         '<tr>' + 
-            '<td width="20%">' + products[i].name + '</td>' +
+            '<td width="25%">' + products[i].name + '</td>' +
             '<td width="10%">' + price.toFixed(2) + '</td>' +
-            '<td width="20%">' + qty + '</td>' + 
-            '<td width="30%">' + subtotal.toFixed(2) + '</td>' + 
+            '<td width="25%">' + qty + '</td>' + 
+            '<td width="40%">' + subtotal.toFixed(2) + '</td>' + 
         '</tr>';
 
         total += subtotal;

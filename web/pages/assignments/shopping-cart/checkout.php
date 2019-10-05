@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CS 313 Review</title>
+        <title>CS 313 Checkout</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -32,10 +32,10 @@
                     <table class="table table-striped table-hover table-items">
                         <thead>
                             <tr>
-                                <th width="20%">Name</th>
+                                <th width="25%">Name</th>
                                 <th width="10%">Price</th>
-                                <th width="20%">Qty</th>
-                                <th width="30%">Sub Total</th>
+                                <th width="25%">Qty</th>
+                                <th width="40%">Sub Total</th>
                             </tr>
                         </thead>
                         <tbody id="table-contents">
@@ -59,19 +59,19 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <label for="fname">First Name</label>
                     <span id="fnamevalid"> *</span>
                     <br />
                     <input name="fname" type="text" id="fname" size="3" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <label for="lname">Last Name</label>
                     <span id="lnamevalid"> *</span>
                     <br />
                     <input name="lname" type="text" id="lname" size="3" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="address">Address</label>
                     <span id="addressvalid"> *</span>
                     <br />

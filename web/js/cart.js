@@ -90,10 +90,10 @@ function updateTable(products) {
         '<table class="table table-striped table-hover table-items">' +
             '<thead>' +
                 '<tr>' +
-                    '<th width="20%">Name</th>' +
+                    '<th width="25%">Name</th>' +
                     '<th width="10%">Price</th>' +
-                    '<th width="20%">Qty</th>' +
-                    '<th width="30%">Action</th>' +
+                    '<th width="25%">Qty</th>' +
+                    '<th width="40%">Action</th>' +
                 '</tr>' +
             '</thead>' +
             '<tbody>'
@@ -103,12 +103,12 @@ function updateTable(products) {
     for (var i = 0; i < arrayLength; i++) {
         text += 
                 '<tr>' +
-                    '<td width="20%" id="item-' + i + '-name">' + products[i].name + '</td>' +
+                    '<td width="25%" id="item-' + i + '-name">' + products[i].name + '</td>' +
                     '<td width="10%" id="item-' + i + '-price">' + products[i].price + '</td>' +
-                    '<td width="20%">' +
+                    '<td width="25%">' +
                         '<input id="item-' + i + '-qty" class="form-control" type="number" min="0" value="' + products[i].qty + '"/>' +
                     '</td>' +
-                    '<td width="30%">' +
+                    '<td width="40%">' +
                         '<div class="btn-group">' +
                             '<button type="button" class="btn btn-success" id="item-' + i + '-add" onclick="updateCart(' + i + ')">Update</button>' +
                             
