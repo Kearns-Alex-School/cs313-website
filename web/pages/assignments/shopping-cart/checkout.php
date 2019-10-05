@@ -51,11 +51,10 @@
                     <br>
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
-                    <form action="../../../php/shopping-cart/confirmation.php" method="post">
-                        <button type="submit" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</button>
+                    
+                    <a href="../../../php/shopping-cart/confirmation.php" type="button" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>
 
-                        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</button>
-                    </form>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</a>
                 </div>
             </div>
 
