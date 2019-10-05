@@ -32,6 +32,13 @@ function addToCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
     var qty   = document.getElementById('item-' + index + '-qty').value;
     var name  = document.getElementById('item-' + index + '-name').innerHTML;
+    
+    if (qty < 1) {
+        alert("Please enter a positive number to add to your cart").classList.add("alert-warning");
+        qty.value = 0;
+        return;
+    }
+    
     var removebutton = document.getElementById('item-' + index + '-remove');
     removebutton.classList.remove("disabled");
     removebutton.disabled = false;
