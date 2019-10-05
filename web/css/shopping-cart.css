@@ -2,15 +2,13 @@ body {
     background-color: #87cefa;
 }
 
-/*
-.row-striped:nth-of-type(odd){
+.table-striped:nth-of-type(odd){
     background-color: #ffffff;
   }
   
-.row-striped:nth-of-type(even){
+.table-striped:nth-of-type(even){
     background-color: #b9b9b9;
 }
-*/
 
 thead, tbody, tr, td, th { 
     display: block; 
@@ -29,18 +27,6 @@ tbody {
 }
 
 tbody td, thead th {
-    /*width: 20%;*/
+    width: 20%;
     float: left;
-}
-
-table {
-    width: 100%;
-}
-
-table td, table th {
-    white-space: nowrap;
-}
-
-table td:last-child, table th:last-child {
-    width: 100%;
 }
