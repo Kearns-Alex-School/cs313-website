@@ -38,7 +38,7 @@ function checkName(name, marker) {
     // check the name for only alphabet
     var pass = thisName.value.search(/(.*\d.*)|(.*\s.*)/);
 
-    if (pass == 0 || thisName.value.length == 0 || thisName.includes('/')|| thisName.includes('\')) {
+    if (pass == 0 || thisName.value.length == 0) {
         thisMarker.style.display = 'initial';
         thisMarker.innerHTML = "* Need to be fixed";
         return false;
