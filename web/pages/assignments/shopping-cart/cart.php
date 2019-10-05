@@ -32,6 +32,7 @@
                 <div class="col-sm-8" id="item-contents">
 
                     <!-- Product Table -->
+                    
                 </div>
                 <div class="col-sm-4">
                     <h1 class="display-4 text-center">Total</h1>

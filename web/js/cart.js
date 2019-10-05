@@ -2,7 +2,7 @@ var checkout_btn;
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === "complete") {
-        //init();
+        init();
     }
 });
 
@@ -11,17 +11,9 @@ function init() {
 
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
+
         updateTotal(products);
-
-        var arrayLength = products.length;
-        for (var i = 0; i < arrayLength; i++) {
-            var qty = document.getElementById('item-' + products[i].id + '-qty');
-            qty.value = products[i].qty;
-
-            var removebutton = document.getElementById('item-' + products[i].id + '-remove');
-            removebutton.classList.remove("disabled");
-            removebutton.disabled = false;
-        }
+        updateTable(products);
     }
 }
 
@@ -65,6 +57,7 @@ function removeFromCart(index) {
 function updateTotal(products) {
     var sum = 0.0;
     var arrayLength = products.length;
+
     for (var i = 0; i < arrayLength; i++) {
         console.log(products[i]);
         sum += products[i].price * products[i].qty;
@@ -84,5 +77,30 @@ function clearCart() {
     checkout_btn.classList.add("disabled");
     document.getElementById('total-price').innerHTML = '$' + sum.toFixed(2);
 
-    updateTable();
+    let products = [];
+    updateTable(products);
+}
+
+function updateTable(products) {
+    var text = 
+    '<div class="table-responsive">' +
+        '<table class="table table-striped table-hover table-items">' +
+            '<thead>' +
+                '<tr>' +
+                    '<th width="20%">Name</th>' +
+                    '<th width="10%">Price</th>' +
+                    '<th width="20%">Qty</th>' +
+                    '<th width="30%">Action</th>' +
+                '</tr>' +
+            '</thead>' +
+            '<tbody>';
+
+    
+    
+    text +=
+            '</tbody>' +
+        '</table>' +
+    '</div>';
+
+    document.getElementById('item-contents').innerHTML = text;
 }
