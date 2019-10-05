@@ -2,6 +2,7 @@ body {
     background-color: #87cefa;
 }
 
+/*
 .row-striped:nth-of-type(odd){
     background-color: #ffffff;
   }
@@ -9,6 +10,7 @@ body {
 .row-striped:nth-of-type(even){
     background-color: #b9b9b9;
 }
+*/
 
 thead, tbody, tr, td, th { 
     display: block; 
@@ -35,10 +37,10 @@ table {
     width: 100%;
 }
 
-table td {
+table td, table th {
     white-space: nowrap;
 }
 
-table td:last-child {
+table td:last-child, table th:last-child {
     width: 100%;
 }
