@@ -63,7 +63,7 @@ $width = 100;
     <table class="table table-striped table-hover table-items">
         <thead>
         <tr>
-            <th width="20%";>Picture</th>
+            <th width="20%">Picture</th>
             <th width="20%">Name</th>
             <th width="10%">Price</th>
             <th width="10%">Qty</th>
