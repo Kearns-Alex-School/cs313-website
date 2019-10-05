@@ -27,6 +27,18 @@ tbody {
 }
 
 tbody td, thead th {
-    /*width: 1%;*/
+    /*width: 20%;*/
     float: left;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    white-space: nowrap;
+}
+
+table td:last-child {
+    width: 100%;
 }
