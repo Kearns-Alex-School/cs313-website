@@ -45,7 +45,7 @@
 
                     <a href="../../../php/shopping-cart/checkout.php" type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</a>
 
-                    <button type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Remove All</button>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Remove All</a>
                 </div>
             </div>
 

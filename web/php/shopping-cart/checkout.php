@@ -10,7 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
-        <script src="../../../js/review-cart.js"></script>
+        <script src="../../../js/checkout.js"></script>
     </head>
     
     <body class="container-fluid">

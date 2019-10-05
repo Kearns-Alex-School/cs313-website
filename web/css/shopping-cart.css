@@ -27,10 +27,10 @@ td {
     padding: 0px;
 }
 
-#lnamevalid, #fnamevalid {
+#fname, #lname {
     width: 300px;
 }
 
-#lnamevalid, #fnamevalid, #addressvalid {
+#fnamevalid, #lnamevalid, #addressvalid {
     color: red;
 }
