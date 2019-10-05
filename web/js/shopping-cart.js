@@ -7,6 +7,7 @@ function addToCart(index) {
     removebutton.disabled = false;
 
     document.getElementById('checkout-btn').disabled = false;
+    document.getElementById('checkout-btn').classList.remove("disabled");
 
     let products = [];
     if(localStorage.getItem('products')){
@@ -43,6 +44,7 @@ function updateTotal(products) {
 
     if (arrayLength == 0) {
         document.getElementById('checkout-btn').disabled = true;
+        document.getElementById('checkout-btn').classList.add("disabled");
     }
     document.getElementById('total-price').innerHTML = '$' + sum.toFixed(2);
 }
@@ -59,4 +61,7 @@ function clearCart() {
         var qty = document.getElementById('item-' + i + '-qty');
         qty.value = 0;
     }
+
+    document.getElementById('checkout-btn').disabled = true;
+    document.getElementById('checkout-btn').classList.add("disabled");
 }
