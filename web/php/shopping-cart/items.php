@@ -88,8 +88,10 @@ $width = 100;
                     <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
                 </td>
                 <td>
-                    <button id="item'.$temp_index.'-add">Add</button>
-                    <button id="item'.$temp_index.'-remove">Remove</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="item'.$temp_index.'-add">Add</button>
+                        <button type="button" class="btn btn-danger disabled" id="item'.$temp_index.'-remove">Remove</button>
+                    </div>
                 </td>
             </tr>';
 

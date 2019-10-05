@@ -38,7 +38,8 @@ session_start();
                     <?php include ($_SERVER['DOCUMENT_ROOT']."/php/shopping-cart/items.php");?>
                 </div>
                 <div class="col-sm-4">
-                
+                    <button type="button" class="btn btn-success">Checkout</button>
+                    <button type="button" class="btn btn-danger">Reset</button>
                 </div>
             </div>
 
