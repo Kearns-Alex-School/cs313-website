@@ -37,8 +37,6 @@
                 <div class="col-sm-4">
                     <h1 class="display-4 text-center">Total</h1>
 
-                    <br>
-
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
                     <a href="../../../pages/assignments/shopping-cart/cart.php" type="button" class="btn btn-primary btn-lg btn-block" >Check Cart</a>

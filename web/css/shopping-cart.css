@@ -27,10 +27,6 @@ td {
     padding: 0px;
 }
 
-/*#fname, #lname {
-    width: 200px;
-}*/
-
 #fnamevalid, #lnamevalid, #addressvalid {
     color: red;
 }

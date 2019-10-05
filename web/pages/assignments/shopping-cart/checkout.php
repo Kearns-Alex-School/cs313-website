@@ -48,8 +48,6 @@
                 <div class="col-sm-4">
                     <h1 class="display-4 text-center">Total</h1>
 
-                    <br>
-
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
                     <div class="form-group">
@@ -75,33 +73,7 @@
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</a>
                 </div>
             </div>
-
-            <div class="row">
-                <!--div class="col-sm-4">
-                    <label for="fname">First Name</label>
-                    <span id="fnamevalid"> *</span>
-                    <br />
-                    <input name="fname" type="text" id="fname" size="3" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
-                </div>
-                <div class="col-sm-4">
-                    <label for="lname">Last Name</label>
-                    <span id="lnamevalid"> *</span>
-                    <br />
-                    <input name="lname" type="text" id="lname" size="3" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
-                </div>
-                <div class="col-sm-4">
-                    <label for="address">Address</label>
-                    <span id="addressvalid"> *</span>
-                    <br />
-                    <input name="address" style="width:300px" type="text" id="address" size="3" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
-                </div-->
-
-            </div>
-
-            
         </div>
-
-
 
         <!-- Footer -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
