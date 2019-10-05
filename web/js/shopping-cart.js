@@ -1,4 +1,4 @@
-var checkout_btn = document.getElementById('checkout-btn');
+var checkout_btn;
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === "complete") {
@@ -7,6 +7,8 @@ document.addEventListener('readystatechange', event => {
 });
 
 function init() {
+    checkout_btn = document.getElementById('checkout-btn');
+
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
         updateTotal(products);
