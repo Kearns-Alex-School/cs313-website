@@ -25,7 +25,7 @@ tbody {
     height: 425px;
     overflow-y: auto;
     display: table-row-group;
-    display: table-row-group;
+    vertical-align: middle;
 }
 
 td, th {
