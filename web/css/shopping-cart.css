@@ -10,15 +10,8 @@ body {
     background-color: #b9b9b9;
 }
 
-thead, tbody, tr, td, th { 
+thead tr , tbody { 
     display: block; 
-}
-
-tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
 }
 
 tbody {
@@ -26,6 +19,6 @@ tbody {
     overflow-y: auto;
 }
 
-tbody td, thead th {
+th {
     float: left;
 }
