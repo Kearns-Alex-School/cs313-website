@@ -26,3 +26,11 @@ th {
 td {
     padding: 0px;
 }
+
+#lnamevalid, #fnamevalid {
+    width: 300px;
+}
+
+#lnamevalid, #fnamevalid, #addressvalid {
+    color: red;
+}

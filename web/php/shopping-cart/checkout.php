@@ -52,10 +52,33 @@
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
                     <form action="../../../php/shopping-cart/confirmation.php" method="post">
-                        <button type="submit" class="btn btn-success btn-lg btn-block" disabled id="checkout-btn" >Checkout</button>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</button>
+
                         <button type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</button>
                     </form>
                 </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="fname">First Name</label>
+                    <span id="fnamevalid"> *</span>
+                    <br />
+                    <input name="fname" type="text" id="fname" size="3" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
+                </div>
+                <div class="col-sm-3">
+                    <label for="lname">Last Name</label>
+                    <span id="lnamevalid"> *</span>
+                    <br />
+                    <input name="lname" type="text" id="lname" size="3" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
+                </div>
+                <div class="col-sm-6">
+                    <label for="address">Address</label>
+                    <span id="addressvalid"> *</span>
+                    <br />
+                    <input name="address" style="width:300px" type="text" id="address" size="3" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
+                </div>
+
             </div>
 
             
