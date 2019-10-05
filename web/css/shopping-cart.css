@@ -22,3 +22,8 @@ tbody {
 th {
     float: left;
 }
+
+td {
+    padding: 0px;
+    display: flow-root;
+}
