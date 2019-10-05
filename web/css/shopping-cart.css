@@ -26,8 +26,9 @@ tbody {
     overflow-y: auto;
 }
 
-tbody td, thead th {
-    top: 50%;
-    vertical-align: middle;
+td, th {
+    position:absolute;
+    top:50%;
+    /*vertical-align: middle;*/
     float: left;
 }
