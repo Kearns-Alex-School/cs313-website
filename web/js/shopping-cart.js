@@ -3,7 +3,8 @@ function addToCart(index) {
     var qty   = document.getElementById('item-' + index + '-qty').value;
     var name  = document.getElementById('item-' + index + '-name').innerHTML;
     var removebutton = document.getElementById('item-' + index + '-remove');
-    removebutton.classList.remove("disabled")
+    removebutton.classList.remove("disabled");
+    removebutton.setAttribute("disable", "none");
 
     let products = [];
     if(localStorage.getItem('products')){
@@ -17,13 +18,14 @@ function addToCart(index) {
 
 function removeFromCart(index) {
     let storageProducts = JSON.parse(localStorage.getItem('products'));
-    let products = storageProducts.filter(product => product.id !== index );
+    let products = storageProducts.filter(product => product.id !== index);
     localStorage.setItem('products', JSON.stringify(products));
 
     updateTotal(products);
 
     var removebutton = document.getElementById('item-' + index + '-remove');
-    removebutton.classList.add("disabled")
+    removebutton.classList.add("disabled");
+    removebutton.setAttribute("disable", "disable");
     var qty = document.getElementById('item-' + index + '-qty');
     qty.value = 0;
 }
@@ -45,7 +47,8 @@ function clearCart() {
 
     for (var i = 0; i < 10; i++) {
         var removebutton = document.getElementById('item-' + i + '-remove');
-        removebutton.classList.add("disabled")
+        removebutton.classList.add("disabled");
+        removebutton.setAttribute("disable", "disable");
         var qty = document.getElementById('item-' + i + '-qty');
         qty.value = 0;
     }
