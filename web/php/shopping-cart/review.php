@@ -27,21 +27,38 @@
             
             <br>
 
-            <table class="table table-striped table-hover table-items">
-                <thead>
-                    <tr>
-                        <th width="20%">Name</th>
-                        <th width="10%">Price</th>
-                        <th width="20%">Qty</th>
-                        <th width="30%">Sub Total</th>
-                    </tr>
-                </thead>
-                <tbody id="table-contents">
+            <div class="row">
+                <div class="col-sm-8">
+                    <table class="table table-striped table-hover table-items">
+                        <thead>
+                            <tr>
+                                <th width="20%">Name</th>
+                                <th width="10%">Price</th>
+                                <th width="20%">Qty</th>
+                                <th width="30%">Sub Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-contents">
 
-                    <!-- Run JS to populate table rows -->
+                            <!-- Run JS to populate table rows -->
 
-                </tbody>
-            </table>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="display-4 text-center">Total</h1>
+
+                    <br>
+
+                    <h2 class="display-4 text-center" id="total-price">$0.00</h2>
+                    <form action="../../../php/shopping-cart/confirmation.php" method="post">
+                        <button type="submit" class="btn btn-success btn-lg btn-block" disabled id="checkout-btn" >Checkout</button>
+                        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</button>
+                    </form>
+                </div>
+            </div>
+
+            
         </div>
 
 

@@ -22,4 +22,5 @@ function init() {
     }
 
     document.getElementById('table-contents').innerHTML = text;
+    document.getElementById('total-price').innerHTML = '$' + total.toFixed(2);
 }
