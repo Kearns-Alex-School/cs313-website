@@ -26,12 +26,10 @@ tbody {
     overflow-y: auto;
 }
 
-td, th {
+.table td, .table  th {
     display: flex;
     align-items: center;
+    text-align: left;
+    vertical-align: middle;
     float: left;
-}
-
-p {
-    margin-bottom: 0;
 }
