@@ -51,6 +51,21 @@
                     <br>
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
+
+                    <label for="fname">First Name</label>
+                        <span id="fnamevalid"> *</span>
+                        <br />
+                        <input name="fname" type="text" id="fname" size="3" onInput="checkName('fname', 'fnamevalid')" placeholder="First Name..." />
+
+                    <label for="lname">Last Name</label>
+                        <span id="lnamevalid"> *</span>
+                        <br />
+                        <input name="lname" type="text" id="lname" size="3" onInput="checkName('lname', 'lnamevalid')" placeholder="Last Name..." />
+
+                    <label for="address">Address</label>
+                        <span id="addressvalid"> *</span>
+                        <br />
+                        <input name="address" style="width:300px" type="text" id="address" size="3" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
                     
                     <a href="../../../pages/assignments/shopping-cart/confirmation.php" type="button" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>
 
@@ -59,7 +74,7 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-4">
+                <!--div class="col-sm-4">
                     <label for="fname">First Name</label>
                     <span id="fnamevalid"> *</span>
                     <br />
@@ -76,7 +91,7 @@
                     <span id="addressvalid"> *</span>
                     <br />
                     <input name="address" style="width:300px" type="text" id="address" size="3" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
-                </div>
+                </div-->
 
             </div>
 
