@@ -27,7 +27,6 @@ tbody {
 }
 
 tbody td, thead th {
-    /*width: 20%;*/
-    width: fit-content;
+    width: 20%;
     float: left;
 }
