@@ -70,7 +70,7 @@
                         <input type="text" name="address" id="address" class="form-control" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
                     </div>
                     
-                    <input type="submit" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</input>
+                    <a type="submit" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>
 
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Go Back</a>
                 </div>

@@ -12,7 +12,7 @@ function init() {
     var arrayLength = products.length;
     for (var i = 0; i < arrayLength; i++) {
         text += 
-        '<li>' + products[i].qty + ' ' + products[i].name '</li>';
+        '<li>' + products[i].qty + ' ' + products[i].name + '</li>';
     }
 
     text += 
