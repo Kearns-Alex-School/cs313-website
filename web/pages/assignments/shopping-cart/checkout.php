@@ -29,6 +29,8 @@
 
             <div class="row">
                 <div class="col-sm-8">
+                    <br>
+
                     <table class="table table-striped table-hover table-items">
                         <thead>
                             <tr>
@@ -65,7 +67,7 @@
                     <div class="form-group">
                         <label for="address">Address:</label>
                         <span id="addressvalid"> *</span>
-                        <input type="text" id="address" class="form-control" onInput="checkName('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
+                        <input type="text" id="address" class="form-control" onInput="checkAddress('address', 'addressvalid')" placeholder="12345 road rd. City, ST 12345" />
                     </div>
                     
                     <a href="../../../pages/assignments/shopping-cart/confirmation.php" type="button" class="btn btn-success btn-lg btn-block" onclick="return checkAll()">Checkout</a>

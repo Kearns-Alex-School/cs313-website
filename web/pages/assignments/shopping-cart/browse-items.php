@@ -30,6 +30,7 @@
 
             <div class="row">
                 <div class="col-sm-8">
+                    <br>
 
                     <!-- Product Table -->
                     <?php include ($_SERVER['DOCUMENT_ROOT']."/php/shopping-cart/items.php");?>
