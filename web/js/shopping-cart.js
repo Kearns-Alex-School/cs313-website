@@ -1,3 +1,10 @@
+window.onload = function() {
+    if(localStorage.getItem('products')){
+        products = JSON.parse(localStorage.getItem('products'));
+        updateTotal(products);
+    }
+}
+
 function addToCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
     var qty   = document.getElementById('item-' + index + '-qty').value;
