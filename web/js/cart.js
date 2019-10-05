@@ -45,6 +45,7 @@ function updateCart(index) {
     localStorage.setItem('products', JSON.stringify(products));
 
     updateTotal(products);
+    updateTable(products);
 }
 
 function removeFromCart(index) {
@@ -53,6 +54,7 @@ function removeFromCart(index) {
     localStorage.setItem('products', JSON.stringify(products));
 
     updateTotal(products);
+    updateTable(products);
 }
 
 function updateTotal(products) {
@@ -76,7 +78,7 @@ function clearCart() {
 
     checkout_btn.disabled = true;
     checkout_btn.classList.add("disabled");
-    document.getElementById('total-price').innerHTML = '$' + sum.toFixed(2);
+    document.getElementById('total-price').innerHTML = '$0.00';
 
     let products = [];
     updateTable(products);
@@ -94,14 +96,34 @@ function updateTable(products) {
                     '<th width="30%">Action</th>' +
                 '</tr>' +
             '</thead>' +
-            '<tbody>';
+            '<tbody>'
+    ;
 
-    
-    
+    var arrayLength = products.length;
+    for (var i = 0; i < arrayLength; i++) {
+        text += 
+                '<tr>' +
+                    '<td width="20%" id="item-' + i + '-name">' + products[i].name + '</td>' +
+                    '<td width="10%" id="item-' + i + '-price">' + products[i].price + '</td>' +
+                    '<td width="20%">' +
+                        '<input id="item-' + i + '-qty" class="form-control" type="number" min="0" value="' + products[i].qty + '"/>' +
+                    '</td>' +
+                    '<td width="30%">' +
+                        '<div class="btn-group">' +
+                            '<button type="button" class="btn btn-success" id="item-' + i + '-add" onclick="updateCart(' + i + ')">Update</button>' +
+                            
+                            '<button type="button" class="btn btn-danger disabled" disabled id="item-' + i + '-remove" onclick="removeFromCart(' + i + ')">Remove</button>' +
+                        '</div>' +
+                    '</td>' +
+                '</tr>'
+        ;
+    }
+
     text +=
             '</tbody>' +
         '</table>' +
-    '</div>';
+    '</div>'
+    ;
 
     document.getElementById('item-contents').innerHTML = text;
 }

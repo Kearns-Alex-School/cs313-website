@@ -28,7 +28,7 @@ function init() {
     }
 }
 
-function addToCart(index) {
+function updateCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
     var qty   = document.getElementById('item-' + index + '-qty');
     var name  = document.getElementById('item-' + index + '-name').innerHTML;

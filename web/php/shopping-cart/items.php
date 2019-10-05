@@ -89,7 +89,7 @@ $width = 100;
                 </td>
                 <td width="30%">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-success" id="item-'.$temp_index.'-add" onclick="addToCart('.$temp_index.')">Update</button>
+                        <button type="button" class="btn btn-success" id="item-'.$temp_index.'-add" onclick="updateCart('.$temp_index.')">Update</button>
                         
                         <button type="button" class="btn btn-danger disabled" disabled id="item-'.$temp_index.'-remove" onclick="removeFromCart('.$temp_index.')">Remove</button>
                     </div>
