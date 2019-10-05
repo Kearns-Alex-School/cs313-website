@@ -82,8 +82,8 @@ $width = 100;
                 <td width="20%">
                     <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'" width="'.$width.'">
                 </td>
-                <td width="20%">'.$item[$Name_Index].'</td>
-                <td width="10%" id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
+                <td width="20%"><p>'.$item[$Name_Index].'</p></td>
+                <td width="10%" id="item-'.$temp_index.'-price"><p>'.$item[$Price_Index].'</p></td>
                 <td width="20%">
                     <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
                 </td>
