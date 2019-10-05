@@ -36,7 +36,7 @@ function updateTotal(products) {
         sum += products[i].price * products[i].qty;
     }
 
-    document.getElementById('total-price').innerHTML = '$' + sum;
+    document.getElementById('total-price').innerHTML = '$' + sum.toFixed(2);
 }
 
 function clearCart() {
