@@ -24,6 +24,7 @@ tr:after {
 tbody {
     height: 425px;
     overflow-y: auto;
+    display: table-row-group;
 }
 
 td, th {
