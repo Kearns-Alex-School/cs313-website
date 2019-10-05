@@ -112,7 +112,7 @@ function updateTable(products) {
                         '<div class="btn-group">' +
                             '<button type="button" class="btn btn-success" id="item-' + i + '-add" onclick="updateCart(' + i + ')">Update</button>' +
                             
-                            '<button type="button" class="btn btn-danger disabled" disabled id="item-' + i + '-remove" onclick="removeFromCart(' + i + ')">Remove</button>' +
+                            '<button type="button" class="btn btn-danger" id="item-' + i + '-remove" onclick="removeFromCart(' + i + ')">Remove</button>' +
                         '</div>' +
                     '</td>' +
                 '</tr>'
