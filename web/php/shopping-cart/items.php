@@ -63,11 +63,11 @@ $width = 100;
     <table class="table table-striped table-hover table-items">
         <thead>
         <tr>
-            <th>Picture</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Action</th>
+            <th width="20%";>Picture</th>
+            <th width="20%">Name</th>
+            <th width="10%">Price</th>
+            <th width="10%">Qty</th>
+            <th width="40%">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -79,15 +79,15 @@ $width = 100;
         {
             echo '
             <tr>
-                <td>
+                <td width="20%">
                     <img class="product" src="'.$root.$item[$Picture_Index].'" alt="'.$item[$Name_Index].'" width="'.$width.'">
                 </td>
-                <td>'.$item[$Name_Index].'</td>
-                <td id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
-                <td>
+                <td width="20%">'.$item[$Name_Index].'</td>
+                <td width="10%" id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
+                <td width="10%">
                     <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
                 </td>
-                <td>
+                <td width="40%">
                     <div class="btn-group">
                         <button type="button" class="btn btn-success" id="item'.$temp_index.'-add" onclick="">Add</button>
                         
