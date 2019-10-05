@@ -41,9 +41,9 @@
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
-                    <a href="../../../pages/shopping-cart/review.php" type="button" class="btn btn-primary btn-lg btn-block" >Check Cart</a>
+                    <a href="../../../pages/assignments/shopping-cart/review.php" type="button" class="btn btn-primary btn-lg btn-block" >Check Cart</a>
 
-                    <a href="../../../pages/shopping-cart/checkout.php" type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</a>
+                    <a href="../../../pages/assignments/shopping-cart/checkout.php" type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</a>
 
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Remove All</a>
                 </div>

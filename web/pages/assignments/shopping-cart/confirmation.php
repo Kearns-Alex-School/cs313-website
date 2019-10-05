@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-sm-4">
                     
-                    <a href="../../../pages/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse</a>
+                    <a href="../../../pages/assignments/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse</a>
 
                 </div>
             </div>
