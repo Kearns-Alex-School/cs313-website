@@ -4,7 +4,9 @@ function addToCart(index) {
     var name  = document.getElementById('item-' + index + '-name').innerHTML;
     var removebutton = document.getElementById('item-' + index + '-remove');
     removebutton.classList.remove("disabled");
-    removebutton.setAttribute("disable", "none");
+    removebutton.disabled = false;
+
+    document.getElementById('checkout-btn').disabled = false;
 
     let products = [];
     if(localStorage.getItem('products')){
@@ -25,7 +27,8 @@ function removeFromCart(index) {
 
     var removebutton = document.getElementById('item-' + index + '-remove');
     removebutton.classList.add("disabled");
-    removebutton.setAttribute("disable", "disable");
+    removebutton.disabled = true;
+
     var qty = document.getElementById('item-' + index + '-qty');
     qty.value = 0;
 }
@@ -38,6 +41,9 @@ function updateTotal(products) {
         sum += products[i].price * products[i].qty;
     }
 
+    if (arrayLength == 0) {
+        document.getElementById('checkout-btn').disabled = true;
+    }
     document.getElementById('total-price').innerHTML = '$' + sum.toFixed(2);
 }
 
@@ -48,7 +54,8 @@ function clearCart() {
     for (var i = 0; i < 10; i++) {
         var removebutton = document.getElementById('item-' + i + '-remove');
         removebutton.classList.add("disabled");
-        removebutton.setAttribute("disable", "disable");
+        removebutton.disabled = true;
+
         var qty = document.getElementById('item-' + i + '-qty');
         qty.value = 0;
     }
