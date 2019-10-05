@@ -11,7 +11,7 @@ body {
 }
 
 thead, tbody, tr, td, th { 
-    display: block; 
+    display: block;
 }
 
 tr:after {
@@ -24,12 +24,10 @@ tr:after {
 tbody {
     height: 425px;
     overflow-y: auto;
-    display: table-row-group;
-    vertical-align: middle;
 }
 
 td, th {
-    text-align: center;
-	vertical-align: middle;
+    display: flex;
+    align-items: center;
     float: left;
 }
