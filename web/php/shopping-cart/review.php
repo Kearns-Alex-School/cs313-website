@@ -27,6 +27,21 @@
             
             <br>
 
+            <table class="table table-striped table-hover table-items">
+                <thead>
+                    <tr>
+                        <th width="20%">Name</th>
+                        <th width="10%">Price</th>
+                        <th width="20%">Qty</th>
+                        <th width="30%">Sub Total</th>
+                    </tr>
+                </thead>
+                <tbody id="table-contents">
+
+                    <!-- Run JS to populate table rows -->
+
+                </tbody>
+            </table>
         </div>
 
         <!-- Footer -->
