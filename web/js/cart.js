@@ -62,7 +62,7 @@ function updateTotal(products) {
     var arrayLength = products.length;
 
     for (var i = 0; i < arrayLength; i++) {
-        console.log(products[i]);
+        //console.log(products[i]);
         sum += products[i].price * products[i].qty;
     }
 
