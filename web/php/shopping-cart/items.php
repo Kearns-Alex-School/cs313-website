@@ -67,7 +67,7 @@ $width = 100;
             <th>Name</th>
             <th>Price</th>
             <th>Qty</th>
-            <th>Add</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -89,8 +89,9 @@ $width = 100;
                 </td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-success" id="item'.$temp_index.'-add">Add</button>
-                        <button type="button" class="btn btn-danger disabled" id="item'.$temp_index.'-remove">Remove</button>
+                        <button type="button" class="btn btn-success" id="item'.$temp_index.'-add" onclick="">Add</button>
+                        
+                        <button type="button" class="btn btn-danger disabled" id="item'.$temp_index.'-remove" onclick="">Remove</button>
                     </div>
                 </td>
             </tr>';

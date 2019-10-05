@@ -44,8 +44,8 @@ session_start();
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
-                    <button type="button" class="btn btn-success">Checkout</button>
-                    <button type="button" class="btn btn-danger">Reset</button>
+                    <button type="button" class="btn btn-success btn-lg btn-block">Checkout</button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block">Reset</button>
                 </div>
             </div>
 
