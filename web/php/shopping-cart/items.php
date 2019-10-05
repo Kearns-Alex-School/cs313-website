@@ -85,7 +85,7 @@ $width = 100;
                 <td width="20%" id="item-'.$temp_index.'-name">'.$item[$Name_Index].'</td>
                 <td width="10%" id="item-'.$temp_index.'-price">'.$item[$Price_Index].'</td>
                 <td width="20%">
-                    <input id="item-'.$temp_index.'-qty" class="form-control" type="number" value="0"/>
+                    <input id="item-'.$temp_index.'-qty" class="form-control" type="number" min="0" value="0"/>
                 </td>
                 <td width="30%">
                     <div class="btn-group">
