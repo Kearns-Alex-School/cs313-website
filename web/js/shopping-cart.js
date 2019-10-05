@@ -1,7 +1,6 @@
 var checkout_btn = document.getElementById('checkout-btn');
-
-
-window.addEventListener("load", function() {
+/*
+window.onload = function() {
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
         updateTotal(products);
@@ -19,7 +18,7 @@ window.addEventListener("load", function() {
             removebutton.disabled = false;
         }
     }
-});
+}*/
 
 function addToCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
