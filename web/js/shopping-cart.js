@@ -1,6 +1,7 @@
 var checkout_btn = document.getElementById('checkout-btn');
 
-window.onload = function() {
+
+window.addEventListener("load", function() {
     if(localStorage.getItem('products')){
         products = JSON.parse(localStorage.getItem('products'));
         updateTotal(products);
@@ -18,7 +19,7 @@ window.onload = function() {
             removebutton.disabled = false;
         }
     }
-}
+});
 
 function addToCart(index) {
     var price = document.getElementById('item-' + index + '-price').innerHTML;
