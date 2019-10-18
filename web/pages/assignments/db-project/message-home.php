@@ -33,16 +33,16 @@ $db = get_db();
 
             <form action="#" method="post">
                     <div class="form-group">
-                        <label for="fname">User:</label>
+                        <label for="user">User:</label>
                         <input type="text" name="user" id="user" class="form-control" placeholder="user name" />
                     </div>
 
                     <div class="form-group">
-                        <label for="lname">Password:</label>
-                        <input type="text" name="password" id="password" class="form-control" placeholder="Password" />
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
                     </div>
                     
-                    <input type="submit" value="Login" class="btn btn-success btn-lg btn-block">
+                    <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
 
                     <input type="submit" value="Create" class="btn btn-success btn-lg btn-block">
 
