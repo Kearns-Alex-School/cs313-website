@@ -11,7 +11,7 @@
         </a>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/pages/assignments/shopping-cart/browse-items.php">PHP Shopping Cart</a>
-            <a class="dropdown-item disabled" href="#">Assignment</a>
+            <a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/pages/assignments/db-project/message-home.php">Project 1</a>
             <a class="dropdown-item disabled" href="#">Assignment</a>
             <a class="dropdown-item disabled" href="#">Assignment</a>
         </div>

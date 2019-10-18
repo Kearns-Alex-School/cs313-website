@@ -6,7 +6,7 @@
     <h2>
         <nav class="nav flex-column">
             <a class="nav-link text-info" href="../pages/assignments/shopping-cart/browse-items.php">PHP Shopping Cart</a>
-            <a class="nav-link text-info" href="#">Assignment</a>
+            <a class="nav-link text-info" href="../pages/assignments/db-project/message-home.php">Project 1</a>
             <a class="nav-link text-info" href="#">Assignment</a>
             <a class="nav-link text-info" href="#">Assignment</a>
         </nav>
