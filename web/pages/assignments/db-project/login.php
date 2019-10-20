@@ -11,13 +11,13 @@ if ( ! empty( $_POST ) ) {
         // Getting submitted user data from database
         $foo = htmlspecialchars($_POST['username']);
 
-        /*$stmt = $db->prepare('SELECT * FROM t_user WHERE user_name = :id');
-        $stmt->bind_param(':id', $foo, PDO::PARAM_STR);
+        $stmt = $db->prepare('SELECT * FROM t_user WHERE user_name=:id');
+        $stmt->bind_Value(':id', $foo, PDO::PARAM_STR);
         $stmt->execute();
 
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
-        /*$result = $stmt->get_result();
-        $user = $result->fetch_object();*/
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->get_result();
+        $user = $result->fetch_object();
         
         //console_log($stmt);
     		
