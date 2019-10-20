@@ -1,7 +1,7 @@
 <?php
 require "dbConnect.php";
 $db = get_db();
-session_start();
+/*session_start();
 
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
@@ -23,13 +23,7 @@ if ( ! empty( $_POST ) ) {
             echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
         }
     }
-}
-
-$user_check = $_SESSION['login_user'];
-
-$statement = $db->prepare("SELECT user_name FROM t_user WHERE user_name = '$user_check'");
-$statement->execute();
-
+}*/
 ?>
 
 <!DOCTYPE html>
