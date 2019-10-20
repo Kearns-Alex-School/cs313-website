@@ -16,6 +16,12 @@ if ( ! empty( $_POST ) ) {
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($rows as $row)
+{
+  //<b>John 3:16</b> - "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+  console_log('<p>' . $row['user_id'] . ' _ ' . $row['user_name'] . ' _ ' . $row['user_password'] . ' _ ' . $row['user_email'] . '</p>');
+}
         /*$result = $stmt->get_result();
         $user = $result->fetch_object();*/
         
