@@ -11,8 +11,8 @@ if ( ! empty( $_POST ) ) {
         // Getting submitted user data from database
         $foo2 = htmlspecialchars($_POST['username']);
 
-        $stmt = $db->prepare("Select * from t_user where user_name=:id");
-        $stmt->bind_Value(':id', $foo2, PDO::PARAM_STR);
+        $stmt = $db->prepare("Select * from t_user where user_name='admin'");
+        //$stmt->bind_Value(':id', $foo2, PDO::PARAM_STR);
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
