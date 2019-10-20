@@ -11,7 +11,7 @@ if ( ! empty( $_POST ) ) {
         // Getting submitted user data from database
         $foo2 = htmlspecialchars($_POST['username']);
 
-        $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name=:id");
+        $stmt = $db->prepare("Select * from t_user where user_name=:id");
         $stmt->bind_Value(':id', $foo2, PDO::PARAM_STR);
         $stmt->execute();
 
