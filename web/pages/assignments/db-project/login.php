@@ -97,9 +97,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 echo "<p>$stmt</p>";
 echo "<p>$user</p>";
 if ( ! empty( $_POST ) ) {
+    $foo = $_POST['username'];
     foreach ($_POST as $key => $value) {
         echo "<p>$key - $value</p>";
-        echo "<p>$_POST['username']</p>";
+        echo "<p>$foo</p>";
     }
 }
 
