@@ -9,9 +9,9 @@ $foo2 = 'og';
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $foo2 = htmlspecialchars($_POST['username']);
+        /*$foo2 = htmlspecialchars($_POST['username']);
 
-        $stmt = $db->prepare('SELECT * FROM t_user WHERE user_name=:id');
+        $stmt = $db->prepare('SELECT * FROM t_user WHERE user_name=:id');*/
         /*$stmt->bind_Value(':id', $foo, PDO::PARAM_STR);
         $stmt->execute();
 
@@ -102,12 +102,21 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 echo "<p>$stmt</p>";
 echo "<p>$user</p>";
 if ( ! empty( $_POST ) ) {
+    echo "<p>POST</p>";
     $foo = $_POST['username'];
     foreach ($_POST as $key => $value) {
         echo "<p>$key - $value</p>";
     }
 
-    echo "<p>$foo2</p>";
+    //echo "<p>$foo2</p>";
+}
+
+if ( ! empty( $_GET ) ) {
+    echo "<p>GET</p>";
+    foreach ($_GET as $key => $value) {
+        echo "<p>$key - $value</p>";
+    }
+
 }
 
 ?>
