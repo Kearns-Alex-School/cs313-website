@@ -3,7 +3,6 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 $stmt = 'og';
-$result = 'og'
 $user = 'og';
 
 if ( ! empty( $_POST ) ) {
