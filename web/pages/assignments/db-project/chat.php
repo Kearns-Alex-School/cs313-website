@@ -50,21 +50,22 @@ $db = get_db();
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php $username; ?>!</h1>
-            <h2>Char <?php $roomname; ?></h2>
+            <h2>Chat <?php $roomname; ?></h2>
 
             <p>Messages will be displayed here</p>
 
+            <?php
+
+            ?>
+
             <form action="#" method="POST">
                 <div class="form-group">
-                    <input type="text" name="room" id="room" class="form-control" placeholder="search rooms" />
+                    <input type="text" name="message" id="message" class="form-control" placeholder="message" />
                 </div>
                 
                 <input type="submit" value="Send" class="btn btn-primary btn-lg">
             </form>
         </div>
-
-        <a href=''></a>
-
 
         <!-- Footer -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>

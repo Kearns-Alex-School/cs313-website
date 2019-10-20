@@ -47,17 +47,33 @@ $db = get_db();
             <h1>Welcome <?php $username; ?>!</h1>
             <h2>ChatRooms</h2>
 
-            <form action="#" method="POST">
+            <form>
                 <div class="form-group">
-                    <input type="text" name="room" id="room" class="form-control" placeholder="search rooms" />
+                    <input type="text" name="roomName" id="roomName" class="form-control" placeholder="search rooms" />
                 </div>
                 
                 <input type="submit" value="Search" class="btn btn-primary btn-lg">
             </form>
         </div>
+        
+        <?php
 
-        <a href='chat.php'>List of rooms to join will be here.</a>
+        // Search 
+        $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
+        $stmt->bindValue(':roomName', $_GET['roomName'], PDO::PARAM_STR);
+        $stmt->execute();
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        foreach ($rows as $row)
+        {
+            echo '<p>';
+            echo '<a href="chat.php?">';
+            echo '<b>' . $row['room_name'] . '</b>';
+            echo '</a>';
+            echo '</p>';
+        }
+
+        ?>
 
         <!-- Footer -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
