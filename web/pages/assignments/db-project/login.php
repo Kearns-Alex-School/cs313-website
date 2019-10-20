@@ -94,8 +94,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo "<p><strong>$user_name :$user_email</strong> - \"$user_password\"<p>";
 }
 
-echo "<p>$stmt</p>"
-echo "<p>$user</p>"
+echo "<p>$stmt</p>";
+echo "<p>$user</p>";
 ?>
 
         </div>
