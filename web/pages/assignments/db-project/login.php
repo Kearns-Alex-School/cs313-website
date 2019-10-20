@@ -21,12 +21,9 @@ if ( ! empty( $_POST ) ) {
 
 foreach ($rows as $row)
 {
-  //<b>John 3:16</b> - "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
   console_log('<p>' . $row['user_id'] . ' _ ' . $row['user_name'] . ' _ ' . $row['user_password'] . ' _ ' . $row['user_email'] . '</p>');
   $returned_password = $row['user_password'];
 }
-        /*$result = $stmt->get_result();
-        $user = $result->fetch_object();*/
         
         console_log($stmt);
         console_log($username);
@@ -38,7 +35,7 @@ foreach ($rows as $row)
             $root = $_SERVER['DOCUMENT_ROOT'];
             $dir_path = $root . "/index.php";
             console_log($dir_path);
-            header('https://kearns-cs313.herokuapp.com/index.php');
+            header('Location: https://kearns-cs313.herokuapp.com/index.php');
         }
         else {
             console_log('Fail');
