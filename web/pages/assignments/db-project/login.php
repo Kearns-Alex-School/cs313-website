@@ -82,12 +82,12 @@ if ( ! empty( $_POST ) ) {
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="username">username:</label>
-                    <input type="text" name="username" id="username" class="form-control" placeholder="username" />
+                    <input type="text" name="username" id="username" class="form-control" placeholder="admin" />
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="password" />
+                    <input type="password" name="password" id="password" class="form-control" placeholder="admin" />
                 </div>
                 
                 <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">

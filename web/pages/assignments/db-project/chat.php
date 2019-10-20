@@ -5,12 +5,17 @@
 session_start();
 $username = '';
 $userid = '';
+$roomname = '';
+$roomid = '';
 
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
     // Let them access the "logged in only" pages
     $username = $_SESSION['user'];
     $userid = $_SESSION['userid'];
+    //$roomname = $_SESSION['room'];
+    //$roomid = $_SESSION['roomid'];
+
 } else {
     // Redirect them to the login page
     header("Location: https://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php");
@@ -24,7 +29,7 @@ $db = get_db();
 <html lang="en-US">
 	
     <head>
-        <title>Chatrooms</title>
+        <title>Chat</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -45,18 +50,20 @@ $db = get_db();
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php $username; ?>!</h1>
-            <h2>ChatRooms</h2>
+            <h2>Char <?php $roomname; ?></h2>
+
+            <p>Messages will be displayed here</p>
 
             <form action="#" method="POST">
                 <div class="form-group">
                     <input type="text" name="room" id="room" class="form-control" placeholder="search rooms" />
                 </div>
                 
-                <input type="submit" value="Search" class="btn btn-primary btn-lg">
+                <input type="submit" value="Send" class="btn btn-primary btn-lg">
             </form>
         </div>
 
-        <a href='chat.php'>List of rooms to join will be here.</a>
+        <a href=''></a>
 
 
         <!-- Footer -->
