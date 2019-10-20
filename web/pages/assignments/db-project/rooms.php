@@ -54,36 +54,37 @@ $db = get_db();
                 
                 <input type="submit" value="Search" class="btn btn-primary">
             </form>
-        </div>
-        
-        <?php
 
-        // Search 
-        $roomName = $_GET['roomName'];
-        $stmt = $db->prepare('select * from t_room');
+            <?php
 
-        /*if ($roomName !== '')
-        {
-            $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
-            $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
-        } else {
+            // Search 
+            $roomName = $_GET['roomName'];
             $stmt = $db->prepare('select * from t_room');
-        }*/
-        
-        $stmt->execute();
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach ($rows as $row)
-        {
-            echo '<p>';
-            echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'>';
-            echo '<b>' . $row['room_name'] . '</b>';
-            echo '</a>';
-            echo '</p>';
-            echo '<br>';
-        }
+            /*if ($roomName !== '')
+            {
+                $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
+                $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
+            } else {
+                $stmt = $db->prepare('select * from t_room');
+            }*/
+            
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        ?>
+            foreach ($rows as $row)
+            {
+                echo '<p>';
+                echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'>';
+                echo '<b>' . $row['room_name'] . '</b>';
+                echo '</a>';
+                echo '</p>';
+                echo '<br>';
+            }
+
+            ?>
+
+        </div>
 
         <!-- Footer -->
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/footer.php");?>
