@@ -9,9 +9,11 @@ $foo2 = 'og';
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $foo2 = htmlspecialchars($_POST['username']);
+        $username = htmlspecialchars($_POST['username']);
+        $password = htmlspecialchars($_POST['password']);
+        $returned_password = '';
 
-        $stmt = $db->prepare("Select * from t_user where user_name='admin'");
+        $stmt = $db->prepare("select * from t_user where user_name='admin'");
         //$stmt->bind_Value(':id', $foo2, PDO::PARAM_STR);
         $stmt->execute();
 
@@ -21,27 +23,26 @@ foreach ($rows as $row)
 {
   //<b>John 3:16</b> - "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
   console_log('<p>' . $row['user_id'] . ' _ ' . $row['user_name'] . ' _ ' . $row['user_password'] . ' _ ' . $row['user_email'] . '</p>');
+  $returned_password = $row['user_password'];
 }
         /*$result = $stmt->get_result();
         $user = $result->fetch_object();*/
         
         console_log($stmt);
-        console_log($foo2);
+        console_log($username);
     		
     	// Verify user password and set $_SESSION
-    	/*if ( password_verify( $_POST['password'], $user->password ) ) {
-            $_SESSION['user_id'] = $user->ID;
-            //console_log('Pass');
+    	if ( $password ===, $returned_password ) ) {
+            $_SESSION['user'] = $username;
+            console_log('Pass');
             //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
-        }*/
-        /*else {
-            //console_log('Fail');
+        }
+        else {
+            console_log('Fail');
             //echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
-        }*/
+        }
     }
 }
-//$view_variable = 'a string here';
-//console_log($view_variable);
 ?>
 
 <!DOCTYPE html>
