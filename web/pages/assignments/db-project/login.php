@@ -9,10 +9,10 @@ $foo2 = 'og';
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $foo2 = htmlspecialchars($_POST['username']);
+        //$foo2 = htmlspecialchars($_POST['username']);
 
-        $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name='admin'");
-        //$stmt->bind_Value(':id', $foo, PDO::PARAM_STR);
+        $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name=:id");
+        $stmt->bind_Value(':id', htmlspecialchars($_POST['username']), PDO::PARAM_STR);
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
