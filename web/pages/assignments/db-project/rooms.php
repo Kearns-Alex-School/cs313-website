@@ -61,13 +61,13 @@ $db = get_db();
             $roomName = $_GET['roomName'];
             $stmt = $db->prepare('select * from t_room');
 
-            /*if ($roomName !== '')
+            if ($roomName !== '')
             {
                 $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
                 $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
             } else {
                 $stmt = $db->prepare('select * from t_room');
-            }*/
+            }
             
             $stmt->execute();
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

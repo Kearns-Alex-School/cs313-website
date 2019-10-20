@@ -47,14 +47,12 @@ $db = get_db();
         <!-- Content -->
         <br>
         <div id="content" class="container">
-            <h1>Welcome <?php $username; ?>!</h1>
-            <h2>Chat <?php $roomname; ?></h2>
-
-            <p>Messages will be displayed here</p>
+            <h1>Welcome <?php echo $username; ?>!</h1>
+            <h2>Chat <?php echo $roomname; ?></h2>
 
             <?php
 
-            // Search 
+            //
             $stmt = $db->prepare('select m.message, m.message_created, u.user_name from t_messages m LEFT JOIN users u ON (m.user_id = u.user_id) WHERE room_id=:roomid');
             $stmt->bindValue(':roomid', $roomid, PDO::PARAM_STR);
             $stmt->execute();
