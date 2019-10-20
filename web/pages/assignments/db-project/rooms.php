@@ -80,6 +80,7 @@ $db = get_db();
             echo '<b>' . $row['room_name'] . '</b>';
             echo '</a>';
             echo '</p>';
+            echo '<br>';
         }
 
         ?>
