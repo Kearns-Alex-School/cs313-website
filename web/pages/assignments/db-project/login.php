@@ -98,10 +98,8 @@ echo "<p>$stmt</p>";
 echo "<p>$user</p>";
 if ( ! empty( $_POST ) ) {
     foreach ($_POST as $key => $value) {
-        echo "-----";
-        echo "     $key";
-        echo "     $value";
-        echo "-----";
+        echo "<p>$key - $value</p>";
+        echo "<p>$_POST['username']</p>";
     }
 }
 
