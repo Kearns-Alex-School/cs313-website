@@ -19,7 +19,7 @@ if ( ! empty( $_POST ) ) {
         /*$result = $stmt->get_result();
         $user = $result->fetch_object();*/
         
-        //console_log($stmt);
+        console_log($stmt);
     		
     	// Verify user password and set $_SESSION
     	/*if ( password_verify( $_POST['password'], $user->password ) ) {
