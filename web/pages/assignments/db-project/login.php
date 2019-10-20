@@ -12,20 +12,22 @@ if ( ! empty( $_POST ) ) {
         $result = $stmt->get_result();
         $user = $result->fetch_object();
         
-        console_log($stmt);
+        //console_log($stmt);
     		
     	// Verify user password and set $_SESSION
     	if ( password_verify( $_POST['password'], $user->password ) ) {
             $_SESSION['user_id'] = $user->ID;
-            console_log('Pass');
+            //console_log('Pass');
             //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
         }
         else {
-            console_log('Fail');
+            //console_log('Fail');
             //echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
         }
     }
 }
+$view_variable = 'a string here';
+console_log($view_variable);
 ?>
 
 <!DOCTYPE html>
