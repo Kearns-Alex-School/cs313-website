@@ -75,7 +75,7 @@ $db = get_db();
             foreach ($rows as $row)
             {
                 echo '<p>';
-                echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'>';
+                echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'">';
                 echo '<b>' . $row['room_name'] . '</b>';
                 echo '</a>';
                 echo '</p>';
