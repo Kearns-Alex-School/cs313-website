@@ -52,7 +52,7 @@ $db = get_db();
                     <input type="text" name="roomName" id="roomName" class="form-control" placeholder="search rooms" />
                 </div>
                 
-                <input type="submit" value="Search" class="btn btn-primary btn-lg">
+                <input type="submit" value="Search" class="btn btn-primary">
             </form>
         </div>
         
@@ -60,12 +60,14 @@ $db = get_db();
 
         // Search 
         $roomName = $_GET['roomName'];
-        $stmt = $db->prepare('select * from t_room');
         
+
         if ($roomName !== '')
         {
             $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
             $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
+        } else {
+            $stmt = $db->prepare('select * from t_room');
         }
         
         $stmt->execute();
