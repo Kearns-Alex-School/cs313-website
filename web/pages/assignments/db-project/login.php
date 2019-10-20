@@ -1,7 +1,7 @@
 <?php
 require "dbConnect.php";
 $db = get_db();
-/*session_start();
+session_start();
 
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
@@ -12,18 +12,20 @@ if ( ! empty( $_POST ) ) {
         $result = $stmt->get_result();
         $user = $result->fetch_object();
         
-        echo "<p>$stmt<p>";
+        console_log($stmt);
     		
     	// Verify user password and set $_SESSION
     	if ( password_verify( $_POST['password'], $user->password ) ) {
             $_SESSION['user_id'] = $user->ID;
-            echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
+            console_log('Pass');
+            //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
         }
         else {
-            echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
+            console_log('Fail');
+            //echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
         }
     }
-}*/
+}
 ?>
 
 <!DOCTYPE html>
