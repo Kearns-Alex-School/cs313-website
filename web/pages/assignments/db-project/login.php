@@ -16,8 +16,8 @@ if ( ! empty( $_POST ) ) {
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $result = $stmt->get_result();
-        $user = $result->fetch_object();
+        /*$result = $stmt->get_result();
+        $user = $result->fetch_object();*/
         
         //console_log($stmt);
     		
