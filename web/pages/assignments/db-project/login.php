@@ -35,6 +35,7 @@ foreach ($rows as $row)
     	if ($password === $returned_password) {
             $_SESSION['user'] = $username;
             console_log('Pass');
+            header($_SERVER['DOCUMENT_ROOT'] . "/index.php");
             //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
         }
         else {
