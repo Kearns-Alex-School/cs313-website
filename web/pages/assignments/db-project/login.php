@@ -12,7 +12,7 @@ if ( ! empty( $_POST ) ) {
         $returned_password = '';
         $returned_id = '';
 
-        $sql = "select * from t_user where user_name=" . $username;
+        $sql = "select * from t_user where user_name='" . $username . "'";
 
         $stmt = $db->prepare($sql);
         $stmt->execute();
