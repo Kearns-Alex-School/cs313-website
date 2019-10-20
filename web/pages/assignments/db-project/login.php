@@ -4,17 +4,18 @@ $db = get_db();
 session_start();
 $stmt = 'og';
 $user = 'og';
+$foo = 'og';
 
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
         $foo = htmlspecialchars($_POST['username']);
-        
-        $stmt = $db->prepare('SELECT * FROM t_user WHERE user_name = :id');
+
+        /*$stmt = $db->prepare('SELECT * FROM t_user WHERE user_name = :id');
         $stmt->bind_param(':id', $foo, PDO::PARAM_STR);
         $stmt->execute();
 
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
         /*$result = $stmt->get_result();
         $user = $result->fetch_object();*/
         
@@ -104,8 +105,9 @@ if ( ! empty( $_POST ) ) {
     $foo = $_POST['username'];
     foreach ($_POST as $key => $value) {
         echo "<p>$key - $value</p>";
-        echo "<p>$foo</p>";
     }
+
+    echo "<p>$foo</p>";
 }
 
 ?>
