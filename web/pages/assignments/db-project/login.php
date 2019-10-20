@@ -8,12 +8,15 @@ $user = 'og';
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $foo = $_POST['username'];
+        $foo = htmlspecialchars($_POST['username']);
+        
         $stmt = $db->prepare('SELECT * FROM t_user WHERE user_name = :id');
-        $stmt->bind_param(':id', $foo);
+        $stmt->bind_param(':id', $foo, PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->get_result();
-        $user = $result->fetch_object();
+
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        /*$result = $stmt->get_result();
+        $user = $result->fetch_object();*/
         
         //console_log($stmt);
     		
@@ -62,7 +65,7 @@ if ( ! empty( $_POST ) ) {
             <br>
 
             <!--form action="chat-rooms.php" method="post"-->
-            <form action="#" method="post">
+            <form action="#" method="POST">
                 <div class="form-group">
                     <label for="username">username:</label>
                     <input type="text" name="username" id="username" class="form-control" placeholder="username" />
