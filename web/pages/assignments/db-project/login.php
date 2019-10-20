@@ -61,7 +61,7 @@ if ( ! empty( $_POST ) ) {
             <br>
 
             <!--form action="chat-rooms.php" method="post"-->
-            <form action="" method="post">
+            <form action="#" method="post">
                 <div class="form-group">
                     <label for="username">username:</label>
                     <input type="text" name="username" id="username" class="form-control" placeholder="username" />
@@ -96,7 +96,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
 echo "<p>$stmt</p>";
 echo "<p>$user</p>";
-echo "<p>$_POST['username']</p>"
+if ( ! empty( $_POST ) ) {
+    echo "<p>$_POST['username']</p>"
+}
+
 ?>
 
         </div>
