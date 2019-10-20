@@ -20,6 +20,7 @@ if ( ! empty( $_POST ) ) {
         $user = $result->fetch_object();*/
         
         console_log($stmt);
+        console_log($foo2);
     		
     	// Verify user password and set $_SESSION
     	/*if ( password_verify( $_POST['password'], $user->password ) ) {
@@ -109,14 +110,6 @@ if ( ! empty( $_POST ) ) {
     }
 
     echo "<p>$foo2</p>";
-}
-
-if ( ! empty( $_GET ) ) {
-    echo "<p>GET</p>";
-    foreach ($_GET as $key => $value) {
-        echo "<p>$key - $value</p>";
-    }
-
 }
 
 ?>
