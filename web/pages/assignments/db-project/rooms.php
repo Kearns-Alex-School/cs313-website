@@ -66,22 +66,14 @@ $db = get_db();
 
             // Search 
             $roomName = $_GET['roomName'];
-            $stmt = $db->prepare('select * from t_room');
 
-            if ($visited == false || $roomName === '')
+            if ($visited == false)
             {
                 $stmt = $db->prepare('select * from t_room');
             }
             else {
                 $stmt = $db->prepare("select * from t_room WHERE room_name like '%:roomName%");
                 $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
-            }
-
-            if ($roomName !== '' || $visited == false)
-            {
-                
-            } else {
-                $stmt = $db->prepare('select * from t_room');
             }
             
             $stmt->execute();
