@@ -8,8 +8,8 @@ $user = 'og';
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name = ?");
-        $stmt->bind_param('s', $_POST['username']);
+        $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name = $_POST['username']");
+        //$stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
         $user = $result->fetch_object();
