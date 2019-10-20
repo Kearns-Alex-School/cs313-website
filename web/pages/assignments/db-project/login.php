@@ -96,6 +96,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
 echo "<p>$stmt</p>";
 echo "<p>$user</p>";
+echo "<p>$_POST['username']</p>"
 ?>
 
         </div>
