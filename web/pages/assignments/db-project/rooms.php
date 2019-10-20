@@ -5,6 +5,7 @@
 session_start();
 $username = '';
 $userid = '';
+$roomName = '';
 
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
