@@ -97,7 +97,12 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 echo "<p>$stmt</p>";
 echo "<p>$user</p>";
 if ( ! empty( $_POST ) ) {
-    //echo "<p>$_POST['username']</p>";
+    foreach ($_POST as $key => $value) {
+        echo "-----";
+        echo "     $key";
+        echo "     $value";
+        echo "-----";
+    }
 }
 
 ?>
