@@ -12,8 +12,9 @@ if ( ! empty( $_POST ) ) {
         $returned_password = '';
         $returned_id = '';
 
-        $stmt = $db->prepare("select * from t_user where user_name=:id");
-        $stmt->bind_Value(':id', $username, PDO::PARAM_STR);
+        $sql = "select * from t_user where user_name=" . $username;
+
+        $stmt = $db->prepare($sql);
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -31,7 +32,7 @@ if ( ! empty( $_POST ) ) {
             $_SESSION['userid'] = $returned_id;
 
             console_log('Pass');
-            
+
             $dir_path = 'https://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php';
             header('Location: ' . $dir_path);
         }
