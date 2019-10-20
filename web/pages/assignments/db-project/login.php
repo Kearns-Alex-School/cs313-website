@@ -2,9 +2,7 @@
 require "dbConnect.php";
 $db = get_db();
 session_start();
-$stmt = 'og';
-$user = 'og';
-$foo2 = 'og';
+$login_error = false;
 
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
@@ -12,33 +10,34 @@ if ( ! empty( $_POST ) ) {
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
         $returned_password = '';
+        $returned_id = '';
 
-        $stmt = $db->prepare("select * from t_user where user_name='admin'");
-        //$stmt->bind_Value(':id', $foo2, PDO::PARAM_STR);
+        $stmt = $db->prepare("select * from t_user where user_name=:id");
+        $stmt->bind_Value(':id', $username, PDO::PARAM_STR);
         $stmt->execute();
 
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-foreach ($rows as $row)
-{
-  console_log('<p>' . $row['user_id'] . ' _ ' . $row['user_name'] . ' _ ' . $row['user_password'] . ' _ ' . $row['user_email'] . '</p>');
-  $returned_password = $row['user_password'];
-}
+        foreach ($rows as $row)
+        {
+            $returned_password = $row['user_password'];
+            $returned_id = $row['user_id'];
+        }
         
-        console_log($stmt);
         console_log($username);
     		
     	// Verify user password and set $_SESSION
-    	if ($password === $returned_password) {
+    	if ($password === $returned_password && $password !== '') {
             $_SESSION['user'] = $username;
+            $_SESSION['userid'] = $returned_id;
+
             console_log('Pass');
-            $root = $_SERVER['DOCUMENT_ROOT'];
-            $dir_path = $root . "/index.php";
-            console_log($dir_path);
+            
+            $dir_path = 'https://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php';
             header('Location: ' . $dir_path);
         }
         else {
             console_log('Fail');
+            $login_error = true;
         }
     }
 }
@@ -69,10 +68,16 @@ foreach ($rows as $row)
         <br>
         <div id="content" class="container">
             <h1>Simple Chatroom</h1>
+
+            <?php 
+            if ($login_error == true)
+            {
+                echo '<p class="text-danger">Username or Password was incorrect. Please try again.</p>';
+            }
+            ?>
             
             <br>
 
-            <!--form action="chat-rooms.php" method="post"-->
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="username">username:</label>
@@ -88,37 +93,6 @@ foreach ($rows as $row)
 
                 <input type="button" value="Create" class="btn btn-success btn-lg btn-block">
             </form>
-
-            <?php
-$statement = $db->prepare("SELECT user_name, user_password, user_email FROM t_user");
-$statement->execute();
-
-// Go through each result
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	// The variable "row" now holds the complete record for that
-	// row, and we can access the different values based on their
-	// name
-	$user_name = $row['user_name'];
-	$user_password = $row['user_password'];
-	$user_email = $row['user_email'];
-
-	echo "<p><strong>$user_name :$user_email</strong> - \"$user_password\"<p>";
-}
-
-echo "<p>$stmt</p>";
-echo "<p>$user</p>";
-if ( ! empty( $_POST ) ) {
-    echo "<p>POST</p>";
-    $foo = $_POST['username'];
-    foreach ($_POST as $key => $value) {
-        echo "<p>$key - $value</p>";
-    }
-
-    echo "<p>$foo2</p>";
-}
-
-?>
 
         </div>
 
