@@ -12,10 +12,10 @@ if ( ! empty( $_POST ) ) {
         $foo2 = htmlspecialchars($_POST['username']);
 
         $stmt = $db->prepare("SELECT * FROM t_user WHERE user_name='admin'");
-        /*$stmt->bind_Value(':id', $foo, PDO::PARAM_STR);
+        //$stmt->bind_Value(':id', $foo, PDO::PARAM_STR);
         $stmt->execute();
 
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /*$result = $stmt->get_result();
         $user = $result->fetch_object();*/
         
