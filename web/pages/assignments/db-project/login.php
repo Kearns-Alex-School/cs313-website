@@ -36,7 +36,7 @@ foreach ($rows as $row)
             $_SESSION['user'] = $username;
             console_log('Pass');
             $root = $_SERVER['DOCUMENT_ROOT'];
-            $dir_path = $root + "/index.php";
+            $dir_path = $root . "/index.php";
             console_log($dir_path);
             //header($dir_path);
         }
