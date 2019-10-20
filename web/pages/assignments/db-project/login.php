@@ -32,7 +32,7 @@ foreach ($rows as $row)
         console_log($username);
     		
     	// Verify user password and set $_SESSION
-    	if ( $password ===, $returned_password ) ) {
+    	if ($password === $returned_password) {
             $_SESSION['user'] = $username;
             console_log('Pass');
             //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
