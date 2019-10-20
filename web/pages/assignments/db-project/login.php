@@ -38,7 +38,7 @@ foreach ($rows as $row)
             $root = $_SERVER['DOCUMENT_ROOT'];
             $dir_path = $root + "/index.php";
             console_log($dir_path);
-            header($dir_path);
+            //header($dir_path);
         }
         else {
             console_log('Fail');
