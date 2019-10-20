@@ -5,16 +5,14 @@
 session_start();
 $username = '';
 $userid = '';
-$roomname = '';
-$roomid = '';
+$roomname = $_GET['room'];
+$roomid = $_GET['roomid'];
 
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
     // Let them access the "logged in only" pages
     $username = $_SESSION['user'];
     $userid = $_SESSION['userid'];
-    //$roomname = $_SESSION['room'];
-    //$roomid = $_SESSION['roomid'];
 
 } else {
     // Redirect them to the login page
@@ -55,6 +53,21 @@ $db = get_db();
             <p>Messages will be displayed here</p>
 
             <?php
+
+            // Search 
+            $stmt = $db->prepare('select m.message, m.message_created, u.user_name from t_messages m LEFT JOIN users u ON (m.user_id = u.user_id) WHERE room_id=:roomid');
+            $stmt->bindValue(':roomid', $roomid, PDO::PARAM_STR);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($rows as $row)
+            {
+                echo '<p>';
+                echo '<b>' . $row['message_created'] . ': </b>';
+                echo '' . $row['user_name'] . ' - ';
+                echo '"' . $row['message'] . '"';
+                echo '</p>';
+            }
 
             ?>
 

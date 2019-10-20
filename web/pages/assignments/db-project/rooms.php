@@ -44,7 +44,7 @@ $db = get_db();
         <!-- Content -->
         <br>
         <div id="content" class="container">
-            <h1>Welcome <?php $username; ?>!</h1>
+            <h1>Welcome <?php echo $username; ?>!</h1>
             <h2>ChatRooms</h2>
 
             <form>
@@ -59,15 +59,22 @@ $db = get_db();
         <?php
 
         // Search 
-        $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
-        $stmt->bindValue(':roomName', $_GET['roomName'], PDO::PARAM_STR);
+        $roomName = $_GET['roomName'];
+        $stmt = $db->prepare('select * from t_room');
+        
+        if ($roomName !== '')
+        {
+            $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
+            $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
+        }
+        
         $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($rows as $row)
         {
             echo '<p>';
-            echo '<a href="chat.php?">';
+            echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'>';
             echo '<b>' . $row['room_name'] . '</b>';
             echo '</a>';
             echo '</p>';
