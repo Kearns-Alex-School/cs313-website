@@ -5,7 +5,13 @@
 session_start();
 $username = '';
 $userid = '';
-$roomName = '';
+
+/*Check to see if $_SESSION['visited'] has already been set during this users visit.
+Store the result of that check in to the variable $visited.
+*/
+$visited = isset($_SESSION['visited']);
+/* Set $_SESSION['visited'] so that the above check will return true on future visits. */
+$_SESSION['visited'] = true;
 
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
@@ -62,10 +68,18 @@ $db = get_db();
             $roomName = $_GET['roomName'];
             $stmt = $db->prepare('select * from t_room');
 
-            if ($roomName !== '')
+            if ($visited == false || $roomName === '')
             {
-                $stmt = $db->prepare('select * from t_room WHERE room_name=:roomName');
+                $stmt = $db->prepare('select * from t_room');
+            }
+            else {
+                $stmt = $db->prepare("select * from t_room WHERE room_name like '%:roomName%");
                 $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
+            }
+
+            if ($roomName !== '' || $visited == false)
+            {
+                
             } else {
                 $stmt = $db->prepare('select * from t_room');
             }
