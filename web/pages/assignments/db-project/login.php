@@ -20,14 +20,14 @@ if ( ! empty( $_POST ) ) {
             //console_log('Pass');
             //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
         }
-        else {
+        /*else {
             //console_log('Fail');
             //echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
-        }
+        }*/
     }
 }
-$view_variable = 'a string here';
-console_log($view_variable);
+//$view_variable = 'a string here';
+//console_log($view_variable);
 ?>
 
 <!DOCTYPE html>
