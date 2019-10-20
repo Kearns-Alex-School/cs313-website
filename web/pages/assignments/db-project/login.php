@@ -2,6 +2,9 @@
 require "dbConnect.php";
 $db = get_db();
 session_start();
+$stmt = 'og';
+$result = 'og'
+$user = 'og';
 
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
@@ -60,19 +63,20 @@ if ( ! empty( $_POST ) ) {
 
             <!--form action="chat-rooms.php" method="post"-->
             <form action="" method="post">
-                    <div class="form-group">
-                        <label for="username">username:</label>
-                        <input type="text" name="username" id="username" class="form-control" placeholder="username" />
-                    </div>
+                <div class="form-group">
+                    <label for="username">username:</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="username" />
+                </div>
 
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="password" />
-                    </div>
-                    
-                    <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password" />
+                </div>
+                
+                <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
 
-                    <input type="button" value="Create" class="btn btn-success btn-lg btn-block">
+                <input type="button" value="Create" class="btn btn-success btn-lg btn-block">
+            </form>
 
             <?php
 $statement = $db->prepare("SELECT user_name, user_password, user_email FROM t_user");
@@ -91,7 +95,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo "<p><strong>$user_name :$user_email</strong> - \"$user_password\"<p>";
 }
 
-
+echo "<p>$stmt</p>"
+echo "<p>$user</p>"
 ?>
 
         </div>
