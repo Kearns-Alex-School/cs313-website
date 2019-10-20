@@ -36,12 +36,11 @@ foreach ($rows as $row)
             $_SESSION['user'] = $username;
             console_log('Pass');
             $dir_path = $_SERVER['DOCUMENT_ROOT'] + "/index.php";
+            console_log($dir_path);
             header($dir_path);
-            //echo "<p>Pass <strong>$user :$_POST['password']</strong><p>";
         }
         else {
             console_log('Fail');
-            //echo "<p>Fail <strong>$user :$_POST['password']</strong><p>";
         }
     }
 }
