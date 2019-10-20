@@ -39,3 +39,20 @@ function get_db() {
 
 	return $db;
 }
+
+
+function Login($user, $password) {
+
+    // check the database to see if we have a match
+    
+        
+    return true;
+}
+
+
+function Create($user, $password) {
+
+    // try to add the new user to the database
+        
+    return true;
+}
