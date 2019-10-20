@@ -40,8 +40,6 @@ if ( ! empty( $_POST ) ) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
-
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -70,9 +68,9 @@ if ( ! empty( $_POST ) ) {
                         <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                     </div>
                     
-                    <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block" onclick="return login('user','password')">
+                    <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
 
-                    <input type="submit" value="Create" class="btn btn-success btn-lg btn-block" onclick="return create('user','password')">
+                    <input type="button" value="Create" class="btn btn-success btn-lg btn-block">
 
             <?php
 $statement = $db->prepare("SELECT user_name, user_password, user_email FROM t_user");
