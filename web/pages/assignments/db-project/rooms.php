@@ -9,8 +9,8 @@ $userid = '';
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
     // Let them access the "logged in only" pages
-    $username = $_SESSION['user']
-    $userid = $_SESSION['userid']
+    $username = $_SESSION['user'];
+    $userid = $_SESSION['userid'];
 } else {
     // Redirect them to the login page
     header("Location: https://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php");
