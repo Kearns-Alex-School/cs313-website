@@ -45,7 +45,7 @@ if ($password === $returned_password && $password !== '') {
     echo $username . ' : ' . $returned_id;
 
     // send the user to the rooms
-    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php");
+    header("Location: rooms.php");
 
     //die();
 }
@@ -53,7 +53,7 @@ else {
     console_log('Fail');
 
     // send the user back to the login page
-    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php?fail=true");
+    header("Location: login.php?fail=true");
 
     die();
 }
