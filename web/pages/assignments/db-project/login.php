@@ -1,5 +1,5 @@
 <?php
-require "dbConnect.php";
+require "php/dbConnect.php";
 $db = get_db();
 session_start();
 $login_error = false;
@@ -33,8 +33,12 @@ if ( ! empty( $_POST ) ) {
 
             console_log('Pass');
 
-            $dir_path = 'https://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php';
-            header('Location: ' . $dir_path);
+            $host  = $_SERVER['HTTP_HOST'];
+            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+            $extra = 'rooms.php';
+            header("Location: http://$host$uri/$extra");
+            /*$dir_path = 'https://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php';
+            header('Location: ' . $dir_path);*/
         }
         else {
             console_log('Fail');

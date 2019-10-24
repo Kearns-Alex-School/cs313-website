@@ -23,7 +23,7 @@ if ( isset( $_SESSION['user'] ) ) {
     header("Location: https://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php");
 }
 
-require "dbConnect.php";
+require "php/dbConnect.php";
 $db = get_db();
 ?>
 
