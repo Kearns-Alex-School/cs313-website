@@ -24,9 +24,6 @@ if ($submit === 'create' && $password !== '' && $username !== '') {
 	$stmt->execute();
 }
 
-echo '<p>user: ' . $username . '</p>';
-echo '<p>pass: ' . $password . '</p>';
-/*
 // grab the username from the database if there is a match
 $sql = "select * from t_user where user_name='" . $username . "'";
 
@@ -59,5 +56,5 @@ else {
     header("Location: ../login.php?fail=true");
 
     die();
-}*/
+}
 ?>
