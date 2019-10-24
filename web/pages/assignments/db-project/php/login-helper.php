@@ -16,7 +16,7 @@ $returned_id = '';
 
 
 
-echo '<p>submit: ' . $submit[0] . '</p>';
+echo '<p>submit: ' . $submit . '</p>';
 echo '<p>user: ' . $username . '</p>';
 echo '<p>pass: ' . $password . '</p>';
 
