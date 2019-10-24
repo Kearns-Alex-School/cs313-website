@@ -16,9 +16,9 @@ $returned_id = '';
 
 
 
-echo 'submit: ' . $submit[0];
-echo 'user: ' . $username;
-echo 'pass: ' . $password;
+echo '<p>submit: ' . $submit[0] . '</p>';
+echo '<p>user: ' . $username . '</p>';
+echo '<p>pass: ' . $password . '</p>';
 
 // if we are creating a new user then we need to add it so we will pass on the "check" later
 /*if ($submit[0] === 'create' && $password !== '' && $username !== '') {
