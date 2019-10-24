@@ -4,24 +4,20 @@ $db = get_db();
 session_start();
 
 // Getting submitted user data from database
-//$func     = htmlspecialchars($_POST['function']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 $submit = htmlspecialchars($_POST['submit'][0]);
 $returned_password = '';
 $returned_id = '';
 
-
-
-
-
-
+/*
 echo '<p>submit: ' . $submit . '</p>';
 echo '<p>user: ' . $username . '</p>';
 echo '<p>pass: ' . $password . '</p>';
+*/
 
 // if we are creating a new user then we need to add it so we will pass on the "check" later
-/*if ($submit[0] === 'create' && $password !== '' && $username !== '') {
+if ($submit === 'create' && $password !== '' && $username !== '') {
 	$sql = "insert into t_user (user_name, user_password) values ('" . $username . "', '" . $password . "')";
 
 	$stmt = $db->prepare($sql);
@@ -50,23 +46,15 @@ if ($password === $returned_password && $password !== '') {
     $_SESSION['user'] = $username;
     $_SESSION['userid'] = $returned_id;
 
-    //console_log('Pass');
-
-    //echo $username . ' : ' . $returned_id + 'Pass';
-
     // send the user to the rooms
     header("Location: ../rooms.php");
 
     die();
 }
 else {
-    //console_log('Fail');
-
-    //echo $username . ' : ' . $returned_id + 'Fail';
-
     // send the user back to the login page
     header("Location: ../login.php?fail=true");
 
     die();
-}*/
+}
 ?>

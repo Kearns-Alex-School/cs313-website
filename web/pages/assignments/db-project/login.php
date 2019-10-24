@@ -53,7 +53,7 @@ session_start();
                 
                 <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit[]" value="login">Login</button>
 
-                <button type="button" class="btn btn-success btn-lg btn-block" name="submit[]" value="create">Create</button>
+                <button type="submit" class="btn btn-success btn-lg btn-block" name="submit[]" value="create">Create</button>
             </form>
 
         </div>
