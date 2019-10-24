@@ -10,7 +10,7 @@ function Create()
 
 function SendHTTP(func)
 {
-	var xmlhttp  = new XMLHttpRequest();
+	var xmlhttp = window.XMLHttpRequest?new XMLHttpRequest(): new ActiveXObject("Microsoft.XMLHTTP");
 
 	/*xmlhttp.onreadystatechange = function ()
 	{
