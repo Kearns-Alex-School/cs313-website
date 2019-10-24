@@ -4,14 +4,24 @@ $db = get_db();
 session_start();
 
 // Getting submitted user data from database
-$func     = htmlspecialchars($_REQUEST['function']);
-$username = htmlspecialchars($_REQUEST['username']);
-$password = htmlspecialchars($_REQUEST['password']);
+//$func     = htmlspecialchars($_POST['function']);
+$username = htmlspecialchars($_POST['username']);
+$password = htmlspecialchars($_POST['password']);
+$submit = htmlspecialchars($_POST['submit']);
 $returned_password = '';
 $returned_id = '';
 
+
+
+
+
+
+echo 'submit: ' . $submit[0];
+echo 'user: ' . $username;
+echo 'pass: ' . $password;
+
 // if we are creating a new user then we need to add it so we will pass on the "check" later
-if ($func === 'create' && $password !== '' && $username !== '') {
+/*if ($submit[0] === 'create' && $password !== '' && $username !== '') {
 	$sql = "insert into t_user (user_name, user_password) values ('" . $username . "', '" . $password . "')";
 
 	$stmt = $db->prepare($sql);
@@ -57,6 +67,6 @@ else {
     // send the user back to the login page
     header("Location: ../login.php?fail=true");
 
-    die();
+    die();*/
 }
 ?>

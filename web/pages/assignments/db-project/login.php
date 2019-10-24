@@ -40,7 +40,7 @@ session_start();
             
             <br>
 
-            <form>
+            <form action="php/login-helper" method="post">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" name="username" id="username" class="form-control" placeholder="username" />
@@ -51,9 +51,9 @@ session_start();
                     <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
                 
-                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Login()">Login</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit[]" value="login">Login</button>
 
-                <button type="button" class="btn btn-success btn-lg btn-block" onclick="Create()">Create</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" name="submit[]" value="create">Create</button>
             </form>
 
         </div>
