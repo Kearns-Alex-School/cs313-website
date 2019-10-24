@@ -67,6 +67,6 @@ else {
     // send the user back to the login page
     header("Location: ../login.php?fail=true");
 
-    die();*/
-}
+    die();
+}*/
 ?>
