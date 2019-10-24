@@ -32,7 +32,7 @@ session_start();
             <h1>Simple Chatroom</h1>
 
             <?php 
-            if (isset( $_POST['fail']))
+            if (isset( $_GET['fail']))
             {
                 echo '<p class="text-danger">Username and/or Password was incorrect. Please try again.</p>';
             }
