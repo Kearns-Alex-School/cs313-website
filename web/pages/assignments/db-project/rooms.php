@@ -20,10 +20,7 @@ if ( isset( $_SESSION['user'] ) ) {
     $userid = $_SESSION['userid'];
 } else {
     // Redirect them to the login page
-    $host  = $_SERVER['HTTP_HOST'];
-    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    $extra = 'login.php';
-    header("Location: http://$host$uri/$extra");
+    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php");
 
     die();
 }

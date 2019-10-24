@@ -33,10 +33,6 @@ foreach ($rows as $row)
 }
 
 console_log($username);
-
-// Redirect them to the login page
-$host  = $_SERVER['HTTP_HOST'];
-$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 	
 // verify user password
 if ($password === $returned_password && $password !== '') {
@@ -47,8 +43,7 @@ if ($password === $returned_password && $password !== '') {
     console_log('Pass');
 
     // send the user to the rooms
-    $extra = 'rooms.php';
-    header("Location: http://$host$uri/$extra");
+    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php");
 
     die();
 }
@@ -56,8 +51,7 @@ else {
     console_log('Fail');
 
     // send the user back to the login page
-    $extra = 'login.php';
-    header("Location: http://$host$uri/$extra?fail=true");
+    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php?fail=true");
 
     die();
 }
