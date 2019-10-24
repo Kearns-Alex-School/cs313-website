@@ -16,8 +16,13 @@ function SendHTTP(func)
 	{
     	if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
     	{
-    		// once the request is done do nothing. The php will redirect
-    	}
+            // once the request is done do nothing. The php will redirect
+            alert("sucess");
+        }
+        else 
+        {
+            alert("fail");
+        }
   	}
 
   	var paramaters = "?";
