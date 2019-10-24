@@ -16,6 +16,7 @@ session_start();
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
+        <script src="js/login.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -50,9 +51,9 @@ session_start();
                     <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
                 
-                <button type="button" class="btn btn-primary btn-lg btn-block">Login</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Login()")>Login</button>
 
-                <button type="button" class="btn btn-success btn-lg btn-block">Create</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="Create()">Create</button>
             </form>
 
         </div>
