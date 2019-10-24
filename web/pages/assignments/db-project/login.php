@@ -51,7 +51,7 @@ session_start();
                     <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
                 
-                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Login()")>Login</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Login()">Login</button>
 
                 <button type="button" class="btn btn-success btn-lg btn-block" onclick="Create()">Create</button>
             </form>
