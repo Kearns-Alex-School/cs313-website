@@ -2,50 +2,6 @@
 require "php/dbConnect.php";
 $db = get_db();
 session_start();
-$login_error = false;
-
-if ( ! empty( $_POST ) ) {
-    if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
-        // Getting submitted user data from database
-        $username = htmlspecialchars($_POST['username']);
-        $password = htmlspecialchars($_POST['password']);
-        $returned_password = '';
-        $returned_id = '';
-
-        $sql = "select * from t_user where user_name='" . $username . "'";
-
-        $stmt = $db->prepare($sql);
-        $stmt->execute();
-
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($rows as $row)
-        {
-            $returned_password = $row['user_password'];
-            $returned_id = $row['user_id'];
-        }
-        
-        console_log($username);
-    		
-    	// Verify user password and set $_SESSION
-    	if ($password === $returned_password && $password !== '') {
-            $_SESSION['user'] = $username;
-            $_SESSION['userid'] = $returned_id;
-
-            console_log('Pass');
-
-            $host  = $_SERVER['HTTP_HOST'];
-            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-            $extra = 'rooms.php';
-            header("Location: http://$host$uri/$extra");
-
-            die();
-        }
-        else {
-            console_log('Fail');
-            $login_error = true;
-        }
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -75,28 +31,28 @@ if ( ! empty( $_POST ) ) {
             <h1>Simple Chatroom</h1>
 
             <?php 
-            if ($login_error == true)
+            if (isset( $_POST['fail']))
             {
-                echo '<p class="text-danger">Username or Password was incorrect. Please try again.</p>';
+                echo '<p class="text-danger">Username and/or Password was incorrect. Please try again.</p>';
             }
             ?>
             
             <br>
 
-            <form action="#" method="POST">
+            <form>
                 <div class="form-group">
-                    <label for="username">username:</label>
-                    <input type="text" name="username" id="username" class="form-control" placeholder="admin" />
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="username" />
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="admin" />
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
                 
-                <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Login</button>
 
-                <input type="button" value="Create" class="btn btn-success btn-lg btn-block">
+                <button type="button" class="btn btn-success btn-lg btn-block">Create</button>
             </form>
 
         </div>
