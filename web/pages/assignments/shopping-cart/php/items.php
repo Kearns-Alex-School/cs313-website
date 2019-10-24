@@ -54,8 +54,7 @@ $items = array(
 $Name_Index = 0;
 $Picture_Index = 1;
 $Price_Index = 2;
-//$root = $_SERVER['DOCUMENT_ROOT'];
-$root = "../../../content/images/";
+$root = "content/images/";
 $width = 100;
 ?>
 
