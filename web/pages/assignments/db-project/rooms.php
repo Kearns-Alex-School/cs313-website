@@ -20,7 +20,8 @@ if ( isset( $_SESSION['user'] ) ) {
     $userid = $_SESSION['userid'];
 } else {
     // Redirect them to the login page
-    header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/login.php");
+    // send the user to the rooms
+    header("Location: ../login.php?test=test");
 
     die();
 }
