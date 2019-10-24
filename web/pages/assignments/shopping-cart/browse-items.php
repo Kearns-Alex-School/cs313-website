@@ -10,8 +10,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
-        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
-        <script src="../../../js/shopping-cart.js"></script>
+        <link rel="stylesheet" href="css/shopping-cart.css">
+        <script src="js/shopping-cart.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -33,16 +33,16 @@
                     <br>
 
                     <!-- Product Table -->
-                    <?php include ($_SERVER['DOCUMENT_ROOT']."/php/shopping-cart/items.php");?>
+                    <?php include ("php/items.php");?>
                 </div>
                 <div class="col-sm-4">
                     <h1 class="display-4 text-center">Total</h1>
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
-                    <a href="../../../pages/assignments/shopping-cart/cart.php" type="button" class="btn btn-primary btn-lg btn-block" >Check Cart</a>
+                    <a href="cart.php" type="button" class="btn btn-primary btn-lg btn-block" >Check Cart</a>
 
-                    <a href="../../../pages/assignments/shopping-cart/checkout.php" type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</a>
+                    <a href="checkout.php" type="button" class="btn btn-success btn-lg btn-block disabled" disabled id="checkout-btn" >Checkout</a>
 
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Remove All</a>
                 </div>

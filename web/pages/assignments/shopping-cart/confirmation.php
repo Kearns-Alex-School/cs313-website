@@ -14,9 +14,9 @@ $address = htmlspecialchars($_POST["address"]);
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
-        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
-        <script src="../../../js/confirmation.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/shopping-cart.css">
+        <script src="js/confirmation.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -49,7 +49,7 @@ $address = htmlspecialchars($_POST["address"]);
                 </div>
                 <div class="col-sm-4">
                     
-                    <a href="../../../pages/assignments/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse Products</a>
+                    <a href="browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse Products</a>
 
                 </div>
             </div>

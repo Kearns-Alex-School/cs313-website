@@ -9,9 +9,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
-        <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/shopping-cart.css">
-        <script src="../../../js/cart.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/shopping-cart.css">
+        <script src="js/cart.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -39,9 +39,9 @@
 
                     <h2 class="display-4 text-center" id="total-price">$0.00</h2>
 
-                    <a href="../../../pages/assignments/shopping-cart/browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse Products</a>
+                    <a href="browse-items.php" type="button" class="btn btn-primary btn-lg btn-block" >Browse Products</a>
 
-                    <a href="../../../pages/assignments/shopping-cart/checkout.php" type="button" class="btn btn-success btn-lg btn-block" id="checkout-btn" >Checkout</a>
+                    <a href="checkout.php" type="button" class="btn btn-success btn-lg btn-block" id="checkout-btn" >Checkout</a>
 
                     <a type="button" class="btn btn-danger btn-lg btn-block" onclick="clearCart()">Remove All</a>
                 </div>
