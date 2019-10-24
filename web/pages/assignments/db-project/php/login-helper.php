@@ -45,7 +45,7 @@ if ($password === $returned_password && $password !== '') {
     // send the user to the rooms
     header("Location: http://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php");
 
-    die();
+    //die();
 }
 else {
     console_log('Fail');
