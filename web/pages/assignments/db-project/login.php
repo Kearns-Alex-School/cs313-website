@@ -40,7 +40,7 @@ session_start();
             
             <br>
 
-            <form action="php/login-helper" method="post">
+            <form action="php/login-helper.php" method="post">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" name="username" id="username" class="form-control" placeholder="username" />
