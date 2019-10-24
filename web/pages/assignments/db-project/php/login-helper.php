@@ -7,7 +7,7 @@ session_start();
 //$func     = htmlspecialchars($_POST['function']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
-$submit = htmlspecialchars($_POST['submit']);
+$submit = htmlspecialchars($_POST['submit'][0]);
 $returned_password = '';
 $returned_id = '';
 
