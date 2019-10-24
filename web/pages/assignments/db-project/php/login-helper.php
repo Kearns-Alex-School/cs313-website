@@ -40,17 +40,19 @@ if ($password === $returned_password && $password !== '') {
     $_SESSION['user'] = $username;
     $_SESSION['userid'] = $returned_id;
 
-    console_log('Pass');
+    //console_log('Pass');
 
-    echo $username . ' : ' . $returned_id;
+    echo $username . ' : ' . $returned_id + 'Pass';
 
     // send the user to the rooms
     header("Location: ../rooms.php");
 
-    //die();
+    die();
 }
 else {
-    console_log('Fail');
+    //console_log('Fail');
+
+    echo $username . ' : ' . $returned_id + 'Fail';
 
     // send the user back to the login page
     header("Location: ../login.php?fail=true");

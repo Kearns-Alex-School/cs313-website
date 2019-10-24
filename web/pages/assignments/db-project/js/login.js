@@ -17,15 +17,11 @@ function SendHTTP(func)
     	if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
     	{
             // once the request is done do nothing. The php will redirect
-            alert("sucess");
-        }
-        else 
-        {
-            alert("fail");
+            alert("sucess" + xmlhttp.responseText);
         }
   	}
 
-  	var paramaters = "?";
+  	var paramaters = "";
 
   	// grab all of the elements that we need to login or create
   	var formElements = document.getElementsByTagName("input");
@@ -46,6 +42,7 @@ function SendHTTP(func)
   	paramaters += func;
 
   	// call the php function to verify or create
-	xmlhttp.open("POST", "php/login-helper.php" + paramaters);
-  	xmlhttp.send();
+    xmlhttp.open("POST", "php/login-helper.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  	xmlhttp.send(paramaters);
 }
