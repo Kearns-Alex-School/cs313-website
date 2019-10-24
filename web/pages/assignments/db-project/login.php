@@ -37,8 +37,8 @@ if ( ! empty( $_POST ) ) {
             $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
             $extra = 'rooms.php';
             header("Location: http://$host$uri/$extra");
-            /*$dir_path = 'https://kearns-cs313.herokuapp.com/pages/assignments/db-project/rooms.php';
-            header('Location: ' . $dir_path);*/
+
+            die();
         }
         else {
             console_log('Fail');
