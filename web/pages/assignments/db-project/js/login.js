@@ -41,6 +41,6 @@ function SendHTTP(func)
   	paramaters += func;
 
   	// call the php function to verify or create
-	xmlhttp.open("GET", "login-helper.php" + paramaters);
+	xmlhttp.open("GET", "php/login-helper.php" + paramaters);
   	xmlhttp.send();
 }
