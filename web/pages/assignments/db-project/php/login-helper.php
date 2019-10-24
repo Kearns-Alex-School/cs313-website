@@ -42,7 +42,7 @@ if ($password === $returned_password && $password !== '') {
 
     //console_log('Pass');
 
-    echo $username . ' : ' . $returned_id + 'Pass';
+    //echo $username . ' : ' . $returned_id + 'Pass';
 
     // send the user to the rooms
     header("Location: ../rooms.php");
@@ -52,7 +52,7 @@ if ($password === $returned_password && $password !== '') {
 else {
     //console_log('Fail');
 
-    echo $username . ' : ' . $returned_id + 'Fail';
+    //echo $username . ' : ' . $returned_id + 'Fail';
 
     // send the user back to the login page
     header("Location: ../login.php?fail=true");

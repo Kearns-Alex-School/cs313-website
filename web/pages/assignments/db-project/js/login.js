@@ -12,14 +12,14 @@ function SendHTTP(func)
 {
 	var xmlhttp  = new XMLHttpRequest();
 
-	xmlhttp.onreadystatechange = function ()
+	/*xmlhttp.onreadystatechange = function ()
 	{
     	if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
     	{
             // once the request is done do nothing. The php will redirect
             alert("sucess" + xmlhttp.responseText);
         }
-  	}
+  	}*/
 
   	var paramaters = "";
 
