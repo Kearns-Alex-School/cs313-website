@@ -19,11 +19,15 @@ echo '<p>pass: ' . $password . '</p>';
 // if we are creating a new user then we need to add it so we will pass on the "check" later
 if ($submit === 'create' && $password !== '' && $username !== '') {
 	$sql = "insert into t_user (user_name, user_password) values ('" . $username . "', '" . $password . "')";
+    echo '<p>user: ' . $username . '</p>';
+    echo '<p>pass: ' . $password . '</p>';
+    echo '<p>pass: ' . $sql . '</p>';
 
-	$stmt = $db->prepare($sql);
-	$stmt->execute();
+
+	//$stmt = $db->prepare($sql);
+	//$stmt->execute();
 }
-
+/*
 // grab the username from the database if there is a match
 $sql = "select * from t_user where user_name='" . $username . "'";
 
@@ -56,5 +60,5 @@ else {
     header("Location: ../login.php?fail=true");
 
     die();
-}
+}*/
 ?>
