@@ -7,6 +7,9 @@ if (is_null($db))
 {
     echo '$db is null';
 }
+else {
+    echo $db;
+}
 
 
 $func = htmlspecialchars($_GET['function']);
