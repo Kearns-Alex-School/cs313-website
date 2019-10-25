@@ -1,5 +1,5 @@
 <?php
-require "dbConnect.php";
+require "php/dbConnect.php";
 $db = get_db();
 session_start();
 
@@ -25,16 +25,9 @@ switch ($func)
 
 function Refresh() {
     $sql = 'select room_id, room_name from t_room';
-    try
-    {
-        $stmt = $db->prepare($sql);
-    }
-    catch (PDOException $ex) {
-		// If this were in production, you would not want to echo
-		// the details of the exception.
-		echo "Error connecting to DB. Details: $ex";
-		return;
-	}
+
+    // trouble line
+    $stmt = $db->prepare($sql);
 
     echo 'indoRefresh';
     //GetRows($stmt);
