@@ -77,13 +77,13 @@ function Create() {
 
     $sql = "insert into t_room (user_id, room_created, room_name, room_password) values (" . $userID . ", NOW(), '" . $roomName . "', '" . $roomPass . "')";
 
-    $stmt = $db->prepare($sql);
+    /*$stmt = $db->prepare($sql);
     
     try {
         $stmt->execute();
     } catch (PDOException $ex) {
         echo "Error: $ex";
 		die();
-    }
+    }*/
 }
 ?>
