@@ -32,9 +32,9 @@ function Search() {
 }
 
 function Refresh() {
-    $stmt = $db->prepare('select room_id, room_name from t_room');
+    /*$stmt = $db->prepare('select room_id, room_name from t_room');
 
-    GetRows($stmt);
+    GetRows($stmt);*/
 }
 
 function GetRows($statement) {
