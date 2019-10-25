@@ -3,7 +3,7 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 
-$func = htmlspecialchars($_REQUEST['function']);
+$func = htmlspecialchars($_POST['function']);
 
 switch ($func)
 {
@@ -25,13 +25,13 @@ function Search() {
 
     $stmt = $db->prepare("select room_id, room_name from t_room where room_name LIKE '%$roomName%'");
 
-    GetRows($stmt)
+    GetRows($stmt);
 }
 
 function Refresh() {
     $stmt = $db->prepare('select room_id, room_name from t_room');
 
-    GetRows($stmt)
+    GetRows($stmt);
 }
 
 function GetRows($statement) {
