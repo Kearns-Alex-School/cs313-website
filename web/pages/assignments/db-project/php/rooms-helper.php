@@ -72,7 +72,7 @@ function DoCreate() {
     session_start();
     $db = get_db();
 
-    $roomName = htmlspecialchars($_POST['searchName']);
+    $roomName = htmlspecialchars($_POST['roomName']);
     $roomPass = htmlspecialchars($_POST['roomPass']);
     $userID = $_SESSION['userid'];
 
