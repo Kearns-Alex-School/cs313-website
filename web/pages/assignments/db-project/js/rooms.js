@@ -17,7 +17,7 @@ function Search()
 {
     var xhttp = new XMLHttpRequest();
 
-    $searchName = document.getElementById("searchName").Value;
+    var searchName = document.getElementById("searchName").value;
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
