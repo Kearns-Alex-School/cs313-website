@@ -27,7 +27,7 @@ function Search()
 
     xhttp.open("POST", "php/rooms-helper.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send('function=search&searchName=' + $searchName);
+    xhttp.send('function=search&searchName=' + searchName);
 }
 
 function Create() 
