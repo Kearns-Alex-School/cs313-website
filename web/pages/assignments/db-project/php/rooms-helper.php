@@ -32,9 +32,9 @@ function Refresh() {
     $sql = 'select room_id, room_name from t_room';
 
     // trouble line
-    $stmt = $db->prepare($sql);
+    //$stmt = $db->prepare($sql);
 
-    echo 'indoRefresh    '.$foo;
+    echo 'in doRefresh    '.$foo;
     //GetRows($stmt);
 }
 ?>

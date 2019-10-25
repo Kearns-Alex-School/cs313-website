@@ -6,13 +6,6 @@ session_start();
 $username = '';
 $userid = '';
 
-/*Check to see if $_SESSION['visited'] has already been set during this users visit.
-Store the result of that check in to the variable $visited.
-*/
-$visited = isset($_SESSION['visited']);
-/* Set $_SESSION['visited'] so that the above check will return true on future visits. */
-$_SESSION['visited'] = true;
-
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
     // Let them access the "logged in only" pages
@@ -25,9 +18,6 @@ if ( isset( $_SESSION['user'] ) ) {
 
     die();
 }
-
-require "php/dbConnect.php";
-$db = get_db();
 ?>
 
 <!DOCTYPE html>
@@ -106,3 +96,5 @@ $db = get_db();
 	</body>
 
 </html>
+
+<script>Refresh();</script>
