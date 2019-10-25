@@ -18,6 +18,9 @@ switch ($func)
     case "create":
         Create();
         break;
+
+    default:
+        echo 'fail';
 }
 
 function Search() {
@@ -42,9 +45,12 @@ function GetRows($statement) {
 
     foreach ($rows as $row)
     {
+        $room_name = $row['room_name'];
+        $room_id = $row['room_id'];
+
         $html_text .= '<p>';
-        $html_text .= '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'">';
-        $html_text .= '<b>' . $row['room_name'] . '</b>';
+        $html_text .= '<a href="chat.php?room=' . $room_name . '&roomid=' . $room_id .'">';
+        $html_text .= '<b>' . $room_name . '</b>';
         $html_text .= '</a>';
         $html_text .= '</p>';
     }
