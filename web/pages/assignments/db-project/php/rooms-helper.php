@@ -1,6 +1,6 @@
 <?php
 //require "dbConnect.php";
-$db = get_db();
+
 
 
 session_start();
@@ -32,6 +32,7 @@ function Refresh() {
     $sql = 'select room_id, room_name from t_room';
 
     // trouble line
+    $db = get_db();
     //$stmt = $db->prepare($sql);
 
     echo 'in doRefresh    '.$foo;
