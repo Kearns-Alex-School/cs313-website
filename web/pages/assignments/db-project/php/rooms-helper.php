@@ -3,7 +3,7 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 
-$func = htmlspecialchars($_GET['function']);
+$func = "refresh"; //htmlspecialchars($_GET['function']);
 
 switch ($func)
 {
@@ -38,7 +38,15 @@ function Refresh() {
 }
 
 function GetRows($statement) {
-    $statement->execute();
+    try
+    {
+        $statement->execute();
+    }
+    catch (PDOException $ex) {
+        echo "Error connecting to DB. Details: $ex";
+        return;
+    }
+    
     $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     $html_text = "";

@@ -19,7 +19,5 @@ function Search()
 
 function Create() 
 {
-
-
     Refresh();
 }
