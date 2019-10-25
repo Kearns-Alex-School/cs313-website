@@ -14,7 +14,7 @@ switch ($func)
         break;
 
     case "create":
-        Create();
+        //Create();
         break;
 
     default:
