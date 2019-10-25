@@ -29,7 +29,7 @@ function Refresh() {
     $stmt = $db->prepare($sql);
 
     //echo 'in doRefresh';
-    //GetRows($stmt);
+    GetRows($stmt);
 }
 
 function GetRows($statement) {
