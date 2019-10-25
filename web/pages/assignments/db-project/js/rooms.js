@@ -8,7 +8,7 @@ function Refresh()
         }
     };
 
-    xhttp.open("GET", "php/rooms-helper.php?function=refresh", true);
+    xhttp.open("GET", "php/rooms-helper.php?function=refresh");
     xhttp.send();
 }
 
