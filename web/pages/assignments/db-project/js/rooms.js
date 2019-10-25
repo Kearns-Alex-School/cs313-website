@@ -8,9 +8,8 @@ function Refresh()
         }
     };
 
-    xhttp.open("POST", "php/rooms-helper.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("function=refresh");
+    xhttp.open("GET", "php/rooms-helper.php?function=refresh", true);
+    xhttp.send();
 }
 
 function Search() 

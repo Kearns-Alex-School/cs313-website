@@ -3,7 +3,7 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 
-$func = htmlspecialchars($_POST['function']);
+$func = htmlspecialchars($_GET['function']);
 
 switch ($func)
 {
