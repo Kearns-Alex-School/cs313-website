@@ -1,16 +1,12 @@
 <?php
 require "dbConnect.php";
-$db = get_db();
+//$db = get_db();
+
+
 session_start();
 
-if (is_null($db))
-{
-    echo '$db is null';
-}
-else {
-    echo $db;
-}
-
+$db = $_SESSION['db'];
+$foo = $_SESSION['user'];
 
 $func = htmlspecialchars($_GET['function']);
 
@@ -36,9 +32,9 @@ function Refresh() {
     $sql = 'select room_id, room_name from t_room';
 
     // trouble line
-    $stmt = $db->prepare($sql);
+    //$stmt = $db->prepare($sql);
 
-    echo 'indoRefresh';
+    echo 'indoRefresh    '.$foo;
     //GetRows($stmt);
 }
 ?>
