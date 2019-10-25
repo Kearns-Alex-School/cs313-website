@@ -33,7 +33,7 @@ function Refresh() {
 
     // trouble line
     $db = get_db();
-    //$stmt = $db->prepare($sql);
+    $stmt = $db->prepare($sql);
 
     echo 'in doRefresh    '.$foo;
     //GetRows($stmt);
