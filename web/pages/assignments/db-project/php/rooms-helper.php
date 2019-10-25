@@ -3,6 +3,8 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 
+echo $db;
+
 $func = htmlspecialchars($_GET['function']);
 
 switch ($func)
