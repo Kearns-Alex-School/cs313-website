@@ -3,6 +3,8 @@ require "php/dbConnect.php";
 $db = get_db();
 session_start();
 
+echo $db;
+
 $func = htmlspecialchars($_GET['function']);
 
 switch ($func)
@@ -27,7 +29,7 @@ function Refresh() {
     $sql = 'select room_id, room_name from t_room';
 
     // trouble line
-    $stmt = $db->prepare($sql);
+    //$stmt = $db->prepare($sql);
 
     echo 'indoRefresh';
     //GetRows($stmt);
