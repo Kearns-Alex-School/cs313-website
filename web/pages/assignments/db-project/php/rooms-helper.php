@@ -14,7 +14,7 @@ switch ($func)
         break;
 
     /*case "create":
-        //Create();
+        Create();
         break;*/
 
     default:
@@ -69,6 +69,7 @@ function GetRows($statement) {
 }
 
 function Create() {
+    session_start();
     $db = get_db();
 
     $roomName = htmlspecialchars($_POST['searchName']);
