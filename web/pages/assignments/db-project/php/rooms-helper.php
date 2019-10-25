@@ -14,7 +14,7 @@ switch ($func)
         break;
 
     case "create":
-        Create();
+        //Create();
         break;
 
     default:
@@ -68,7 +68,7 @@ function GetRows($statement) {
     echo $html_text;
 }
 
-function Create() {
+/*function Create() {
 
-}
+}*/
 ?>
