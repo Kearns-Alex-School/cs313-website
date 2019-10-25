@@ -8,17 +8,14 @@ $func = htmlspecialchars($_GET['function']);
 switch ($func)
 {
     case "search":
-        echo 'search';
         //Search();
         break;
 
     case "refresh":
-        echo 'refresh';
-        DoRefresh();
+        Refresh();
         break;
 
     case "create":
-        echo 'create';
         //Create();
         break;
 
@@ -26,9 +23,18 @@ switch ($func)
         echo 'fail';
 }
 
-function DoRefresh() {
+function Refresh() {
     $sql = 'select room_id, room_name from t_room';
-    $stmt = $db->prepare($sql);
+    try
+    {
+        $stmt = $db->prepare($sql);
+    }
+    catch (PDOException $ex) {
+		// If this were in production, you would not want to echo
+		// the details of the exception.
+		echo "Error connecting to DB. Details: $ex";
+		return;
+	}
 
     echo 'indoRefresh';
     //GetRows($stmt);
