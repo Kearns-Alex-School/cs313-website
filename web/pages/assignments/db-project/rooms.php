@@ -56,7 +56,6 @@ $db = get_db();
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php echo $username; ?>!</h1>
-            <h2>Chatrooms</h2>
 
             <div class="row">
                 <div class="col-sm-6">
@@ -84,6 +83,9 @@ $db = get_db();
                         <button type="submit[]" value="create" class="btn btn-primary">Create</button>
                     </form>
                 </div>
+            </div>
+            
+            <h2>Chatrooms</h2>
 
             <div class="row">
                 <div class="col-sm-12">
