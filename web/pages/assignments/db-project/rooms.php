@@ -106,5 +106,3 @@ $db = get_db();
 	</body>
 
 </html>
-
-<script>Refresh();</script>
