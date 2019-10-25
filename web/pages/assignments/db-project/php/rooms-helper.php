@@ -30,7 +30,7 @@ switch ($func)
 }
 
 function Refresh() {
-    //$sql = 'select room_id, room_name from t_room';
+    $sql = 'select room_id, room_name from t_room';
 
     // trouble line
     //$stmt = $db->prepare($sql);
