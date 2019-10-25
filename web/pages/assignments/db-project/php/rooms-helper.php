@@ -1,7 +1,5 @@
 <?php
-//require "dbConnect.php";
-
-
+require "dbConnect.php";
 
 session_start();
 
@@ -40,7 +38,7 @@ function Refresh() {
 }
 
 
-
+/*
 function get_db() {
 	$db = NULL;
 
@@ -71,5 +69,5 @@ function get_db() {
 	}
 
 	return $db;
-}
+}*/
 ?>
