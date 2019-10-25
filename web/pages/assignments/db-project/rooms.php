@@ -65,8 +65,9 @@ $db = get_db();
                             <input type="text" name="searchName" id="searchName" class="form-control" placeholder="search rooms" />
                         </div>
                         
-                        <button type="submit[]" value="search" class="btn btn-primary">Search</button>
-                        <button type="submit[]" value="refresh" class="btn btn-primary">Refresh</button>
+                        <button type="submit[]" value="search" class="btn btn-primary" onclick="Search();">Search</button>
+
+                        <button type="submit[]" value="refresh" class="btn btn-primary" onclick="Refresh();">Refresh</button>
                     </form>
                 </div>
                 <div class="col-sm-6">
@@ -80,11 +81,11 @@ $db = get_db();
                             <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
                         </div>
                     
-                        <button type="submit[]" value="create" class="btn btn-primary">Create</button>
+                        <button type="submit[]" value="create" class="btn btn-primary" onclick="Create();">Create</button>
                     </form>
                 </div>
             </div>
-            
+
             <h2>Chatrooms</h2>
 
             <div class="row">
@@ -106,4 +107,4 @@ $db = get_db();
 
 </html>
 
-<script Refresh(); >
+<script>Refresh();</script>
