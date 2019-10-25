@@ -5,7 +5,7 @@ session_start();
 
 $func = "refresh"; //htmlspecialchars($_GET['function']);
 
-switch ($func)
+/*switch ($func)
 {
     case "search":
         Search();
@@ -21,7 +21,7 @@ switch ($func)
 
     default:
         echo 'fail';
-}
+}*/
 
 function Search() {
     /*$roomName = htmlspecialchars($_POST['searchName']);
