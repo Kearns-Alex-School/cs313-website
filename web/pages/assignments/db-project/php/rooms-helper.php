@@ -34,6 +34,7 @@ function Search() {
     $roomName = htmlspecialchars($_POST['searchName']);
 
     $stmt = $db->prepare("select room_id, room_name from t_room where room_name LIKE '%$roomName%'");
+    echo "select room_id, room_name from t_room where room_name LIKE '%$roomName%'";
 
     GetRows($stmt);
 }
