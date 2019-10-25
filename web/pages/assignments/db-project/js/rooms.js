@@ -32,5 +32,28 @@ function Search()
 
 function Create() 
 {
-    Refresh();
+    var xhttp = new XMLHttpRequest();
+
+    var roomName = document.getElementById("roomName").value;
+    var roomPass = document.getElementById("roomPass").value;
+
+    if (roomName == '')
+    {
+        alert("Please do not leave the room name blank.");
+        return;
+    }
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText.includes("Error: ")) {
+                document.getElementById("results").innerHTML = this.responseText;
+                return;
+            }
+            Refresh();
+        }
+    };
+
+    xhttp.open("POST", "php/rooms-helper.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('function=create&roomName=' + roomName + '&roomPass=' + roomPass);
 }

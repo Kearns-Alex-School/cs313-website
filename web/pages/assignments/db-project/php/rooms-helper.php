@@ -14,7 +14,7 @@ switch ($func)
         break;
 
     case "create":
-        //Create();
+        Create();
         break;
 
     default:
@@ -68,7 +68,22 @@ function GetRows($statement) {
     echo $html_text;
 }
 
-/*function Create() {
+function Create() {
+    $db = get_db();
 
-}*/
+    $roomName = htmlspecialchars($_POST['searchName']);
+    $roomPass = htmlspecialchars($_POST['roomPass']);
+    $userID = $_SESSION['userid'];
+
+    $sql = "insert into t_room (user_id, room_created, room_name, room_password) values (" . $userID . ", NOW(), '" . $roomName . "', '" . $roomPass . "')";
+
+    $stmt = $db->prepare($sql);
+    
+    try {
+        $stmt->execute();
+    } catch (PDOException $ex) {
+        echo "Error: $ex";
+		die();
+    }
+}
 ?>
