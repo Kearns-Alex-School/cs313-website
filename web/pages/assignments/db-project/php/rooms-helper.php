@@ -22,13 +22,19 @@ switch ($func)
 }
 
 function Refresh() {
-    $sql = 'select room_id, room_name from t_room';
-
-    // trouble line
     $db = get_db();
-    $stmt = $db->prepare($sql);
 
-    //echo 'in doRefresh';
+    $stmt = $db->prepare('select room_id, room_name from t_room');
+
+    GetRows($stmt);
+}
+
+function Search() {
+    $db = get_db();
+    $roomName = htmlspecialchars($_POST['searchName']);
+
+    $stmt = $db->prepare("select room_id, room_name from t_room where room_name LIKE '%$roomName%'");
+
     GetRows($stmt);
 }
 
