@@ -3,7 +3,11 @@ require "dbConnect.php";
 $db = get_db();
 session_start();
 
-echo $db;
+if (is_null($db))
+{
+    echo '$db is null';
+}
+
 
 $func = htmlspecialchars($_GET['function']);
 
