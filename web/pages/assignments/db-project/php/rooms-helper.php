@@ -24,11 +24,11 @@ switch ($func)
 }
 
 function Search() {
-    $roomName = htmlspecialchars($_POST['searchName']);
+    /*$roomName = htmlspecialchars($_POST['searchName']);
 
     $stmt = $db->prepare("select room_id, room_name from t_room where room_name LIKE '%$roomName%'");
 
-    GetRows($stmt);
+    GetRows($stmt);*/
 }
 
 function Refresh() {
