@@ -17,7 +17,7 @@ switch ($func)
         break;
 
     case "refresh":
-        Refresh();
+        DoRefresh();
         break;
 
     case "create":
@@ -28,7 +28,7 @@ switch ($func)
         echo 'fail';
 }
 
-function Refresh() {
+function DoRefresh() {
     //$sql = 'select room_id, room_name from t_room';
 
     // trouble line
