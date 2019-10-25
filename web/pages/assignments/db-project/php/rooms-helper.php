@@ -13,9 +13,9 @@ switch ($func)
         Refresh();
         break;
 
-    case "create":
+    /*case "create":
         //Create();
-        break;
+        break;*/
 
     default:
         echo 'fail';
