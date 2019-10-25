@@ -50,6 +50,9 @@ function DoCreate()
                 return;
             }
             Refresh();
+
+            document.getElementById("roomName").value = '';
+            document.getElementById("roomPass").value = '';
         }
     };
 
