@@ -14,7 +14,7 @@ switch ($func)
 
     case "refresh":
         echo 'refresh';
-        Refresh();
+        DoRefresh();
         break;
 
     case "create":
@@ -26,7 +26,7 @@ switch ($func)
         echo 'fail';
 }
 
-function Refresh() {
+function DoRefresh() {
     $stmt = $db->prepare('select room_id, room_name from t_room');
 
     //GetRows($stmt);
