@@ -49,30 +49,26 @@ if ( isset( $_SESSION['user'] ) ) {
 
             <div class="row">
                 <div class="col-sm-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="searchName">Search Rooms:</label>
-                            <input type="text" name="searchName" id="searchName" class="form-control" placeholder="search rooms" />
-                        </div>
-                        
-                        <button type="button" value="search" class="btn btn-primary" onclick="Search();">Search</button>
+                    <div class="form-group">
+                        <label for="searchName">Search Rooms:</label>
+                        <input type="text" name="searchName" id="searchName" class="form-control" placeholder="search rooms" />
+                    </div>
+                    
+                    <button type="button" value="search" class="btn btn-primary" onclick="Search();">Search</button>
 
-                        <button type="button" value="refresh" class="btn btn-primary" onclick="Refresh();">Refresh</button>
-                    </form>
+                    <button type="button" value="refresh" class="btn btn-primary" onclick="Refresh();">Refresh</button>
                 </div>
                 <div class="col-sm-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="roomName">New Room:</label>
-                            <input type="text" name="roomName" id="roomName" class="form-control" placeholder="new room" />
-                        </div>
-                        <div class="form-group">
-                            <label for="roomPass">Password:</label>
-                            <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
-                        </div>
-                    
-                        <button type="button" value="create" class="btn btn-primary" onclick="Create();">Create</button>
-                    </form>
+                    <div class="form-group">
+                        <label for="roomName">New Room:</label>
+                        <input type="text" name="roomName" id="roomName" class="form-control" placeholder="new room" />
+                    </div>
+                    <div class="form-group">
+                        <label for="roomPass">Password:</label>
+                        <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
+                    </div>
+                
+                    <button type="button" value="create" class="btn btn-primary" onclick="Create();">Create</button>
                 </div>
             </div>
 
