@@ -38,7 +38,7 @@ function Refresh() {
     GetRows($stmt);*/
 }
 
-function GetRows($statement) {
+function GetRows() {
     /*try
     {
         $statement->execute();
