@@ -8,7 +8,7 @@ session_start();
 //$db = $_SESSION['db'];
 $foo = $_SESSION['user'];
 
-$func = htmlspecialchars($_GET['function']);
+$func = htmlspecialchars($_POST['function']);
 
 switch ($func)
 {
