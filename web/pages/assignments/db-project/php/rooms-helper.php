@@ -6,7 +6,7 @@ $func = htmlspecialchars($_POST['function']);
 switch ($func)
 {
     case "search":
-        //Search();
+        Search();
         break;
 
     case "refresh":
