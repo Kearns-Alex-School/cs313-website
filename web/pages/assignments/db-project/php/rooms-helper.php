@@ -38,7 +38,7 @@ function Refresh() {
 }
 
 function GetRows($statement) {
-    try
+    /*try
     {
         $statement->execute();
     }
@@ -64,7 +64,7 @@ function GetRows($statement) {
     }
 
     // send all of the results back to the caller.
-    echo $html_text;
+    echo $html_text;*/
 }
 
 function Create() {
