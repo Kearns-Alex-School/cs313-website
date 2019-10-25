@@ -35,6 +35,10 @@ session_start();
             {
                 echo '<p class="text-danger">Username and/or Password was incorrect. Please try again.</p>';
             }
+            else if (isset( $_GET['blank']))
+            {
+                echo '<p class="text-danger">Please do not leave the fields blank.</p>';
+            }
             ?>
             
             <br>

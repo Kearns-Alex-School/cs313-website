@@ -42,6 +42,7 @@ $db = get_db();
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
+        <script src="js/rooms.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -55,46 +56,45 @@ $db = get_db();
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php echo $username; ?>!</h1>
-            <h2>ChatRooms</h2>
+            <h2>Chatrooms</h2>
 
-            <form>
-                <div class="form-group">
-                    <input type="text" name="roomName" id="roomName" class="form-control" placeholder="search rooms" />
+            <div class="row">
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="searchName">Search Rooms:</label>
+                            <input type="text" name="searchName" id="searchName" class="form-control" placeholder="search rooms" />
+                        </div>
+                        
+                        <button type="submit[]" value="search" class="btn btn-primary">Search</button>
+                        <button type="submit[]" value="refresh" class="btn btn-primary">Refresh</button>
+                    </form>
                 </div>
-                
-                <input type="submit" value="Search" class="btn btn-primary">
-            </form>
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="roomName">New Room:</label>
+                            <input type="text" name="roomName" id="roomName" class="form-control" placeholder="new room" />
+                        </div>
+                        <div class="form-group">
+                            <label for="roomPass">Password:</label>
+                            <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
+                        </div>
+                    
+                        <button type="submit[]" value="create" class="btn btn-primary">Create</button>
+                    </form>
+                </div>
 
-            <?php
-
-            // Search 
-            $roomName = $_GET['roomName'];
-            $stmt = $db->prepare('select * from t_room');
-
-            /*if ($visited == false)
-            {
-                $stmt = $db->prepare('select * from t_room');
-            }
-            else {
-                $stmt = $db->prepare("select * from t_room WHERE room_name like '%:roomName%");
-                $stmt->bindValue(':roomName', $roomName, PDO::PARAM_STR);
-            }*/
-            
-            $stmt->execute();
-            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach ($rows as $row)
-            {
-                echo '<p>';
-                echo '<a href="chat.php?room=' . $row['room_name'] . '&roomid=' . $row['room_id'].'">';
-                echo '<b>' . $row['room_name'] . '</b>';
-                echo '</a>';
-                echo '</p>';
-                echo '<br>';
-            }
-
-            ?>
-
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--table-- id="results">
+                    
+                    </!--table-->
+                    <div id="results">
+                    
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -103,3 +103,5 @@ $db = get_db();
 	</body>
 
 </html>
+
+<script Refresh(); >
