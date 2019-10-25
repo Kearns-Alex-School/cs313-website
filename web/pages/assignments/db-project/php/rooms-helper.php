@@ -68,7 +68,7 @@ function GetRows($statement) {
     echo $html_text;
 }
 
-function Create() {
+/*function Create() {
     session_start();
     $db = get_db();
 
@@ -86,5 +86,5 @@ function Create() {
         echo "Error: $ex";
 		die();
     }*/
-}
+}*/
 ?>
