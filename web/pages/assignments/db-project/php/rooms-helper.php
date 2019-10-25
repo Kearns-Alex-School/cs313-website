@@ -27,7 +27,8 @@ switch ($func)
 }
 
 function DoRefresh() {
-    //$stmt = $db->prepare('select room_id, room_name from t_room');
+    $sql = 'select room_id, room_name from t_room';
+    $stmt = $db->prepare($sql);
 
     echo 'indoRefresh';
     //GetRows($stmt);
