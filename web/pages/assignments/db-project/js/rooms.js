@@ -30,7 +30,7 @@ function Search()
     xhttp.send('function=search&searchName=' + searchName);
 }
 
-function Create() 
+function DoCreate() 
 {
     var xhttp = new XMLHttpRequest();
 

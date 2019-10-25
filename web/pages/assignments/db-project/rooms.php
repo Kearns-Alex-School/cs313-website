@@ -68,7 +68,7 @@ if ( isset( $_SESSION['user'] ) ) {
                         <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
                     </div>
                 
-                    <button type="button" value="create" class="btn btn-primary" onclick="Create();">Create</button>
+                    <button type="button" value="create" class="btn btn-primary" onclick="DoCreate();">Create</button>
                 </div>
             </div>
 
