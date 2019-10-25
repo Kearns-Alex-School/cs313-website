@@ -21,7 +21,7 @@ if ( isset( $_SESSION['user'] ) ) {
 } else {
     // Redirect them to the login page
     // send the user to the rooms
-    header("Location: ../login.php?test=test");
+    header("Location: login.php");
 
     die();
 }

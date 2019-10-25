@@ -34,7 +34,6 @@ function get_db() {
 		// If this were in production, you would not want to echo
 		// the details of the exception.
 		echo "Error connecting to DB. Details: $ex";
-		return $ex;
 		die();
 	}
 
