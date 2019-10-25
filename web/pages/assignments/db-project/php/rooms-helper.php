@@ -1,11 +1,6 @@
 <?php
 require "dbConnect.php";
 
-session_start();
-
-//$db = $_SESSION['db'];
-$foo = $_SESSION['user'];
-
 $func = htmlspecialchars($_POST['function']);
 
 switch ($func)
@@ -33,41 +28,38 @@ function Refresh() {
     $db = get_db();
     $stmt = $db->prepare($sql);
 
-    echo 'in doRefresh    '.$foo;
+    //echo 'in doRefresh';
     //GetRows($stmt);
 }
 
+function GetRows($statement) {
+    try
+    {
+        $statement->execute();
+    }
+    catch (PDOException $ex) {
+        echo "Error connecting to DB. Details: $ex";
+        return;
+    }
+    
+    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-/*
-function get_db() {
-	$db = NULL;
+    $html_text = "";
 
-	try {
-		// default Heroku Postgres configuration URL
-		$dbUrl = getenv('DATABASE_URL');
+    foreach ($rows as $row)
+    {
+        $room_name = $row['room_name'];
+        $room_id = $row['room_id'];
 
-		// Get the various parts of the DB Connection from the URL
-		$dbopts = parse_url($dbUrl);
+        $html_text .= '<p>';
+        $html_text .= '<a href="chat.php?room=' . $room_name . '&roomid=' . $room_id .'">';
+        $html_text .= '<b>' . $room_name . '</b>';
+        $html_text .= '</a>';
+        $html_text .= '</p>';
+    }
 
-		$dbHost = $dbopts["host"];
-		$dbPort = $dbopts["port"];
-		$dbUser = $dbopts["user"];
-		$dbPassword = $dbopts["pass"];
-		$dbName = ltrim($dbopts["path"],'/');
+    // send all of the results back to the caller.
+    echo $html_text;
+}
 
-		// Create the PDO connection
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-		// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
-		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	}
-	catch (PDOException $ex) {
-		// If this were in production, you would not want to echo
-		// the details of the exception.
-		echo "Error connecting to DB. Details: $ex";
-		die();
-	}
-
-	return $db;
-}*/
 ?>
