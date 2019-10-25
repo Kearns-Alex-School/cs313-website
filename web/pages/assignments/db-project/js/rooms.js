@@ -15,7 +15,19 @@ function Refresh()
 
 function Search() 
 {
+    var xhttp = new XMLHttpRequest();
 
+    $searchName = document.getElementById("searchName").Value;
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("results").innerHTML = this.responseText;
+        }
+    };
+
+    xhttp.open("POST", "php/rooms-helper.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('function=search&searchName=' + $searchName);
 }
 
 function Create() 
