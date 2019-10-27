@@ -84,7 +84,7 @@ if ( isset( $_SESSION['user'] ) ) {
             </table>
 
             <div class="table-responsive scroll">
-                <form method="post" target="_blank" action="php/chat-helper.php">
+            <form method="post" onsubmit="window.open('php/chat-helper.php','_blank','width=500,height=800'); return false;">
                     <table class="table table-striped table-hover table-items">
 
                     <tbody id="results">
