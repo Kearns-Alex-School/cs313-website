@@ -60,6 +60,8 @@ $db = get_db();
                 </table>
             </div>
 
+            <br>
+
             <div class="form-group">
                 <input type="text" name="message" id="message" class="form-control" placeholder="message" />
             </div>
