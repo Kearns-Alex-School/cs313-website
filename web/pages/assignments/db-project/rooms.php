@@ -82,13 +82,13 @@ if ( isset( $_SESSION['user'] ) ) {
                         <tr>
                             <th width="50%">Room</th>
                             <th width="40%">Creaor</th>
-                            <th width="10%">Price</th>
+                            <th width="10%">Pass</th>
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="results">
 
-                    </tbody id="results">
+                    </tbody>
                     
                     </table>
                 </div>
