@@ -51,6 +51,7 @@ $db = get_db();
         
         <!-- Content -->
         <input type="hidden" id="roomid" name="roomid" value="<?php echo $roomid; ?>">
+        <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
 
         <br>
         <div id="content" class="container">
@@ -65,13 +66,11 @@ $db = get_db();
                 </table>
             </div>
 
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" name="message" id="message" class="form-control" placeholder="message" />
-                </div>
-                
-                <input type="submit" value="Send" class="btn btn-primary btn-lg">
-            </form>
+            <div class="form-group">
+                <input type="text" name="message" id="message" class="form-control" placeholder="message" />
+            </div>
+            
+            <button class="btn btn-primary btn-lg" onclick="SendMessage();">Send</button>
         </div>
 
         <!-- Footer -->

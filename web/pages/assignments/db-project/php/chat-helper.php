@@ -68,6 +68,19 @@ function GetRows($statement) {
 }
 
 function SendMessage() {
+    $db = get_db();
 
+    $roomid = htmlspecialchars($_POST['id']);
+    $userid = htmlspecialchars($_POST['userid']);
+    $message = htmlspecialchars($_POST['message']);
+
+    $stmt = $db->prepare("
+INSERT INTO messages VALUES (
+  ".$userid."
+, ".$roomid."
+, '".$message."'
+, NOW()" );
+
+    $stmt->execute();
 }
 ?>
