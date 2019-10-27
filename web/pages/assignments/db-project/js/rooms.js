@@ -60,3 +60,8 @@ function DoCreate()
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send('function=create&roomName=' + roomName + '&roomPass=' + roomPass);
 }
+
+function OpenRoom(id)
+{
+    
+}

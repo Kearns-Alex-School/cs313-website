@@ -75,13 +75,22 @@ if ( isset( $_SESSION['user'] ) ) {
             <h2>Chatrooms</h2>
 
             <div class="row">
-                <div class="col-sm-12">
-                    <!--table-- id="results">
+                <div class="col-sm-12 table-responsive">
+                    <table class="table table-striped table-hover table-items">
+
+                    <thead>
+                        <tr>
+                            <th width="50%">Room</th>
+                            <th width="40%">Creaor</th>
+                            <th width="10%">Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody id="results">
                     
-                    </!--table-->
-                    <div id="results">
-                    
-                    </div>
+                    </table>
                 </div>
             </div>
         </div>

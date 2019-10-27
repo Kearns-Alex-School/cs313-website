@@ -24,7 +24,15 @@ switch ($func)
 function Refresh() {
     $db = get_db();
 
-    $stmt = $db->prepare('select room_id, room_name from t_room');
+    $stmt = $db->prepare("
+SELECT 
+  r.room_id
+, r.room_name
+, u.user_name
+, r.room_password 
+FROM t_room r 
+LEFT JOIN t_user u ON (r.user_id = u.user_id) 
+ORDER BY r.room_id");
 
     GetRows($stmt);
 }
@@ -33,7 +41,16 @@ function Search() {
     $db = get_db();
     $roomName = htmlspecialchars($_POST['searchName']);
 
-    $stmt = $db->prepare("select room_id, room_name from t_room where room_name LIKE '%$roomName%'");
+    $stmt = $db->prepare("
+SELECT 
+  r.room_id
+, r.room_name
+, u.user_name
+, r.room_password 
+FROM t_room r 
+LEFT JOIN t_user u ON (r.user_id = u.user_id)
+WHERE r.room_name LIKE '%$roomName%' 
+ORDER BY r.room_id");
 
     GetRows($stmt);
 }
@@ -54,14 +71,36 @@ function GetRows($statement) {
 
     foreach ($rows as $row)
     {
-        $room_name = $row['room_name'];
         $room_id = $row['room_id'];
+        $room_name = $row['room_name'];
+        $creator = $row['user_name'];
+        $password = $row['room_password'];
 
-        $html_text .= '<p>';
+        $html_text .='
+        <tr>
+            <td width="50%">
+                <a onclick="OpenRoom('.$room_id.')">'.$room_name.'</a>
+            </td>
+            <td width="40%">
+                <p>'.$creator.'</p>
+            </td>
+            <td width="10%">';
+
+        if ($password !=='')
+        {
+            $html_text .='
+                <img src="../content/images/lock.png" alt="L" width="25px">';
+        }
+
+        $html_text .='
+            </td>
+        </tr>';
+
+        /*$html_text .= '<p>';
         $html_text .= '<a href="chat.php?room=' . $room_name . '&roomid=' . $room_id .'">';
         $html_text .= '<b>' . $room_name . '</b>';
         $html_text .= '</a>';
-        $html_text .= '</p>';
+        $html_text .= '</p>';*/
     }
 
     // send all of the results back to the caller.

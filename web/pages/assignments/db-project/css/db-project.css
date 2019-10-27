@@ -1,0 +1,28 @@
+body {
+    background-color: #1b97e4;
+}
+
+.table-striped:nth-of-type(odd){
+    background-color: #ffffff;
+  }
+  
+.table-striped:nth-of-type(even){
+    background-color: #b9b9b9;
+}
+
+thead tr , tbody { 
+    display: block; 
+}
+
+tbody {
+    height: 425px;
+    overflow-y: auto;
+}
+
+th {
+    float: left;
+}
+
+td {
+    padding: 0px;
+}
