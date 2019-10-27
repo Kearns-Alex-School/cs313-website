@@ -79,7 +79,7 @@ function GetRows($statement) {
         $html_text .='
         <tr>
             <td width="50%">
-                <a onclick="OpenRoom('.$room_id.')">'.$room_name.'</a>
+                <a href="" onclick="OpenRoom('.$room_id.')">'.$room_name.'</a>
             </td>
             <td width="40%">
                 <p>'.$creator.'</p>

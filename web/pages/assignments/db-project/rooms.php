@@ -76,22 +76,24 @@ if ( isset( $_SESSION['user'] ) ) {
             <h2>Chatrooms</h2>
 
             <div class="row">
-                <div class="col-sm-12 table-responsive">
-                    <table class="table table-striped table-hover table-items">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-items">
 
-                    <thead>
-                        <tr>
-                            <th width="50%">Room</th>
-                            <th width="40%">Creator</th>
-                            <th width="10%">Pass</th>
-                        </tr>
-                    </thead>
+                        <thead>
+                            <tr>
+                                <th width="50%">Room</th>
+                                <th width="40%">Creator</th>
+                                <th width="10%">Pass</th>
+                            </tr>
+                        </thead>
 
-                    <tbody id="results">
+                        <tbody id="results">
 
-                    </tbody>
-                    
-                    </table>
+                        </tbody>
+                        
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

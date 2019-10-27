@@ -63,5 +63,5 @@ function DoCreate()
 
 function OpenRoom(id)
 {
-    
+    //myWindow=window.open('lead_data.php?leadid=1','myWin','width=400,height=650');
 }
