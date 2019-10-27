@@ -3,6 +3,14 @@ require "dbConnect.php";
 session_start();
 
 $roomid = htmlspecialchars($_POST['submit'][0]);
+if ( isset( $_SESSION['roomid'] ) ) {
+    $roomid = $_SESSION['roomid'];
+}
+else 
+{
+    $_SESSION['roomid'] = $roomid;
+}
+
 $db = get_db();
 $stmt = $db->prepare("
 SELECT 
