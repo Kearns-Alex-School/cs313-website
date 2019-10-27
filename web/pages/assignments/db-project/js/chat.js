@@ -31,3 +31,21 @@ function Refresh()
         xhttp.send('function=refresh&id=' + roomid);
     }
 }
+
+function SendMessage()
+{
+    var roomid = document.getElementById("roomid").value;
+    var userid = document.getElementById("userid").value;
+    var message = document.getElementById("message").value;
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+        }
+    };
+
+    xhttp.open("POST", "php/chat-helper.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('function=send&id=' + roomid + '&userid=' + userid + '&message=' + message);
+}
