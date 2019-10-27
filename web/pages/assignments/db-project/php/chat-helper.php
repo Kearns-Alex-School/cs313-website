@@ -91,7 +91,7 @@ else if (isset( $_GET['password']))
 
             <form>
                 <div class="form-group">
-                    <input type="text" name="password" id="password" class="form-control" placeholder="password" />
+                    <input type="password" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
                 
                 <input type="submit" value="Submit" class="btn btn-primary btn-lg">
