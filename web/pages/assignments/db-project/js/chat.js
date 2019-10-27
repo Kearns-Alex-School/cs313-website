@@ -1,5 +1,6 @@
 function Refresh()
 {
+    console.log("inside");
     var roomid = document.getElementById("roomid").value;
     var xhttp = new XMLHttpRequest();
 

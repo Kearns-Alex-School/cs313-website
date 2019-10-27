@@ -56,27 +56,14 @@ $db = get_db();
         <div id="content" class="container">
             <h1>Welcome <?php echo $username; ?>!</h1>
             <h2>Chat <?php echo $roomname; ?></h2>
-            <table class="table table-striped table-hover table-items">
-                <tbody id="results">
 
-                </tbody>
-            </table>
+            <div class="table-responsive scroll">
+                <table class="table table-striped table-hover table-items">
+                    <tbody id="results">
 
-            <?php
-
-            //
-            $stmt = $db->prepare('select m.message, m.message_created, u.user_name from t_messages m LEFT JOIN t_user u ON (m.user_id = u.user_id) WHERE room_id=:roomid');
-            $stmt->bindValue(':roomid', $roomid, PDO::PARAM_INT);
-            $stmt->execute();
-            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach ($rows as $row)
-            {
-                echo '
-                <p><b>' . $row['message_created'] . ': </b>'. $row['user_name'] . ' - "' . $row['message'] . '"</p>';
-            }
-
-            ?>
+                    </tbody>
+                </table>
+            </div>
 
             <form action="#" method="POST">
                 <div class="form-group">
@@ -94,4 +81,4 @@ $db = get_db();
 
 </html>
 
-<script>setInterval(Refresh(), 5000);</script>
+<script>setTimeout(Refresh(), 5000);</script>
