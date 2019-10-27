@@ -95,7 +95,7 @@ function GetRows($statement) {
         $html_text .='
             </td>
             <td width="20%">
-                <button type="submit" class="btn btn-success btn-sm btn-block" name="submit" value="'.$room_id.'">Join</button>
+                <button type="submit" class="btn btn-success btn-sm btn-block" name="submit[]" value="'.$room_id.'">Join</button>
             </td>
         </tr>';
     }
