@@ -3,7 +3,7 @@ require "dbConnect.php";
 session_start();
 
 $roomid = htmlspecialchars($_POST['submit'][0]);
-if ( isset( $_SESSION['roomid'] ) ) {
+if ($roomid =='' && isset( $_SESSION['roomid'] ) ) {
     $roomid = $_SESSION['roomid'];
 }
 else 
