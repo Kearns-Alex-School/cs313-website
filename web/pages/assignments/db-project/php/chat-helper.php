@@ -53,11 +53,11 @@ function GetRows($statement) {
     {
         $html_text .='
         <tr>
-            <td width="40%">
+            <td width="30%">
                 <p><b>' . $row['user_name'] . ': </b></p>
                 <p>' . $row['message_created'] . '</p>
             </td>
-            <td width="60%">
+            <td width="70%">
                 <p>"' . $row['message'] . '"</p>
             </td>
         </tr>';

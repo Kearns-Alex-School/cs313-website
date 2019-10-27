@@ -43,12 +43,6 @@ $db = get_db();
 	</head>
 
     <body class="container-fluid">
-        <!-- Header -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/header.php");?>
-
-        <!-- Navigation Bar -->
-        <?php include ($_SERVER['DOCUMENT_ROOT']."/php/nav.php");?>
-        
         <!-- Content -->
         <input type="hidden" id="roomid" name="roomid" value="<?php echo $roomid; ?>">
         <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">
@@ -56,7 +50,7 @@ $db = get_db();
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php echo $username; ?>!</h1>
-            <h2>Chat <?php echo $roomname; ?></h2>
+            <h2 class="text-center"><?php echo $roomname; ?></h2>
 
             <div class="table-responsive scroll">
                 <table class="table table-striped table-hover table-items">
