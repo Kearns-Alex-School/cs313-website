@@ -1,7 +1,7 @@
 <?php
 require "dbConnect.php";
 
-$roomid = htmlspecialchars($_POST['roomid']);
+$roomid = htmlspecialchars($_POST['submit'][0]);
 
 echo "Roomid: $roomid";
 
