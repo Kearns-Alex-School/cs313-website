@@ -81,6 +81,11 @@ INSERT INTO t_messages VALUES (
 , '".$message."'
 , NOW()" );
 
-    $stmt->execute();
+    try {
+        $stmt->execute();
+    } catch (PDOException $ex) {
+        echo "Error: $ex";
+        die();
+    }
 }
 ?>
