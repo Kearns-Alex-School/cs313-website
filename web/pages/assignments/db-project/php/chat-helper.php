@@ -11,7 +11,7 @@ $stmt = $db->prepare("
 SELECT 
 room_password 
 FROM t_room 
-WHERE room_id = '$roomid'");
+WHERE room_id = $roomid");
 
 try
 {
