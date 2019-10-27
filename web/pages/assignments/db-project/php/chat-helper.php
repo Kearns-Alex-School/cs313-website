@@ -5,7 +5,13 @@ $roomid = htmlspecialchars($_POST['submit'][0]);
 
 echo "Roomid: $roomid";
 
-$db = get_db();
+echo "
+SELECT 
+room_password 
+FROM t_room 
+WHERE room_id = $roomid";
+
+/*$db = get_db();
 
 $stmt = $db->prepare("
 SELECT 
@@ -39,6 +45,6 @@ if ($returned_password == '')
 }
 else {
     echo "need password";
-}
+}*/
 
 ?>
