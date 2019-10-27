@@ -78,10 +78,10 @@ function GetRows($statement) {
 
         $html_text .='
         <tr>
-            <td width="50%">
-                <a href="" onclick="OpenRoom('.$room_id.')">'.$room_name.'</a>
-            </td>
             <td width="40%">
+                <p>'.$room_name.'</p>
+            </td>
+            <td width="30%">
                 <p>'.$creator.'</p>
             </td>
             <td width="10%">';
@@ -94,13 +94,10 @@ function GetRows($statement) {
 
         $html_text .='
             </td>
+            <td width="20%">
+                <button type="submit" class="btn btn-success btn-sm" name="submit" value="'.$room_id.'">Join</button>
+            </td>
         </tr>';
-
-        /*$html_text .= '<p>';
-        $html_text .= '<a href="chat.php?room=' . $room_name . '&roomid=' . $room_id .'">';
-        $html_text .= '<b>' . $room_name . '</b>';
-        $html_text .= '</a>';
-        $html_text .= '</p>';*/
     }
 
     // send all of the results back to the caller.

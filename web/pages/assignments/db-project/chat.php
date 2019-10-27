@@ -16,7 +16,7 @@ if ( isset( $_SESSION['user'] ) ) {
 
 } else {
     // send the user to the rooms
-    header("Location: ../login.php");
+    header("Location: login.php");
 
     die();
 }

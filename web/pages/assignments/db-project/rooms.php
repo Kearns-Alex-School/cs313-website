@@ -13,7 +13,6 @@ if ( isset( $_SESSION['user'] ) ) {
     $userid = $_SESSION['userid'];
 } else {
     // Redirect them to the login page
-    // send the user to the rooms
     header("Location: login.php");
 
     die();
@@ -75,26 +74,25 @@ if ( isset( $_SESSION['user'] ) ) {
 
             <h2>Chatrooms</h2>
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover table-items">
+            <div class="table-responsive">
+                <form method="post" onsubmit="window.open('php/chat.php','_blank','width=1000,height=800');">
+                    <table class="table table-striped table-hover table-items">
 
-                        <thead>
-                            <tr>
-                                <th width="50%">Room</th>
-                                <th width="40%">Creator</th>
-                                <th width="10%">Pass</th>
-                            </tr>
-                        </thead>
+                    <thead>
+                        <tr>
+                            <th width="40%">Room</th>
+                            <th width="30%">Creator</th>
+                            <th width="10%">Pass</th>
+                            <th width="20%"></th>
+                        </tr>
+                    </thead>
 
-                        <tbody id="results">
+                    <tbody id="results">
 
-                        </tbody>
-                        
-                        </table>
-                    </div>
-                </div>
+                    </tbody>
+                    
+                    </table>
+                </form>
             </div>
         </div>
 
