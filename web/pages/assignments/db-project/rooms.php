@@ -82,20 +82,10 @@ if ( isset( $_SESSION['user'] ) ) {
                     <th width="20%"> </th>
                 </tr>
             </table>
-            
-            <div class="table-responsive">
-                <form method="post" onsubmit="window.open('php/chat.php','_blank','width=1000,height=800');">
+
+            <div class="table-responsive scroll">
+                <form method="post" onsubmit="window.open('php/chat.php','_blank','width=1000,height=800'); return false;">
                     <table class="table table-striped table-hover table-items">
-<!--
-                    <thead>
-                        <tr>
-                            <th width="40%">Room</th>
-                            <th width="30%">Creator</th>
-                            <th width="10%">Pass</th>
-                            <th width="20%"> </th>
-                        </tr>
-                    </thead>
--->
 
                     <tbody id="results">
 
