@@ -39,6 +39,7 @@ $db = get_db();
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
         <link rel="stylesheet" href="css/db-project.css">
+        <script src="js/chat.js"></script>
 	</head>
 
     <body class="container-fluid">
@@ -49,10 +50,17 @@ $db = get_db();
         <?php include ($_SERVER['DOCUMENT_ROOT']."/php/nav.php");?>
         
         <!-- Content -->
+        <input type="hidden" id="roomid" name="roomid" value="<?php echo $roomid; ?>">
+
         <br>
         <div id="content" class="container">
             <h1>Welcome <?php echo $username; ?>!</h1>
             <h2>Chat <?php echo $roomname; ?></h2>
+            <table class="table table-striped table-hover table-items">
+                <tbody id="results">
+
+                </tbody>
+            </table>
 
             <?php
 
@@ -64,11 +72,8 @@ $db = get_db();
 
             foreach ($rows as $row)
             {
-                echo '<p>';
-                echo '<b>' . $row['message_created'] . ': </b>';
-                echo '' . $row['user_name'] . ' - ';
-                echo '"' . $row['message'] . '"';
-                echo '</p>';
+                echo '
+                <p><b>' . $row['message_created'] . ': </b>'. $row['user_name'] . ' - "' . $row['message'] . '"</p>';
             }
 
             ?>
@@ -88,3 +93,5 @@ $db = get_db();
 	</body>
 
 </html>
+
+<script>setInterval(Refresh(), 5000);</script>

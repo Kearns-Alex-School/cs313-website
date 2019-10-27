@@ -84,7 +84,7 @@ if ( isset( $_SESSION['user'] ) ) {
             </table>
 
             <div class="table-responsive scroll">
-                <form method="post" target="_blank" action="php/chat-helper.php">
+                <form method="post" target="_blank" action="php/password-helper.php">
                     <table class="table table-striped table-hover table-items">
 
                     <tbody id="results">
