@@ -39,7 +39,7 @@ if ($returned_password == '')
     header("Location: ../chat.php");
     die();
 }
-else if ($_GET['password'] !== '')
+else if (isset( $_GET['password']))
 {
     if ($_GET['password'] == $returned_password)
     {
@@ -81,7 +81,7 @@ else if ($_GET['password'] !== '')
             }
             ?>
 
-            <form action="#" method="POST">
+            <form>
                 <div class="form-group">
                     <input type="text" name="password" id="password" class="form-control" placeholder="password" />
                 </div>
