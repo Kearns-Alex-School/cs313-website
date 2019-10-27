@@ -3,15 +3,15 @@ require "dbConnect.php";
 
 $roomid = htmlspecialchars($_POST['submit'][0]);
 
-echo "Roomid: $roomid";
+echo "<p>Roomid: $roomid</p>";
 
-echo "
+echo "<p>
 SELECT 
 room_password 
 FROM t_room 
-WHERE room_id = $roomid";
+WHERE room_id = $roomid</p>";
 
-/*$db = get_db();
+$db = get_db();
 
 $stmt = $db->prepare("
 SELECT 
@@ -36,7 +36,7 @@ foreach ($rows as $row)
 }
 
 
-echo "Password: $returned_password";
+echo "<p>Password: $returned_password</p>";
 
 if ($returned_password == '')
 {
@@ -44,7 +44,7 @@ if ($returned_password == '')
     die();
 }
 else {
-    echo "need password";
-}*/
+    echo "<p>need password</p>";
+}
 
 ?>
