@@ -75,7 +75,7 @@ function SendMessage() {
     $message = htmlspecialchars($_POST['message']);
 
     $stmt = $db->prepare("
-INSERT INTO messages VALUES (
+INSERT INTO t_messages VALUES (
   ".$userid."
 , ".$roomid."
 , '".$message."'
