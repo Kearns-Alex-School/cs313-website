@@ -79,7 +79,7 @@ INSERT INTO t_messages VALUES (
   ".$userid."
 , ".$roomid."
 , '".$message."'
-, NOW()" );
+, NOW())" );
 
     try {
         $stmt->execute();
