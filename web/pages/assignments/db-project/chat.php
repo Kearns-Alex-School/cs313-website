@@ -5,19 +5,20 @@
 session_start();
 $username = '';
 $userid = '';
-$roomname = $_GET['room'];
-$roomid = $_GET['roomid'];
+$roomname = '';
+$roomid = '';
 
 if ( isset( $_SESSION['user'] ) ) {
     // Grab user data from the database using the user_id
     // Let them access the "logged in only" pages
     $username = $_SESSION['user'];
     $userid = $_SESSION['userid'];
+    $roomname = $_SESSION['room'];
+    $roomid = $_SESSION['roomid'];
 
 } else {
     // send the user to the rooms
     header("Location: login.php");
-
     die();
 }
 
@@ -29,7 +30,7 @@ $db = get_db();
 <html lang="en-US">
 	
     <head>
-        <title>Chat</title>
+        <title>Chat <?php echo $roomname; ?></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
