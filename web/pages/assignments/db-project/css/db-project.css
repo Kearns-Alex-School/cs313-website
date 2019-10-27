@@ -10,11 +10,7 @@ body {
     background-color: #b9b9b9;
 }
 
-/*thead tr , tbody { 
-    display: block; 
-}*/
-
-tbody {
+.scroll {
     height: 425px;
     overflow-y: auto;
 }
