@@ -89,7 +89,7 @@ function GetRows($statement) {
         if ($password !=='')
         {
             $html_text .='
-                <img src="../content/images/lock.png" alt="L" width="25px">';
+                <img src="content/images/lock.png" alt="L" width="25px">';
         }
 
         $html_text .='

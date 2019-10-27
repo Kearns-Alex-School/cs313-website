@@ -32,6 +32,7 @@ if ( isset( $_SESSION['user'] ) ) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
+        <link rel="stylesheet" href="css/db-project.css">
         <script src="js/rooms.js"></script>
 	</head>
 
@@ -81,7 +82,7 @@ if ( isset( $_SESSION['user'] ) ) {
                     <thead>
                         <tr>
                             <th width="50%">Room</th>
-                            <th width="40%">Creaor</th>
+                            <th width="40%">Creator</th>
                             <th width="10%">Pass</th>
                         </tr>
                     </thead>
