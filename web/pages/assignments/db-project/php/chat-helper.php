@@ -36,7 +36,7 @@ SELECT
 FROM message m 
 LEFT JOIN users u ON (m.user_id = u.user_id) 
 WHERE room_id=:roomid
-ORDER BY message_created DESC';
+ORDER BY message_created ASC';
 
     // prepare our statement
     $statement = $db->prepare($query);
