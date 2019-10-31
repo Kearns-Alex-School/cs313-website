@@ -96,14 +96,14 @@ SELECT
 , r.room_password 
 FROM room r 
 LEFT JOIN users u ON (r.user_id = u.user_id)
-WHERE r.room_name LIKE \'%:roomName%\' 
+WHERE r.room_name LIKE :roomName
 ORDER BY r.room_id';
 
     // prepare our statement
     $statement = $db->prepare($query);
 
     // bind our values
-    $statement->bindValue(':roomName', $roomName);
+    $statement->bindValue(':roomName', "%$roomName%");
 
     GetRows($statement);
 }
