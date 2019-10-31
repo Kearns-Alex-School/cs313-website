@@ -72,11 +72,9 @@ $password = htmlspecialchars($_GET['password']);
 // check to see if the user entered a password yet
 if (!isset($password) || $password == "") {
     // break out because we have password to compare
-    return;
 }
-
 // check the password entered and the one returned from the database
-if (password_verify($password, $hashedPasswordFromDB)) {
+else if (password_verify($password, $hashedPasswordFromDB)) {
     // set our session data
     $_SESSION['roomid'] = $roomid;
     $_SESSION['room'] = $returned_name;
@@ -86,10 +84,10 @@ if (password_verify($password, $hashedPasswordFromDB)) {
 
     // we always include a die after redirects
     die();
+} else {
+    // if we get it this far, we entered the wrong password
+    $wrong = false;
 }
-
-// if we get it this far, we entered the wrong password
-$wrong = false;
 ?>
 
 <!DOCTYPE html>
