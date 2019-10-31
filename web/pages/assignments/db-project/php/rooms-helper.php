@@ -38,7 +38,7 @@ function DoCreate() {
     
     // set up our query to insert the record into our table
     $query = '
-INSERT INTO room 
+INSERT INTO room (user_id, room_created, room_name, room_password)
 VALUES (:userid, NOW(), :roomName, roomPass)';
 
     // prepare our statement

@@ -31,7 +31,7 @@ if ($submit == 'create') {
 
     // set up our query to insert the record into our table
 	$query = '
-INSERT INTO users 
+INSERT INTO users (user_name, user_password)
 VALUES (:username, :password)';
 
     // prepare our statement
