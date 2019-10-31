@@ -1,81 +1,137 @@
 <?php
 require "dbConnect.php";
 
+// get our function data from the POST
 $func = htmlspecialchars($_POST['function']);
 
+// depending on what we got, call the associated function
 switch ($func)
 {
-    case "search":
-        Search();
+    case "create":
+        DoCreate();
         break;
 
     case "refresh":
         Refresh();
         break;
 
-    case "create":
-        DoCreate();
+    case "search":
+        Search();
         break;
 
     default:
         echo 'fail';
 }
 
-function Refresh() {
+// function that handles inserting a new room in the database
+function DoCreate() {
+    // start our session
+    session_start();
+
+    // connect to our database
     $db = get_db();
 
-    $stmt = $db->prepare("
+    // geat our extra data from the POST and session
+    $userid = $_SESSION['userid'];
+    $roomName = htmlspecialchars($_POST['roomName']);
+    $roomPass = htmlspecialchars($_POST['roomPass']);
+    
+    // set up our query to insert the record into our table
+    $query = '
+INSERT INTO room 
+VALUES (:userid, NOW(), :roomName, roomPass)';
+
+    // prepare our statement
+    $statement = $db->prepare($query);
+    
+    // bind our values
+    $statement->bindValue(':userid', $userid);
+    $statement->bindValue(':roomName', $roomName);
+    $statement->bindValue(':roomPass', $roomPass);
+
+    // run the query in a try/catch so we can see data if we fail
+    try {
+        $statement->execute();
+    } catch (PDOException $ex) {
+        echo "Error inserting into DB. Details:<br> $ex";
+		die();
+    }
+}
+
+// function responsible for grabbing all of the rooms
+function Refresh() {
+    // connect to our database
+    $db = get_db();
+
+    // set up our query to select the record from our table
+    $query = '
 SELECT 
   r.room_id
 , r.room_name
 , u.user_name
 , r.room_password 
-FROM t_room r 
-LEFT JOIN t_user u ON (r.user_id = u.user_id) 
-ORDER BY r.room_id");
+FROM room r 
+LEFT JOIN users u ON (r.user_id = u.user_id) 
+ORDER BY r.room_id';
 
-    GetRows($stmt);
+    // prepare our statement
+    $statement = $db->prepare(query);
+
+    GetRows($statement);
 }
 
 function Search() {
+    // connect to our database
     $db = get_db();
+
+    // get our extra data from the POST
     $roomName = htmlspecialchars($_POST['searchName']);
 
-    $stmt = $db->prepare("
+    // set up our query to select the record from our table
+    $query = '
 SELECT 
   r.room_id
 , r.room_name
 , u.user_name
 , r.room_password 
-FROM t_room r 
-LEFT JOIN t_user u ON (r.user_id = u.user_id)
-WHERE r.room_name LIKE '%$roomName%' 
-ORDER BY r.room_id");
+FROM room r 
+LEFT JOIN users u ON (r.user_id = u.user_id)
+WHERE r.room_name LIKE ''%:roomName%'' 
+ORDER BY r.room_id';
 
-    GetRows($stmt);
+    // prepare our statement
+    $statement = $db->prepare($query);
+
+    // bind our values
+    $statement->bindValue(':roomName', $roomName);
+
+    GetRows($statement);
 }
 
 function GetRows($statement) {
-    try
-    {
+    // run the query in a try/catch so we can see data if we fail
+    try {
         $statement->execute();
-    }
-    catch (PDOException $ex) {
-        echo "Error connecting to DB. Details: $ex";
+    } catch (PDOException $ex) {
+        echo "Error selecting from DB. Details:<br> $ex";
         return;
     }
     
+    // get all of the rows
     $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     $html_text = "";
 
+    // loop through each row
     foreach ($rows as $row)
     {
-        $room_id = $row['room_id'];
+        // grab the required data from the row columns
         $room_name = $row['room_name'];
         $creator = $row['user_name'];
         $password = $row['room_password'];
+        $room_id = $row['room_id'];
 
+        // build our HTML
         $html_text .='
         <tr>
             <td width="40%">
@@ -86,6 +142,7 @@ function GetRows($statement) {
             </td>
             <td width="10%">';
 
+        // check to see if we have a password on this room
         if ($password !=='')
         {
             $html_text .='
@@ -102,25 +159,5 @@ function GetRows($statement) {
 
     // send all of the results back to the caller.
     echo $html_text;
-}
-
-function DoCreate() {
-    session_start();
-    $db = get_db();
-
-    $roomName = htmlspecialchars($_POST['roomName']);
-    $roomPass = htmlspecialchars($_POST['roomPass']);
-    $userID = $_SESSION['userid'];
-
-    $sql = "insert into t_room (user_id, room_created, room_name, room_password) values (" . $userID . ", NOW(), '" . $roomName . "', '" . $roomPass . "')";
-
-    $stmt = $db->prepare($sql);
-    
-    try {
-        $stmt->execute();
-    } catch (PDOException $ex) {
-        echo "Error: $ex";
-		die();
-    }
 }
 ?>

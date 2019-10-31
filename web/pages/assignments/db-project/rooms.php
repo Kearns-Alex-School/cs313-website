@@ -1,22 +1,20 @@
 <?php
-// You'd put this code at the top of any "protected" page you create
-
-// Always start this first
+// put this code at the top of any page you want to "protect"
+// always begin our session
 session_start();
-$username = '';
-$userid = '';
 
-if ( isset( $_SESSION['user'] ) ) {
-    // Grab user data from the database using the user_id
-    // Let them access the "logged in only" pages
-    $username = $_SESSION['user'];
-    $userid = $_SESSION['userid'];
-} else {
-    // Redirect them to the login page
+// check to see if we have our user session variable set
+if (!isset( $_SESSION['user'])) {
+    // send the user to the login page
     header("Location: login.php");
 
+    // we always include a die after redirects
     die();
 }
+
+// grab session data 
+$username = $_SESSION['user'];
+$userid = $_SESSION['userid'];
 ?>
 
 <!DOCTYPE html>

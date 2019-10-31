@@ -1,65 +1,95 @@
 <?php
+// put this code at the top of any page you want to "protect"
 require "dbConnect.php";
+
+// always begin our session
 session_start();
 
+// special way to find out which join button was pressed
 $roomid = htmlspecialchars($_POST['submit'][0]);
-if ($roomid =='' && isset( $_SESSION['roomid'] ) ) {
+
+// this is our continual check if we keep entering the wrong password to keep
+// the room id associated
+// if the roomid is not in the POST data, then it is in our session
+if ($roomid == '' && isset($_SESSION['roomid'])) {
     $roomid = $_SESSION['roomid'];
-}
-else 
-{
+// if our session does not have a roomid, then we need to create one
+} else {
     $_SESSION['roomid'] = $roomid;
 }
 
+// connect to our database
 $db = get_db();
-$stmt = $db->prepare("
+
+// set up our query to select the record from our table
+$query = '
 SELECT 
   room_password 
 , room_name
-FROM t_room 
-WHERE room_id = $roomid");
+FROM room 
+WHERE room_id = :roomid';
 
-try
-{
-    $stmt->execute();
-}
-catch (PDOException $ex) {
-    echo "Error connecting to DB. Details: $ex";
+// prepare our statement
+$statement = $db->prepare($query);
+
+// bind our values
+$statement->bindValue(':roomid', $roomid);
+
+// run the query in a try/catch so we can see data if we fail
+try{
+    $result = $statement->execute();
+}catch (PDOException $ex) {
+    echo "Error selecting from DB. Details: $ex";
     die();
 }
 
-$returned_password = '';
-$returned_name = '';
+// grab the first result
+$row = $statement->fetch();
 
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($rows as $row)
+// grab the required data from the row
+$hashedPasswordFromDB = $row['room_password'];
+$returned_name = $row['room_name'];
+
+// check to see if there is no password on this room
+if ($hashedPasswordFromDB == '')
 {
-   $returned_password = $row['room_password'];
-   $returned_name = $row['room_name'];
+    // set our session data
+    $_SESSION['roomid'] = $roomid;
+    $_SESSION['room'] = $returned_name;
+
+    // send the user to the chat page
+    header("Location: ../chat.php");
+
+    // we always include a die after redirects
+    die();
 }
 
 $wrong = false;
 
-if ($returned_password == '')
-{
+// get the data from the GET
+$password = htmlspecialchars($_GET['password']);
+
+// check to see if the user entered a password yet
+if (!isset($password) || $password == "") {
+    // break out because we have password to compare
+    return;
+}
+
+// check the password entered and the one returned from the database
+if (password_verify($password, $hashedPasswordFromDB)) {
+    // set our session data
     $_SESSION['roomid'] = $roomid;
     $_SESSION['room'] = $returned_name;
+
+    // send the user to the chat page
     header("Location: ../chat.php");
+
+    // we always include a die after redirects
     die();
 }
-else if (isset( $_GET['password']))
-{
-    if ($_GET['password'] == $returned_password)
-    {
-        $_SESSION['roomid'] = $roomid;
-        $_SESSION['room'] = $returned_name;
-        header("Location: ../chat.php");
-        die();
-    }
-    else {
-        $wrong = true;
-    }
-}
+
+// if we get it this far, we entered the wrong password
+$wrong = false;
 ?>
 
 <!DOCTYPE html>
@@ -84,8 +114,7 @@ else if (isset( $_GET['password']))
             <h1>Please enter the password for <?php echo $returned_name; ?></h1>
 
             <?php 
-            if ($wrong == true)
-            {
+            if ($wrong == true) {
                 echo '<p class="text-danger">Password was incorrect. Please try again.</p>';
             }
             ?>

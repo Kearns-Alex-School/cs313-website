@@ -1,9 +1,3 @@
-<?php
-require "php/dbConnect.php";
-$db = get_db();
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en-US">
 	
@@ -35,10 +29,6 @@ session_start();
             if (isset( $_GET['fail']))
             {
                 echo '<p class="text-danger">Username and/or Password was incorrect. Please try again.</p>';
-            }
-            else if (isset( $_GET['blank']))
-            {
-                echo '<p class="text-danger">Please do not leave the fields blank.</p>';
             }
             ?>
             

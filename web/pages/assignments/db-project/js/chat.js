@@ -1,10 +1,8 @@
-window.intervalid = '';
+// set up our refresh interval to get any new messages
+window.intervalid = setInterval('Refresh()', 1000);;
 window.instance   = false;
 
-
-intervalid = setInterval('Refresh()', 1000);
-
-
+// function that handles refreshing the messages
 function Refresh()
 {
     // check to see if we are already in this update
@@ -13,12 +11,11 @@ function Refresh()
         // set our flag so we do not walk on ourself
         instance = true;
 
-        console.log("inside");
-        var roomid = document.getElementById("roomid").value;
+        // create our ajax
         var xhttp = new XMLHttpRequest();
-
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
+                // populate our results
                 document.getElementById("results").innerHTML = this.responseText;
 
                 // reset the flag
@@ -26,6 +23,10 @@ function Refresh()
             }
         };
 
+        // grab our data
+        var roomid = document.getElementById("roomid").value;
+
+        // create and send our request to our helper script
         xhttp.open("POST", "php/chat-helper.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send('function=refresh&id=' + roomid);
@@ -34,17 +35,22 @@ function Refresh()
 
 function SendMessage()
 {
-    var roomid = document.getElementById("roomid").value;
-    var userid = document.getElementById("userid").value;
-    var message = document.getElementById("message").value;
+    // create our ajax
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            // reset our message box
             document.getElementById("message").value = '';
         }
     };
 
+    // grab our data
+    var roomid = document.getElementById("roomid").value;
+    var userid = document.getElementById("userid").value;
+    var message = document.getElementById("message").value;
+
+    // create and send our request to our helper script
     xhttp.open("POST", "php/chat-helper.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send('function=send&id=' + roomid + '&userid=' + userid + '&message=' + message);
