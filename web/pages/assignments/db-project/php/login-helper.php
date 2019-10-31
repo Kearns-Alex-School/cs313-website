@@ -12,6 +12,8 @@ $returned_id = '';
 
 // if we are creating a new user then we need to add it so we will pass on the "check" later
 if ($submit === 'create' && $password !== '' && $username !== '') {
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
 	$sql = "insert into t_user (user_name, user_password) values ('" . $username . "', '" . $password . "')";
 
     $stmt = $db->prepare($sql);
@@ -49,7 +51,7 @@ foreach ($rows as $row)
 console_log($username);
 	
 // verify user password
-if ($password === $returned_password && $password !== '') {
+if (password_verify($password, $returned_password) && $password !== '') {
     // set our SESSION variables that we will use throughout the page
     $_SESSION['user'] = $username;
     $_SESSION['userid'] = $returned_id;

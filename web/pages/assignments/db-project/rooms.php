@@ -58,17 +58,19 @@ if ( isset( $_SESSION['user'] ) ) {
 
                     <button type="button" value="refresh" class="btn btn-primary" onclick="Refresh();">Refresh</button>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="roomName">New Room:</label>
                         <input type="text" name="roomName" id="roomName" class="form-control" placeholder="new room" />
                     </div>
+                
+                    <button type="button" value="create" class="btn btn-primary" onclick="DoCreate();">Create</button>
+                </div>
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="roomPass">Password:</label>
                         <input type="password" name="roomPass" id="roomPass" class="form-control" placeholder="room pass" />
                     </div>
-                
-                    <button type="button" value="create" class="btn btn-primary" onclick="DoCreate();">Create</button>
                 </div>
             </div>
 
