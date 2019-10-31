@@ -70,7 +70,7 @@ $wrong = false;
 $password = htmlspecialchars($_GET['password']);
 
 // check to see if the user entered a password yet
-if (!isset($password)) {
+if (!isset($password) || $password == "") {
     // break out because we have password to compare
 }
 // check the password entered and the one returned from the database
@@ -102,7 +102,7 @@ else if (password_verify($password, $hashedPasswordFromDB)) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/css/style.css">
-        <link rel="stylesheet" href="css/db-project.css">
+        <link rel="stylesheet" href="../css/db-project.css">
 	</head>
 
     <body class="container-fluid">
