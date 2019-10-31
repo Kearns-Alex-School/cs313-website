@@ -70,7 +70,7 @@ $wrong = false;
 $password = htmlspecialchars($_GET['password']);
 
 // check to see if the user entered a password yet
-if (!isset($password) || $password == "") {
+if (!isset($password)) {
     // break out because we have password to compare
 }
 // check the password entered and the one returned from the database
@@ -86,7 +86,7 @@ else if (password_verify($password, $hashedPasswordFromDB)) {
     die();
 } else {
     // if we get it this far, we entered the wrong password
-    $wrong = false;
+    $wrong = true;
 }
 ?>
 
