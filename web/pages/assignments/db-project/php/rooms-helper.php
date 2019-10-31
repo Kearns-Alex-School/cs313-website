@@ -74,6 +74,8 @@ FROM room r
 LEFT JOIN users u ON (r.user_id = u.user_id) 
 ORDER BY r.room_id';
 
+echo "$query<br>";
+
     // prepare our statement
     $statement = $db->prepare(query);
 
