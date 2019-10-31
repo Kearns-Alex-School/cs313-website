@@ -33,8 +33,8 @@ SELECT
   m.message
 , m.message_created
 , u.user_name 
-FROM t_messages m 
-LEFT JOIN t_user u ON (m.user_id = u.user_id) 
+FROM message m 
+LEFT JOIN users u ON (m.user_id = u.user_id) 
 WHERE room_id=:roomid';
 
     // prepare our statement
