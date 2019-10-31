@@ -56,7 +56,7 @@ $roomid = $_SESSION['roomid'];
             <br>
 
             <div class="form-group">
-                <input type="text" name="message" id="message" class="form-control" placeholder="message" />
+                <textarea rows="5" name="message" id="message" class="form-control" placeholder="message" onkeypress="return CheckEnterPressed();"></textarea>
             </div>
             
             <button class="btn btn-primary btn-lg" onclick="SendMessage();">Send</button>

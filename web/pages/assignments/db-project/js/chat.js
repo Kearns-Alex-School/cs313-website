@@ -1,3 +1,4 @@
+Refresh();
 // set up our refresh interval to get any new messages
 window.intervalid = setInterval('Refresh()', 1000);;
 window.instance   = false;
@@ -33,11 +34,27 @@ function Refresh()
     }
 }
 
+function CheckEnterPressed() {
+    // check for the enterkey
+    var key = window.event.keyCode;
+  
+    // If the user has pressed enter
+    if (key === 13) {
+      // send out message
+      SendMessage();
+  
+      // return false so we do not add the '/n'
+      return false;
+    }
+    
+    // return true so we add whatever key was pressed
+    return true;
+  }
+
 function SendMessage()
 {
     // create our ajax
     var xhttp = new XMLHttpRequest();
-
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // reset our message box
