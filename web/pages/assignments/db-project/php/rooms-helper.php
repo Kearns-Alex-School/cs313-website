@@ -35,6 +35,9 @@ function DoCreate() {
     $userid = $_SESSION['userid'];
     $roomName = htmlspecialchars($_POST['roomName']);
     $roomPass = htmlspecialchars($_POST['roomPass']);
+
+    // hash the entered password
+    $hashedPassword = password_hash($roomPass, PASSWORD_DEFAULT);
     
     // set up our query to insert the record into our table
     $query = '
@@ -47,7 +50,7 @@ VALUES (:userid, NOW(), :roomName, :roomPass)';
     // bind our values
     $statement->bindValue(':userid', $userid);
     $statement->bindValue(':roomName', $roomName);
-    $statement->bindValue(':roomPass', $roomPass);
+    $statement->bindValue(':roomPass', $hashedPassword);
 
     // run the query in a try/catch so we can see data if we fail
     try {
