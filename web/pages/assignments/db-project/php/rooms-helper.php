@@ -40,7 +40,7 @@ function DoCreate() {
     if ($roomPass != '') {
         $hashedPassword = password_hash($roomPass, PASSWORD_DEFAULT);
     } else {
-        $hashedPassword = roomPass;
+        $hashedPassword = $roomPass;
     }
     
     
