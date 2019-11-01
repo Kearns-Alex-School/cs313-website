@@ -37,7 +37,12 @@ function DoCreate() {
     $roomPass = htmlspecialchars($_POST['roomPass']);
 
     // hash the entered password
-    $hashedPassword = password_hash($roomPass, PASSWORD_DEFAULT);
+    if ($roomPass != '') {
+        $hashedPassword = password_hash($roomPass, PASSWORD_DEFAULT);
+    } else {
+        $hashedPassword = roomPass;
+    }
+    
     
     // set up our query to insert the record into our table
     $query = '

@@ -26,13 +26,12 @@
             <h1>Simple Chatroom</h1>
 
             <?php 
-            if (isset( $_GET['fail']))
-            {
-                echo '<p class="text-danger">Username and/or Password was incorrect. Please try again.</p>';
+            if (isset( $_GET['fail'])) {
+                echo '<p class="text-warning">Username and/or Password was incorrect. Please try again.</p>';
+            } else {
+                echo "<br>";
             }
             ?>
-            
-            <br>
 
             <form action="php/login-helper.php" method="post">
                 <div class="form-group">
