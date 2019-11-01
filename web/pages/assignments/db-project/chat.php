@@ -35,7 +35,7 @@ $roomid = $_SESSION['roomid'];
         <script src="js/chat.js"></script>
 	</head>
 
-    <body class="container-fluid">
+    <body class="container-fluid" onload="Setup()">
         <!-- Content -->
         <input type="hidden" id="roomid" name="roomid" value="<?php echo $roomid; ?>">
         <input type="hidden" id="userid" name="userid" value="<?php echo $userid; ?>">

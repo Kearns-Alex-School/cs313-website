@@ -1,8 +1,9 @@
-// set up our refresh interval to get any new messages
-window.instance   = false;
-Refresh();
-window.intervalid = setInterval('Refresh()', 1000);;
-
+function Setup() {
+    // set up our refresh interval to get any new messages
+    window.instance   = false;
+    Refresh();
+    window.intervalid = setInterval('Refresh()', 1000);
+}
 
 // function that handles refreshing the messages
 function Refresh()
