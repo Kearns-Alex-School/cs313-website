@@ -97,7 +97,7 @@ function SendMessage() {
     $message = htmlspecialchars($_POST['message']);
 
     $query = '
-INSERT INTO message 
+INSERT INTO message (user_id, room_id, message, message_created)
 VALUES (:userid, :roomid, :message, NOW())';
 
     // prepare our statement
