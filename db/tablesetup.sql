@@ -1,42 +1,29 @@
 /* Author: Alex Kerns
- * Date:   10-01-2019   
+ * Date:   10-30-2019   
  */
 
 CREATE TABLE users (
-  user_id			Serial		PRIMARY KEY
-, user_name			varchar(50)	UNIQUE		NOT NULL
-, user_password	varchar(50)					NOT NULL
-, user_email		varchar(50)					NOT NULL
+  user_id       Serial       PRIMARY KEY
+, user_name     varchar(50)  UNIQUE      NOT NULL
+, user_password	varchar(255)             NOT NULL
 );
 /*
-INSERT INTO users (
-  user_name
-, user_password
-, user_email
-) VALUES (
-  'NAME'
-, 'PASS'
-, 'EMAIL' );
+INSERT INTO public.users(
+  user_id, user_name, user_password)
+  VALUES (?, ?, ?);
  */
 
 CREATE TABLE room (
-  room_id			Serial		PRIMARY KEY
-, user_id			int			REFERENCES Users(user_id)
-, room_created		TIMESTAMP					NOT NULL
-, room_name			varchar(50)	UNIQUE		NOT NULL
-, room_password	varchar(50)
+  room_id       Serial       PRIMARY KEY
+, user_id       int          REFERENCES users(user_id)
+, room_created  TIMESTAMP                              NOT NULL
+, room_name     varchar(50)  UNIQUE                    NOT NULL
+, room_password varchar(255)
 );
 /*
-INSERT INTO room (
-  user_id
-, room_created
-, room_name
-, room_password
-) VALUES (
-  USER_ID
-, NOW()
-, 'NAME'
-, 'PASS');
+INSERT INTO public.room(
+  room_id, user_id, room_created, room_name, room_password)
+  VALUES (?, ?, NOW(), ?, ?);
  */
 
 /*
@@ -51,18 +38,16 @@ LEFT JOIN users u ON (r.user_id = u.user_id)
 ORDER BY r.room_id;
  */
 
-CREATE TABLE messages (
-  user_id			int			REFERENCES users(user_id)
-, room_id			int			REFERENCES room(room_id)
-, message			Text			NOT NULL
-, message_created	TIMESTAMP	NOT NULL
+CREATE TABLE message (
+  user_id         int       REFERENCES users(user_id)
+, room_id         int       REFERENCES room(room_id)
+, message         Text                                NOT NULL
+, message_created TIMESTAMP                           NOT NULL
 );
 /*
-INSERT INTO messages VALUES (
-  USER_ID
-, ROOM_ID
-, 'MESSAGE'
-, NOW() );
+INSERT INTO public.message(
+  user_id, room_id, message, message_created)
+  VALUES (?, ?, ?, NOW());
  */
 
 /*
@@ -70,7 +55,7 @@ SELECT
   m.message
 , m.message_created
 , u.user_name 
-FROM messages m 
+FROM message m 
 LEFT JOIN users u ON (m.user_id = u.user_id) 
-WHERE m.room_id = 1;
+WHERE m.room_id = ##;
  */
