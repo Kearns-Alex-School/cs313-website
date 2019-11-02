@@ -45,7 +45,7 @@ $roomid = $_SESSION['roomid'];
             <h1>Welcome <?php echo $username; ?>!</h1>
             <h2 class="text-center"><?php echo $roomname; ?></h2>
 
-            <div class="table-responsive scroll">
+            <div class="table-responsive scroll" id="chat">
                 <table class="table table-striped table-hover table-items">
                     <tbody id="results">
 

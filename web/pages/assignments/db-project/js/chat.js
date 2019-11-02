@@ -21,6 +21,12 @@ function Refresh()
                 // populate our results
                 document.getElementById("results").innerHTML = this.responseText;
 
+                // grab out div area with our results
+                var chat = document.getElementById("chat");
+
+                // scroll to show the most recent message that was added
+                chat.scrollTop = chat.scrollHeight;
+
                 // reset the flag
                 instance = false;
             }
